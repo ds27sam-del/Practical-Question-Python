@@ -1,0 +1,105 @@
+import sys
+
+def create_matrix(rows, cols, matrix_num):
+    """User se input lekar ek single matrix (2D List) banata hai"""
+    print(f"\n--- Enter elements for Matrix {matrix_num} ---")
+    matrix = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            v = int(input(f"Enter value for row {i+1}, col {j+1}: "))
+            row.append(v)
+        matrix.append(row)
+    return matrix
+
+def print_matrix(matrix, name):
+    """Matrix ko readable format mein print karta hai"""
+    print(f"\n{name} looks like:")
+    for row in matrix:
+        print(row)
+
+def multiply_two_matrices(A, B):
+    """Do matrices (A aur B) ka actual dot product (Row x Column) nikalta hai"""
+    r_A, c_A = len(A), len(A[0])
+    r_B, c_B = len(B), len(B[0])
+    
+    # Rule Check: First matrix ke columns, second matrix ke rows ke barabar hone chahiye
+    if c_A != r_B:
+        print(f"\n❌ Error: Cannot multiply. Columns of first matrix ({c_A}) must match Rows of second matrix ({r_B}).")
+        return None
+        
+    # Result matrix ko 0 se initialize karte hain
+    # Iska dimension hoga: (Rows of A) x (Columns of B)
+    result = [[0 for _ in range(c_B)] for _ in range(r_A)]
+    
+    # Real Matrix Multiplication Logic
+    for i in range(r_A):
+        for j in range(c_B):
+            for k in range(c_A): # ya r_B
+                result[i][j] += A[i][k] * B[k][j]
+                
+    return result
+
+def multi_matrices(matrices):
+    """List mein maujood saari matrices ko ek ke baad ek multiply karta hai"""
+    if not matrices:
+        return []
+        
+    # Pehle result ko pehli matrix ke barabar maan lete hain
+    current_result = matrices[0]
+    
+    # Baki bachi hui matrices se ek-ek karke multiply karte hain
+    for next_matrix in matrices[1:]:
+        current_result = multiply_two_matrices(current_result, next_matrix)
+        if current_result is None:
+            return None # Agar multiplication fail ho jaye
+            
+    return current_result
+
+def main():
+    print("=== Real Matrix Multiplication Program ===")
+    r = int(input("Enter the number of rows: "))
+    c = int(input("Enter the number of columns: "))
+
+    if r <= 0 or c <= 0:
+        print("Rows and columns must be greater than 0!")
+        return
+
+    num_matrices = int(input("How many matrices do you want to multiply (2 or 3)? "))
+    
+    if num_matrices not in [2, 3]:
+        print("Invalid choice! Please enter either 2 or 3.")
+        return
+
+    # Agar 3 matrices hain, toh multiplication rules ke mutabik unhe Square Matrix (r == c) hona padega
+    if num_matrices == 3 and r != c:
+        print("\n⚠️ Note: 3 matrices ko multiply karne ke liye Rows aur Columns ka barabar (Square Matrix) hona zaroori hai.")
+        print(f"Aapne Rows:{r} aur Cols:{c} daala hai, jo ki square nahi hai. Program exit ho raha hai.")
+        return
+
+    # Saari matrices ko store karne ke liye list
+    all_matrices = []
+
+    # 1. User se saari matrices ka input lena
+    for i in range(1, num_matrices + 1):
+        mat = create_matrix(r, c, i)
+        all_matrices.append(mat)
+
+    # 2. User ko unki banayi hui matrices dikhana
+    print("\n===============================")
+    for i, mat in enumerate(all_matrices, 1):
+        print_matrix(mat, f"Matrix {i}")
+    print("===============================")
+
+    # 3. Real Multiplication Operation perform karna
+    print("\nPerforming Matrix Multiplication (Row x Column)...")
+    result_matrix = multi_matrices(all_matrices)
+    
+    # 4. Final output dikhana agar multiplication successful raha
+    if result_matrix is not None:
+        print_matrix(result_matrix, "The FINAL RESULTANT Matrix")
+    else:
+        print("\n❌ Multiplication could not be completed due to dimension mismatch.")
+
+if __name__ == "__main__":
+    main()
