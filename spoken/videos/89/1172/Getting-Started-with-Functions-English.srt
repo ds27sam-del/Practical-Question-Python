@@ -1,0 +1,283 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:05
+Welcome to the spoken tutorial on <b>Getting started with</b> <b>functions</b>.
+
+2
+00:00:06 --> 00:00:16
+In this tutorial, we will learn to,
+<p>Define a <b>function</b>
+</p><p>Define <b>functions</b> with <b>arguments</b> and
+</p><p>use <b>docstrings</b>.
+</p>
+
+3
+00:00:17 --> 00:00:31
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p><p><b>Python 3.4.3 </b>and
+</p><p><b>IPython 5.1.0</b>
+</p>
+
+4
+00:00:32 --> 00:00:43
+To practise this tutorial, you should know how to use <b>tuples.</b>
+<p>If not, see the relevant <b>Python</b> tutorials on this website.
+</p>
+
+5
+00:00:44 --> 00:00:47
+First we will learn about functions.
+
+6
+00:00:48 --> 00:00:54
+A <b>function</b> is a portion of <b>code</b> within a larger <b>program</b> that performs a specific task.
+
+7
+00:00:55 --> 00:01:00
+<b>Functions </b>are useful in reusing the <b>code</b> and eliminate code redundancy.
+
+8
+00:01:01 --> 00:01:06
+<b>Functions</b> are also used to organise our code into manageable blocks.
+
+9
+00:01:07 --> 00:01:10
+Here is the syntax for defining the <b>functions</b>.
+
+10
+00:01:11 --> 00:01:14
+<b>def</b> is the <b>keyword </b>which defines the <b>function</b> name.
+
+11
+00:01:15 --> 00:01:18
+colon is used to mark the end of the <b>function</b> name.
+
+12
+00:01:19 --> 00:01:28
+<b>docstring</b> is the documentation string to describe what the <b>function</b> does.
+<p>It is an optional, but recommended.
+</p>
+
+13
+00:01:29 --> 00:01:35
+<b>Statement</b> makes the function body and it must have 4 indentation level.
+
+14
+00:01:36 --> 00:01:43
+<b>return</b> statement is to return a value from the function and it is also indented by 4 spaces.
+
+15
+00:01:44 --> 00:01:48
+Now we will understand the <b>functions</b> with an example.
+
+16
+00:01:49 --> 00:01:54
+Consider a mathematical <b>function</b> <b>f</b> <i>of</i><b> x</b><i> is equal to</i> <b>x</b> <i>squared</i>.
+
+17
+00:01:55 --> 00:02:01
+Here <b>x</b> is a <b>variable</b>. <b>f </b><i>of </i><b>x</b> changes when <b>x</b> changes.
+
+18
+00:02:02 --> 00:02:05
+Let us define our <b>function f </b><i>of </i><b>x.</b>
+
+19
+00:02:06 --> 00:02:12
+The first line <b>def f </b><i>of</i><b> x </b>is used to define the <b>function</b> <b>name</b> and its <b>parameters.</b>
+
+20
+00:02:13 --> 00:02:18
+The second line uses the <b>function parameters</b> to return the required value.
+
+21
+00:02:19 --> 00:02:23
+Let us start <b>ipython.</b>
+<p>Open the <b>terminal</b>.
+</p>
+
+22
+00:02:24 --> 00:02:28
+Type <b>ipython3 </b>and press <b>Enter</b>.
+
+23
+00:02:29 --> 00:02:35
+From here onwards, remember to press the <b>Enter</b> key after typing every command on the <b>terminal</b>.
+
+24
+00:02:36 --> 00:02:46
+Type,
+<p><b>def f </b><i>inside brackets </i><b>x </b><i>colon</i> <b>return x </b>asterisk <b>x</b>
+</p><p>and press the <b>Enter</b> key two times.
+</p>
+
+25
+00:02:47 --> 00:02:50
+Let us call the <b>f </b><i>of<b> </b></i><b>x </b>with different <b>arguments.</b>
+
+26
+00:02:51 --> 00:03:04
+Type,
+<p><b>f </b><i>inside brackets </i><b>2</b>
+</p><p><b>f </b><i>inside brackets </i><b>2.5</b>
+</p><p>It returned 4 and 6.25 respectively.
+</p>
+
+27
+00:03:05 --> 00:03:09
+Now let us see how to write <b>functions</b> without <b>arguments</b>.
+
+28
+00:03:10 --> 00:03:20
+Type the code as shown.
+<p>It defines a new <b>function</b> named <b>greet</b> which will print <b>"No function arguments"</b>
+</p>
+
+29
+00:03:21 --> 00:03:27
+Now we will call the <b>function</b> as,<b>greet </b><i>open and close parentheses</i>
+
+30
+00:03:28 --> 00:03:32
+Note that it is not mandatory for a <b>function</b> to <b>return</b> <b>values</b>.
+
+31
+00:03:33 --> 00:03:39
+The <b>function greet</b> neither takes any <b>arguments</b> nor <b>returns</b> any <b>value</b>.
+
+32
+00:03:40 --> 00:03:43
+Next we will learn how to <b>comment</b> in a <b>code</b>.
+
+33
+00:03:44 --> 00:03:47
+<b>Documenting/commenting code</b> is a good practice.
+
+34
+00:03:48 --> 00:03:56
+<b>Docstrings</b> are triple quoted <b>comments</b> entered just after the <b>function</b> <b>definition</b>.
+<p>It implies what the <b>function</b> does.
+</p>
+
+35
+00:03:57 --> 00:04:01
+Let us write a <b>function </b>which <b>returns average </b>of two numbers.
+
+36
+00:04:02 --> 00:04:13
+Type the code as shown. and press the <b>Enter</b> key two times.
+<p><b>Comments</b> within triple quotes give a clear explanation about the <b>code</b>.
+</p>
+
+37
+00:04:14 --> 00:04:22
+Type, <b>avg </b><i>question mark</i>
+<p>Here we can see the <b>docstring </b>of the <b>function avg.</b>
+</p>
+
+38
+00:04:23 --> 00:04:30
+Now let us pass 3 and 5 as values to the <b>arguments a</b> and <b>b</b> to the <b>function avg.</b>
+
+39
+00:04:31 --> 00:04:40
+Type, <b>avg </b><i>inside brackets</i><b> 3 </b><i>comma</i><b> 5</b> We get 4.0 as output.
+
+40
+00:04:41 --> 00:04:46
+Pause the video.Try this exercise and then resume the video.
+
+41
+00:04:47 --> 00:04:53
+Write a <b>function circle </b>which returns the <b>area</b> and <b>perimeter</b> of a <b>circle</b> with given radius <b>r</b>.
+
+42
+00:04:54 --> 00:04:57
+Switch back to the <b>terminal</b> for the solution.
+
+43
+00:04:58 --> 00:05:04
+Type the <b>code</b> as shown. Press the <b>Enter</b> key two times.
+
+44
+00:05:05 --> 00:05:09
+The <b>circle function</b> requires us to <b>return</b> two values.
+
+45
+00:05:10 --> 00:05:15
+A <b>python function</b> can return any number of values in the form of a <b>tuple</b>.
+
+46
+00:05:16 --> 00:05:24
+Let us call the <b>function circle</b> as, <b>a </b><i>comma</i><b> p </b><i>is equal to</i><b> circle </b><i>inside brackets </i><b>6</b>
+
+47
+00:05:25 --> 00:05:30
+Now Type, <b>print </b><i>inside brackets </i><b>a </b><i>comma</i><b> p</b>
+
+48
+00:05:31 --> 00:05:37
+We can see the output as area and perimeter of a circle of radius 6.
+
+49
+00:05:38 --> 00:05:43
+This brings us to the end of this tutorial. Let us summarize.
+
+50
+00:05:44 --> 00:05:53
+In this tutorial, we have learnt to,
+<p>Define <b>functions</b> in <b>Python</b>
+</p><p>Call a <b>function</b> by specifying the <b>function</b> name
+</p>
+
+51
+00:05:54 --> 00:06:05
+Write <b>docstrings</b> to a <b>function</b> by putting it as a triple quoted <b>string</b>
+<p>Pass <b>parameters</b> to a <b>function</b>
+</p><p>Return <b>values</b> from a <b>function</b>.
+</p>
+
+52
+00:06:06 --> 00:06:14
+Here are some self assessment questions for you to solve
+<p>1. How many <b>arguments</b> can be passed to a <b>Python function</b>?
+</p>
+
+53
+00:06:15 --> 00:06:19
+2.Write a <b>function</b> to find the area of a rectangle.
+
+54
+00:06:20 --> 00:06:27
+And the answers,
+<p>1. Any number of <b>arguments</b> can be passed to a <b>Python function</b>.
+</p>
+
+55
+00:06:28 --> 00:06:41
+2. We can write a <b>function</b> to find the area of a rectangle as:<b>def rectangle</b><i> underscore </i><b>area </b><i>inside brackets </i><b>l </b><i>comma</i><b> b </b><i>colon</i>
+<p><b>return l </b><i>asterisk</i><b> b </b>
+</p>
+
+56
+00:06:42 --> 00:06:45
+Please post your timed queries in this forum.
+
+57
+00:06:46 --> 00:06:50
+Please post your general queries on Python in this forum.
+
+58
+00:06:51 --> 00:06:54
+FOSSEE team coordinates the TBC project.
+
+59
+00:06:55 --> 00:07:03
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India. For more details, visit this website.
+
+60
+00:07:04 --> 00:07:09
+This is Priya from IIT Bombay signing off. Thanks for watching.
+

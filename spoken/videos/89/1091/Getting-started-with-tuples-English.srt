@@ -1,0 +1,395 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:06
+Welcome to the spoken tutorial on <b>Getting Started with tuples</b>.
+
+2
+00:00:07 --> 00:00:11
+In this tutorial we will:  Understand what <b>tuples</b> are
+
+3
+00:00:12 --> 00:00:14
+Compare <b>tuples</b> with <b>lists</b>
+
+4
+00:00:15 --> 00:00:20
+Know why they are needed and Learn to use them.
+
+5
+00:00:21 --> 00:00:28
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p>
+
+6
+00:00:29 --> 00:00:35
+<b>Python 3.4.3 </b>and  <b>IPython 5.1.0</b>
+
+7
+00:00:36 --> 00:00:46
+To practise this tutorial, you should know how to
+<p>run basic <b>Python </b>commands on the <b>ipython console</b>
+</p><p>and  use <b>lists</b>
+</p>
+
+8
+00:00:47 --> 00:00:52
+If not, see the relevant <b>Python </b>tutorials on this website.
+
+9
+00:00:53 --> 00:00:56
+First we will learn about <b>tuples</b>.
+
+10
+00:00:57 --> 00:01:01
+<b>Tuple</b> is a collection of <b>elements</b> similar to a <b>list</b>.
+
+11
+00:01:02 --> 00:01:07
+<b>Tuple</b> uses <b>parentheses</b>, whereas list uses <b>square brackets.</b>
+
+12
+00:01:08 --> 00:01:12
+<b>Elements</b> of a <b>tuple</b> cannot be changed once it is assigned.
+
+13
+00:01:13 --> 00:01:16
+But in a <b>list, elements</b> can be changed.
+
+14
+00:01:17 --> 00:01:20
+Here are few examples for declaring <b>tuples</b>.
+
+15
+00:01:21 --> 00:01:26
+<i>Inside brackets</i> 1, 2.5 is a <b>tuple</b> with two <b>elements</b>.
+
+16
+00:01:27 --> 00:01:31
+The same can be declared as 1, 2.5.
+
+17
+00:01:32 --> 00:01:36
+<i>Inside brackets </i>1 comma is a <b>tuple</b> with one <b>element</b>.
+
+18
+00:01:37 --> 00:01:40
+The same can be declared as 1 comma
+
+19
+00:01:41 --> 00:01:51
+<p><i>Inside brackets again inside brackets </i>1 comma and outside bracket a comma is a <b>tuple</b> with one <b>tuple</b> as <b>element</b>.
+</p>
+
+20
+00:01:52 --> 00:01:58
+The same can be declared as <i>inside brackets</i> 1 comma and outside bracket a comma.
+
+21
+00:01:59 --> 00:02:03
+Let us start <b>ipython</b>. Open the <b>terminal.</b>
+
+22
+00:02:04 --> 00:02:09
+Type <b>ipython3 </b>and press <b>Enter.</b>
+
+23
+00:02:10 --> 00:02:16
+From here onwards, remember to press the <b>Enter</b> key after typing every command on the <b>terminal</b>.
+
+24
+00:02:17 --> 00:02:37
+Let's learn to create a <b>tuple</b>.
+<p>Type, <b>t </b><i>is equal to inside brackets</i><b> 1 </b><i>comma</i><b> 2.5 </b><i>comma</i><b> </b><i>inside double quotes </i><b>hello </b><i>comma</i><b> minus 4 </b><i>comma</i><b> </b><i>inside double quotes </i><b>world </b><i>comma</i><b> 1.24 </b><i>comma</i><b> 5</b>
+</p>
+
+25
+00:02:38 --> 00:02:46
+Type, <b>t</b>
+<p>It is similar to <b>list</b> except that <b>parentheses</b> are used instead of <b>square brackets</b>.
+</p>
+
+26
+00:02:47 --> 00:02:50
+At least one comma is mandatory for a <b>tuple</b>.
+
+27
+00:02:51 --> 00:02:55
+The brackets are optional, but should be added for clarity.
+
+28
+00:02:56 --> 00:03:01
+The items in the <b>tuple</b> can be accessed by their <b>index</b> <b>positions</b>.
+
+29
+00:03:02 --> 00:03:06
+Type, <b>t </b><i>inside square brackets </i><b>3</b>
+
+30
+00:03:07 --> 00:03:15
+Type, <b>t </b><i>inside square brackets </i><b>1 </b><i>colon </i><b>5 </b><i>colon </i><b>2</b>
+<p>It prints the corresponding <b>slice.</b>
+</p>
+
+31
+00:03:16 --> 00:03:19
+Now we try to change an <b>element</b> in the <b>tuple</b>.
+
+32
+00:03:20 --> 00:03:27
+Type, <b>t </b><i>inside square brackets </i><b>2 </b><i>is equal to</i><b> </b><i>inside double quotes </i><b>Hello</b>
+
+33
+00:03:28 --> 00:03:34
+We can see that, it raises an error saying '<b>tuple object does not support item assignment'</b>.
+
+34
+00:03:35 --> 00:03:43
+It shows, <b>elements</b> of a <b>tuple</b> cannot be changed after it is created.
+<p>This is called <b>immutability. </b>
+</p>
+
+35
+00:03:44 --> 00:03:47
+We can iterate over <b>tuples</b> like <b>lists</b>.
+
+36
+00:03:48 --> 00:03:56
+Type, <b>for x in t </b><i>colon</i>
+<p><b>print </b><i>inside brackets </i><b>x</b>
+</p>
+
+37
+00:03:57 --> 00:04:00
+It prints each <b>element</b> of the <b>tuple t.</b>
+
+38
+00:04:01 --> 00:04:06
+Pause the video.
+<p>Try this exercise and then resume the video.
+</p>
+
+39
+00:04:07 --> 00:04:11
+Let us look at a simple problem of <b>swapping values</b>.
+
+40
+00:04:12 --> 00:04:19
+Given, <b>a</b><i> is equal to</i><b> 5</b> and <b>b </b><i>is equal to</i><b> 7</b>, swap the values of <b>a</b> and <b>b</b>.
+
+41
+00:04:20 --> 00:04:23
+Switch to the <b>terminal</b> for the solution.
+
+42
+00:04:24 --> 00:04:27
+Type, <b>a </b><i>is equal to</i><b> 5</b>
+
+43
+00:04:28 --> 00:04:31
+<b>b </b><i>is equal to</i><b> 7</b>
+
+44
+00:04:32 --> 00:04:37
+Then type, <b>a</b>
+<p>Type, <b>b</b>
+</p>
+
+45
+00:04:38 --> 00:04:44
+We now create a <b>variable</b> say, <b>temp </b>and <b>swap</b> the <b>values</b> using this <b>variable.</b>
+<p><br/>
+</p>
+
+46
+00:04:45 --> 00:04:48
+Type
+<p><b>temp </b><i>is equal to</i><b> a </b>
+</p>
+
+47
+00:04:49 --> 00:04:52
+<b>a </b><i>is equal to</i><b> b</b>
+
+48
+00:04:53 --> 00:04:56
+<b>b </b><i>is equal to</i><b> temp</b>
+
+49
+00:04:57 --> 00:05:01
+Then type, <b>a</b>
+<p>Type, <b>b</b>
+</p>
+
+50
+00:05:02 --> 00:05:09
+We can see that the values are successfully swapped now.
+<p>But this is the traditional approach.
+</p>
+
+51
+00:05:10 --> 00:05:13
+Now let us do it in the <b>Python</b> way.
+
+52
+00:05:14 --> 00:05:20
+Type
+<p><b>a </b><i>is equal to</i><b> 5</b>
+</p><p><b>b </b><i>is equal to</i><b> 7</b>
+</p>
+
+53
+00:05:21 --> 00:05:26
+<b>a, b </b><i>is equal to</i><b> b, a</b>
+
+54
+00:05:27 --> 00:05:30
+Now we will check whether the values are swapped.
+
+55
+00:05:31 --> 00:05:35
+Type, <b>a</b>
+<p>Type, <b>b</b>
+</p>
+
+56
+00:05:36 --> 00:05:39
+We can see that the <b>values</b> are <b>swapped</b> easily.
+
+57
+00:05:40 --> 00:05:43
+We can also do this for different <b>datatypes</b>.
+
+58
+00:05:44 --> 00:05:48
+Type, <b>a </b><i>is equal to</i><b> 2.5 </b>
+
+59
+00:05:49 --> 00:05:58
+<b>b </b><i>is equal to inside double quotes</i><b> hello</b>
+<p><b>a, b </b><i>is equal to</i><b> b, a</b>
+</p>
+
+60
+00:05:59 --> 00:06:06
+Now to check the values, type, <b>a</b>
+<p>Type, <b>b</b>
+</p>
+
+61
+00:06:07 --> 00:06:11
+This is possible because of the <b>immutability</b> of <b>tuples</b>.
+
+62
+00:06:12 --> 00:06:15
+This is called<b> tuple packing</b> and <b>unpacking</b>.
+
+63
+00:06:16 --> 00:06:20
+When you type, <b>a</b> <i>comma</i> <b>b</b> <i>is equal to</i> <b>b</b> <i>comma</i> <b>a</b>
+
+64
+00:06:21 --> 00:06:31
+First, the values of <b>b</b> and <b>a</b> are <b>packed</b> into a <b>tuple</b> on the right side. Then it is <b>unpacked</b> into the <b>variables</b> <b>a</b> and <b>b</b>.
+
+65
+00:06:32 --> 00:06:35
+Let us first see about <b>tuple packing</b>.
+
+66
+00:06:36 --> 00:06:42
+Type, <b>5 </b><i>comma</i>
+<p>We can see a <b>tuple</b> with one <b>element</b>. 
+</p>
+
+67
+00:06:43 --> 00:06:48
+Type, <b>5 </b><i>comma inside double quotes </i><b>hello </b><i>comma</i><b> 2.5 </b>
+
+68
+00:06:49 --> 00:06:52
+Now it is a <b>tuple</b> with three <b>elements</b>.
+
+69
+00:06:53 --> 00:07:00
+When we type two or more <b>elements</b> separated by <b>commas</b>, those <b>elements</b> are packed into a <b>tuple</b>.
+
+70
+00:07:01 --> 00:07:08
+<b>Immutability</b> of <b>tuples</b> ensures that the <b>values</b> are not changed during the <b>packing</b> and <b>unpacking</b>.
+
+71
+00:07:09 --> 00:07:14
+This brings us to the end of this tutorial. Let us summarize.
+
+72
+00:07:15 --> 00:07:20
+In this tutorial, we have learnt about, <b>Tuples</b>
+
+73
+00:07:21 --> 00:07:24
+Similarities of <b>tuples</b> with <b>lists</b>
+
+74
+00:07:25 --> 00:07:31
+<b>Immutability</b> of <b>tuples</b> and Concept of <b>Packing</b> and <b>unpacking</b> of <b>tuples</b>.
+
+75
+00:07:32 --> 00:07:35
+Here are some self assessment questions for you to solve.
+<p><br/>
+</p>
+
+76
+00:07:36 --> 00:07:49
+First. Define a <b>tuple</b> containing two values as given below. The first value is <b>integer</b> 4 and the second value is <b>float</b> 2.5.
+
+77
+00:07:50 --> 00:07:57
+Second. If we type, <b>a</b> <i>is equal to</i><b> 5</b> <i>comma </i>then what is the <b>datatype</b> of <b>a</b>?
+
+78
+00:07:58 --> 00:08:15
+Third. If we type, <b>a</b> <i>is equal to inside brackets </i><b>2</b> <i>comma </i><b>3   a</b> <i>inside square brackets </i><b>0</b> <i>comma</i> <b>a</b> <i>inside square brackets </i><b>1</b> <i>is equal to inside brackets </i><b>3</b> <i>comma</i> <b>4</b>
+<p>What is the output?
+</p>
+
+79
+00:08:16 --> 00:08:31
+And the answers,
+<p>First. A <b>tuple</b> is defined by enclosing <b>parentheses</b> around a sequence of items separated by commas. Hence, we write our <b>tuple</b> as, <i>inside brackets </i>4 <i>comma</i> 2.5
+</p>
+
+80
+00:08:32 --> 00:08:38
+Second. Since the given data is 5 followed by a comma, it is a <b>tuple</b>
+
+81
+00:08:39 --> 00:08:45
+Third. The given operation will give a <b>TypeError</b> because <b>tuples</b> are <b>immutable</b>.
+
+82
+00:08:46 --> 00:08:49
+Please post your timed queries in this forum.
+
+83
+00:08:50 --> 00:08:54
+Please post your general queries on Python in this forum.
+
+84
+00:08:55 --> 00:08:58
+FOSSEE team coordinates the TBC project.
+
+85
+00:08:59 --> 00:09:08
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website.
+</p>
+
+86
+00:09:09 --> 00:09:14
+This is Priya from IIT Bombay signing off.
+<p>Thanks for watching.
+</p>
+

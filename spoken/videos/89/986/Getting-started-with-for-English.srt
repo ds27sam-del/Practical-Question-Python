@@ -1,0 +1,393 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:07
+Hello Friends. Welcome to the tutorial on "Getting started with <b>for loops</b>".
+
+2
+00:00:08 --> 00:00:16
+At the end of this tutorial, you will be able to,
+<p>Use the <b>for loop</b>.
+</p><p>Use <b>range() function</b>.
+</p>
+
+3
+00:00:17 --> 00:00:24
+To record this tutorial, I am using,
+<p><b>Ubuntu Linux 14.04</b> operating system
+</p>
+
+4
+00:00:25 --> 00:00:31
+<b>Python 3.4.3</b> and <b>IPython 5.1.0</b>
+
+5
+00:00:32 --> 00:00:36
+To practice this tutorial, you should know how to use <b>lists</b>.
+
+6
+00:00:37 --> 00:00:41
+If not, see the relevant <b>Python</b> tutorials on this website.
+
+7
+00:00:42 --> 00:00:45
+First let us see the syntax of <b>for loop</b>.
+
+8
+00:00:46 --> 00:00:53
+<b>for statement</b> iterates over the members of a sequence in order, executing the <b>block</b> each time.
+
+9
+00:00:54 --> 00:01:00
+Here the <b>loop variable</b> takes the value of the <b>item</b> inside the sequence on each iteration.
+
+10
+00:01:01 --> 00:01:04
+For each <b>item,</b> the <b>loop body</b> is executed.
+
+11
+00:01:05 --> 00:01:09
+We will see an example of <b>for loop</b> and how to execute it.
+
+12
+00:01:10 --> 00:01:16
+Let us first open the <b>Terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously.
+
+13
+00:01:17 --> 00:01:21
+Now, type <b>ipython3</b> and press <b>Enter</b>.
+
+14
+00:01:22 --> 00:01:29
+Let us initialise the <b>pylab package</b>.
+<p>Type <b>%pylab </b>and press<b> Enter.</b>
+</p>
+
+15
+00:01:30 --> 00:01:32
+Open your <b>text editor</b>.
+
+16
+00:01:33 --> 00:01:38
+Let us write a <b>for loop</b>. Type the code as shown here:
+
+17
+00:01:39 --> 00:01:45
+Here the loop variable iterates over a list of numbers and finds the square root of each number.
+
+18
+00:01:46 --> 00:01:51
+The numbers are: 4, 9, 16, 25, and 36.
+
+19
+00:01:52 --> 00:01:59
+Note that here we used two variables, <b>numbers </b> which is a <b>list</b> of numbers
+
+20
+00:02:00 --> 00:02:10
+<b>num</b> - which is the element of <b>list</b> under consideration, in each cycle of the <b>for loop</b>.
+<p>The variable names can be any of your choice.
+</p>
+
+21
+00:02:11 --> 00:02:17
+Note that a <b>colon</b> after the <b>for statement</b> indicates the starting of <b>loop body</b>.
+
+22
+00:02:18 --> 00:02:23
+Every <b>statement </b>in <b>loop</b> starts with 4 spaces.
+
+23
+00:02:24 --> 00:02:28
+It means that, the line is a <b>block</b> of <b>code</b> in <b>for loop</b>.
+
+24
+00:02:29 --> 00:02:34
+In this example, it is only a single <b>statement</b> in the <b>block</b>.
+
+25
+00:02:35 --> 00:02:45
+Note that the line <b>print("This is outside for-loop")</b> is not indented.
+<p>It means that it is not a part of the<b> for loop</b>. 
+</p>
+
+26
+00:02:46 --> 00:02:50
+And the lines after that don't fall in the scope of the <b>for loop</b>.
+
+27
+00:02:51 --> 00:03:00
+Thus each <b>block</b> is separated by the indentation level.
+<p>This marks the importance of <b>white-spaces</b> in <b>Python</b>.
+</p>
+
+28
+00:03:01 --> 00:03:12
+Save the file as <b>sqrt_num_list.py </b>in the<b> home directory</b>.
+
+29
+00:03:13 --> 00:03:18
+Now switch back to your <b>terminal</b>.
+<p>Let us clear the <b>terminal</b>.
+</p>
+
+30
+00:03:19 --> 00:03:30
+Run the script using the <b>run</b> command as <b><i>percent</i> run <i>minus</i> i filename </b>and press <b>Enter.</b>
+
+31
+00:03:31 --> 00:03:36
+We get the square root of the given numbers executed by the <b>for loop</b>.
+
+32
+00:03:37 --> 00:03:41
+This is the <b>print statement</b> output executed after the <b>for loop</b>.
+
+33
+00:03:42 --> 00:03:47
+Use the same example we used in <b>sqrt_num_list.py</b>
+
+34
+00:03:48 --> 00:03:52
+Type each line of the code in the <b>IPython interpreter prompt. </b>
+
+35
+00:03:53 --> 00:03:57
+Skip the line: <b>print("This is outside for-loop")</b>
+
+36
+00:03:58 --> 00:04:00
+Switch to the <b>terminal</b>.
+
+37
+00:04:01 --> 00:04:19
+Type,<b>numbers <i>equal to inside square brackets</i> 4, 9, 16, 25, 36</b> and press <b>Enter</b>
+
+38
+00:04:20 --> 00:04:26
+<b>for num in numbers </b><i>colon</i> Press <b>Enter</b>
+
+39
+00:04:27 --> 00:04:39
+You will notice that, the <b>prompt</b> changes to three dots.
+<p>And the cursor is not after the three dots but, there are four spaces from the three dots.
+</p>
+
+40
+00:04:40 --> 00:04:49
+Please note that <b>IPython</b> automatically indents the <b>block</b>.
+<p>The three dots tell you that you are inside a <b>block</b>.
+</p>
+
+41
+00:04:50 --> 00:05:18
+Now type the rest of the <b>for loop</b>.
+<p><b>print <i>inside parentheses inside quotes sqrt of comma </i>num <i>comma inside quotes is comma</i> num <i>asterick asterick which is raised to power of</i> 0.5</b> and press <b>Enter</b>
+</p>
+
+42
+00:05:19 --> 00:05:25
+Now we have finished the <b>statements</b> in the <b>block</b>.
+<p>But still the <b>interpreter</b> is showing three dots. 
+</p>
+
+43
+00:05:26 --> 00:05:29
+This means that you are still inside the <b>block</b>.
+
+44
+00:05:30 --> 00:05:36
+To exit from the <b>block</b>, press <b>Enter</b> key twice without entering anything else.
+
+45
+00:05:37 --> 00:05:43
+It printed the square root of each number in the <b>list</b>, which was executed in the <b>for loop.</b>
+
+46
+00:05:44 --> 00:05:47
+Next we will see about <b>range built-in function</b> in <b>Python</b>.
+
+47
+00:05:48 --> 00:05:51
+<b>range()</b> function generates a <b>list</b> of <b>integers.</b>
+
+48
+00:05:52 --> 00:05:58
+The syntax is: <b>range  start <i>comma</i> stop <i>comma</i> step</b>
+
+49
+00:05:59 --> 00:06:10
+For example: <b>range <i>inside parentheses</i> one <i>comma</i> twenty <i>comma</i> two </b> generates integers from 1 to 19 with step of 2
+
+50
+00:06:11 --> 00:06:17
+<b>range <i>inside parentheses</i> twenty </b> generates integers from 0 to 19
+
+51
+00:06:18 --> 00:06:24
+Note that the ending number that you specify will not be included in the <b>list</b>.
+
+52
+00:06:25 --> 00:06:33
+Find out the cube of all the numbers from one to ten.
+<p>Execute this in the <b>Python interpreter</b>.
+</p>
+
+53
+00:06:34 --> 00:06:39
+Let us now try to run the <b>for loop</b> in a <b>Python terminal</b> window.
+
+54
+00:06:40 --> 00:06:45
+Open a new <b>terminal</b> by  pressing <b>Ctrl+Alt+T</b> keys simultaneously.
+
+55
+00:06:46 --> 00:06:53
+Start the <b>Python interpreter</b> by issuing the <b>command python </b>in the new <b>terminal</b> and press <b>Enter</b>.
+
+56
+00:06:54 --> 00:07:05
+Type, <b>for i </b>in range <b><i>inside parentheses</i> one <i>comma </i>eleven <i>colon</i> and </b>press <b>Enter</b>
+
+57
+00:07:06 --> 00:07:16
+We will see that this time it shows three dots, but the cursor is close to the dots.
+<p>So we have to indent the <b>block</b>.
+</p>
+
+58
+00:07:17 --> 00:07:26
+The <b>Python interpreter</b> does not indent the code automatically.
+<p>So enter four <b>spaces</b> and then type the following.
+</p>
+
+59
+00:07:27 --> 00:07:43
+<b>print <i>inside parentheses</i> i <i>comma inside quotes </i>cube is <i>comma</i> i <i>raised to power of</i> three</b> press <b>Enter</b>.
+
+60
+00:07:44 --> 00:07:52
+Now when we hit <b>Enter</b>, we still see the three dots.
+<p>To get out of the <b>block</b>, press <b>Enter</b> once again.
+</p>
+
+61
+00:07:53 --> 00:08:02
+Okay!   So the main thing we learnt here is - how to use the <b>Python interpreter</b> and
+<p>the <b>IPython interpreter</b> to specify <b>blocks</b>.
+</p>
+
+62
+00:08:03 --> 00:08:06
+Print all the odd numbers from 1 to 50.
+
+63
+00:08:07 --> 00:08:11
+Let us do it in our <b>IPython interpreter</b> for ease of use.
+
+64
+00:08:12 --> 00:08:16
+The problem can be solved by just using the <b>range() function</b>.
+
+65
+00:08:17 --> 00:08:19
+Let us clear the <b>terminal</b>.
+
+66
+00:08:20 --> 00:08:39
+for<b> i <i>in range inside parentheses</i> one <i>comma</i> fifty <i>comma</i> two <i>colon </i></b>
+<p>press <b>Enter </b>
+</p><p><b>print<i> inside parentheses</i> i</b> press <b>Enter </b>twice.
+</p>
+
+67
+00:08:40 --> 00:08:44
+The first <b>parameter</b> is the starting number of the sequence.
+
+68
+00:08:45 --> 00:08:48
+The second <b>parameter</b> is the end of the <b>range</b>.
+
+69
+00:08:49 --> 00:08:58
+Note that the <b>sequence</b> does not include the ending number.
+<p>The third <b>parameter</b> is for stepping through the <b>sequence</b>.
+</p>
+
+70
+00:08:59 --> 00:09:04
+Here we gave <b>two</b> which means we are skipping every alternate <b>element</b>.
+
+71
+00:09:05 --> 00:09:14
+This brings us to the end of the tutorial.
+<p>In this tutorial, we learnt to, Create <b>blocks</b> in <b>python</b> using<b> for</b>
+</p>
+
+72
+00:09:15 --> 00:09:16
+Indent the <b>blocks</b> of code
+
+73
+00:09:17 --> 00:09:22
+Iterate over a list using <b>for loop</b> and  Use the <b>range() function</b>
+
+74
+00:09:23 --> 00:09:31
+Here are some self assessment questions for you to solve
+<p>Indentation is not mandatory in <b>Python</b>
+</p><p>True or  False
+</p>
+
+75
+00:09:32 --> 00:09:42
+Write a <b>for loop</b> to print the product of all natural numbers from 1 to 20.
+<p>What will be the output of: <b>range(1, 5)</b>
+</p>
+
+76
+00:09:43 --> 00:09:50
+And the answers,
+<p>1. False, <b>Indentation</b> is essential in <b>python</b>.
+</p>
+
+77
+00:09:51 --> 00:09:57
+2. <b>y </b><i>equal to</i><b> one</b>
+<p>'<i>for x in range <b> one </b></i>comma<i><b> twenty one</b></i>
+</p>
+
+78
+00:09:58 --> 00:10:02
+<b>y</b><i> into equal to</i><b> x</b>
+<p><b>print y</b>
+</p>
+
+79
+00:10:03 --> 00:10:13
+3. <b>range(1, 5)</b> will produce a list of integers from 1 to 4 i.e. [1,2,3,4]
+
+80
+00:10:14 --> 00:10:17
+Please post your timed queries in this forum.
+
+81
+00:10:18 --> 00:10:22
+Please post your general queries on Python in this forum.
+
+82
+00:10:23 --> 00:10:26
+FOSSEE team coordinates the TBC project.
+
+83
+00:10:27 --> 00:10:36
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website.
+</p>
+
+84
+00:10:37 --> 00:10:42
+This is Trupti Kini from IIT Bombay signing off.
+<p>Thank you.
+</p>
+

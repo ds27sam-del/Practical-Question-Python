@@ -1,0 +1,357 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:05
+Welcome to the spoken tutorial on <b>Least Square Fit</b>.
+
+2
+00:00:06 --> 00:00:15
+In this tutorial, you will learn to,
+<p>Generate the <b>least square fit </b>line for a given set of <b>points.</b>
+</p>
+
+3
+00:00:16 --> 00:00:23
+To record this tutorial, I am using <b>Ubuntu Linux 16.04</b> operating system
+
+4
+00:00:24 --> 00:00:30
+<b>Python 3.4.3 </b>and <b>IPython 5.1.0</b>
+
+5
+00:00:31 --> 00:00:37
+To practise this tutorial, you should know about
+<p>using <b>plot</b> interactively
+</p>
+
+6
+00:00:38 --> 00:00:40
+Loading data from files
+
+7
+00:00:41 --> 00:00:47
+Using <b>arrays</b> and <b>matrices </b>and theoretical knowledge of<b> least square method</b>
+
+8
+00:00:48 --> 00:00:52
+If not, see the relevant <b>Python </b>tutorials on this website.
+
+9
+00:00:53 --> 00:01:02
+Before beginning this tutorial, please download the file<b> pendulum.txt </b>from the <b>Code files</b> link of this tutorial.
+
+10
+00:01:03 --> 00:01:06
+Save it in the current <b>working directory</b>.
+
+11
+00:01:07 --> 00:01:11
+Let us start the tutorial with the help of an example.
+
+12
+00:01:12 --> 00:01:21
+Generate a <b>least square fit</b> line for<b> L </b>versus <b>t square</b> using the data in the file '<b>pendulum.txt'</b>.
+
+13
+00:01:22 --> 00:01:25
+Let us open the file <b>pendulum.txt.</b>
+
+14
+00:01:26 --> 00:01:31
+This is an <b>input file</b> generated from a simple <b>pendulum experiment</b>.
+
+15
+00:01:32 --> 00:01:35
+The first column is the <b>length</b> of the <b>pendulum.</b>
+
+16
+00:01:36 --> 00:01:40
+The second is the corresponding <b>time period</b> of the <b>pendulum</b>.
+
+17
+00:01:41 --> 00:01:46
+The <b>square</b> of <b>time period</b> is directly proportional to its <b>length.</b>
+
+18
+00:01:47 --> 00:01:51
+We shall plot <b>L</b> versus <b>t square</b> and verify this.
+
+19
+00:01:52 --> 00:01:56
+Let us start <b>ipython.</b> Open the <b>terminal</b>.
+
+20
+00:01:57 --> 00:02:02
+Type <b>ipython3 </b>and press <b>Enter</b>.
+
+21
+00:02:03 --> 00:02:09
+From here onwards remember to press the <b>Enter</b> key after typing every command on the <b>terminal</b>.
+
+22
+00:02:10 --> 00:02:16
+To read the input file and <b>parse</b> the data, we are going to use the <b>loadtxt function</b>.
+
+23
+00:02:17 --> 00:02:22
+Type, <b>from numpy import loadtxt</b>
+
+24
+00:02:23 --> 00:02:36
+Now type, Capital <b>L </b><i>comma</i><b> t </b><i>is equal to</i><b> loadtxt</b><i> inside brackets inside double quotes </i><b>pendulum.txt </b><i>comma</i><b> unpack </b><i>is equal to</i><b> True</b>
+
+25
+00:02:37 --> 00:02:41
+<b>loadtxt</b> is a <b>method</b> available in the <b>numpy library</b>.
+
+26
+00:02:42 --> 00:02:48
+Since <b>True</b> is passed to <b>unpack argument</b>, the returned <b>array</b> is transposed.
+
+27
+00:02:49 --> 00:02:53
+This means that we will get one <b>array</b> per column in the file.
+
+28
+00:02:54 --> 00:02:58
+Type capital <b>L</b>
+
+29
+00:02:59 --> 00:03:02
+Then type <b>t</b>
+
+30
+00:03:03 --> 00:03:07
+We can see that<b> L </b>and <b>t</b> are <b>length</b> and <b>time</b> values.
+
+31
+00:03:08 --> 00:03:15
+To know more about <b>loadtxt, </b>type <b>loadtxt </b><i>question mark</i>
+
+32
+00:03:16 --> 00:03:18
+Press <b>q </b>to exit.
+
+33
+00:03:19 --> 00:03:26
+Let us first <b>plot L </b>versus <b>t square. </b>
+<p>Type as shown.
+</p>
+
+34
+00:03:27 --> 00:03:31
+Here <b>bo</b> represents the blue circle marker.
+
+35
+00:03:32 --> 00:03:37
+Then type, <b>plt.show </b><i>open and close brackets</i>
+
+36
+00:03:38 --> 00:03:44
+We can see that there is a <b>visible linear trend</b>, but we do not get a straight line connecting them.
+
+37
+00:03:45 --> 00:03:49
+Looking at the <b>trend</b>, we can now propose a <b>model</b> for the data.
+
+38
+00:03:50 --> 00:03:52
+Let me close this image.
+
+39
+00:03:53 --> 00:04:02
+We need to fit a line through points for the the equation.
+<p>Capital <b>T </b><i>square is</i><b> </b><i>equal to</i><b> m </b><i>asterisk</i><b> </b>Capital <b>L </b><i>plus</i><b> c</b>
+</p>
+
+40
+00:04:03 --> 00:04:09
+Where <b>m</b> represents the <b>slope</b> of the line and <b>c</b> represents the intercept of the line.
+
+41
+00:04:10 --> 00:04:14
+We will obtain <b>m</b> and <b>c</b> using <b>linear regression</b>.
+
+42
+00:04:15 --> 00:04:19
+Let us see the steps to generate a <b>least</b> <b>square fit line.</b>
+
+43
+00:04:20 --> 00:04:32
+First generate the two <b>matrices tsq</b> and <b>A</b>.  Use the <b>lstsq function</b> to find the values of the slope <b>m</b> and the intercept <b>c</b>.
+
+44
+00:04:33 --> 00:04:40
+In <b>matrix</b> form, the equation can be represented as
+<p><b>tsq</b> <i>is equal to</i> <b>A </b><i>asterisk </i><b>p</b>
+</p>
+
+45
+00:04:41 --> 00:04:45
+<b>tsq</b> is a one-dimensional array of size <b>n</b>.
+
+46
+00:04:46 --> 00:04:51
+Each <b>element</b> of this <b>array</b> will contain the <b>square</b> of the <b>time period</b>.
+
+47
+00:04:52 --> 00:04:55
+<b>A</b> is a <b>matrix</b> of size <b>n </b>by <b>2</b>.
+
+48
+00:04:56 --> 00:04:59
+The first column will contain the <b>length</b> of the <b>pendulum</b>.
+
+49
+00:05:00 --> 00:05:03
+The second column will contain the number 1.
+
+50
+00:05:04 --> 00:05:07
+<b>p</b> is a one-dimensional <b>array</b> of size 2.
+
+51
+00:05:08 --> 00:05:11
+The first row contains the <b>slope</b> of the line.
+
+52
+00:05:12 --> 00:05:19
+The second row contains the <b>intercept</b> of the line.
+<p>We need to find <b>p</b> to <b>plot</b> the line.
+</p>
+
+53
+00:05:20 --> 00:05:24
+Let us now generate the <b>A matrix</b> with <b>L</b> values.
+
+54
+00:05:25 --> 00:05:33
+We shall generate a <b>matrix</b> with the first <b>row</b> as <b>L</b> values and the second <b>row</b> as ones.
+<p>Then take the transpose of it.
+</p>
+
+55
+00:05:34 --> 00:05:37
+Type as shown.
+
+56
+00:05:38 --> 00:05:41
+We see that we have intermediate <b>matrix</b>.
+
+57
+00:05:42 --> 00:05:44
+Now we need the transpose.
+
+58
+00:05:45 --> 00:05:52
+Type, Capital <b>A </b>is equal to<b> inter</b><i> underscore </i><b>mat </b>dot<b> </b>Capital <b>T </b>
+
+59
+00:05:53 --> 00:05:55
+Now type capital <b>A</b>
+
+60
+00:05:56 --> 00:06:00
+Now we have both the <b>matrices</b> <b>A</b> and <b>tsq</b>.
+
+61
+00:06:01 --> 00:06:07
+We only need to use <b>lstsq.</b>
+<p>Type as shown.
+</p>
+
+62
+00:06:08 --> 00:06:15
+Now to see the result, type <b>result</b>
+<p>The <b>result</b> is a sequence of <b>values</b>. 
+</p>
+
+63
+00:06:16 --> 00:06:22
+Now we will store result of <b>index 0</b> in <b>m</b> and <b>c</b> respectively.
+
+64
+00:06:23 --> 00:06:33
+Type, <b>p </b><i>is equal to</i><b> result </b><i>inside square brackets</i><b> 0</b>
+<p><br/>
+Then type, <b>m </b><i>comma </i><b>c </b><i>is equal to</i><b> p</b>
+</p>
+
+65
+00:06:34 --> 00:06:38
+Now type, <b>m</b> <b>c</b>
+
+66
+00:06:39 --> 00:06:42
+We can see the values for <b>m</b> and <b>c</b>.
+
+67
+00:06:43 --> 00:06:50
+Now we have <b>m</b> and <b>c.</b>
+<p>We need to generate the fitted values of <b>t square</b>.
+</p>
+
+68
+00:06:51 --> 00:06:54
+Type as shown.
+
+69
+00:06:55 --> 00:07:00
+Then type, <b>plt.show</b><i> open and close brackets</i>
+
+70
+00:07:01 --> 00:07:05
+We get the least square fit of <b>L</b> versus <b>t square</b>.
+
+71
+00:07:06 --> 00:07:08
+Let me close this window.
+
+72
+00:07:09 --> 00:07:14
+This brings us to the end of this tutorial. Let us summarize.
+
+73
+00:07:15 --> 00:07:22
+In this tutorial, we have learnt to, Generate a <b>least square fit</b> using <b>matrices</b>
+
+74
+00:07:23 --> 00:07:28
+Use the <b>function lstsq()</b> to generate a <b>least square fit</b> line
+
+75
+00:07:29 --> 00:07:32
+Here is a self assessment question for you to solve
+
+76
+00:07:33 --> 00:07:34
+What does the following <b>function</b> produce?
+
+77
+00:07:35 --> 00:07:50
+And the answer,
+<p>The <b>function ones</b><i> underscore </i><b>like </b><i>inside brackets inside square brackets </i>1 <i>comma</i> 2 <i>comma</i> 3 will generate <b>array</b> <i>inside brackets inside square brackets </i><b>1</b> <i>comma</i> <b>1</b> <i>comma</i> <b>1</b>. 
+</p>
+
+78
+00:07:51 --> 00:07:54
+Please post your timed queries in this forum.
+
+79
+00:07:55 --> 00:07:59
+Please post your general queries on Python in this forum.
+
+80
+00:08:00 --> 00:08:03
+FOSSEE team coordinates the TBC project.
+
+81
+00:08:04 --> 00:08:13
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website.
+</p>
+
+82
+00:08:14 --> 00:08:19
+This is Priya from IIT Bombay signing off. Thanks for watching.
+

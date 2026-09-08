@@ -1,0 +1,505 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:06
+Welcome to the spoken tutorial on <b>Advanced Features of Functions</b>.
+
+2
+00:00:07 --> 00:00:14
+In this tutorial, we will learn to- Assign<b> default values</b> to <b>arguments</b>, when defining <b>functions</b>
+
+3
+00:00:15 --> 00:00:19
+Define and call <b>functions</b> with <b>keyword arguments</b>
+
+4
+00:00:20 --> 00:00:24
+Define and call <b>functions</b> with <b>arbitrary arguments</b>
+
+5
+00:00:25 --> 00:00:30
+Learn some of the <b>built-in functions</b> available in <b>Python standard library</b>.
+
+6
+00:00:31 --> 00:00:37
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p>
+
+7
+00:00:38 --> 00:00:44
+<b>Python 3.4.3</b>  and <b>IPython 5.1.0</b>
+
+8
+00:00:45 --> 00:00:54
+To practise this tutorial, you should know how to
+<p>run basic <b>Python </b>commands on the <b>IPython console</b>
+</p><p>use<b> functions.</b>
+</p>
+
+9
+00:00:55 --> 00:00:59
+If not, see the relevant <b>Python </b>tutorials on this website.
+
+10
+00:01:00 --> 00:01:04
+First let us see about default <b>arguments</b> in <b>Python</b>.
+
+11
+00:01:05 --> 00:01:09
+<b>Function arguments</b> can have default values in <b>Python</b>.
+
+12
+00:01:10 --> 00:01:17
+When we call a <b>function</b> without a value for an <b>argument</b>, its default value is used if available
+
+13
+00:01:18 --> 00:01:20
+Otherwise it will give error.
+
+14
+00:01:21 --> 00:01:25
+Let us start <b>ipython</b>.
+<p>Open the <b>terminal.</b>
+</p>
+
+15
+00:01:26 --> 00:01:29
+Type <b>ipython3 </b>and press <b>Enter.</b>
+
+16
+00:01:30 --> 00:01:36
+From here onwards, remember to press the <b>Enter</b> key after typing every <b>command</b> on the <b>terminal</b>.
+
+17
+00:01:37 --> 00:01:39
+Let us define a <b>function Welcome</b>.
+
+18
+00:01:40 --> 00:01:43
+Type the code as shown.
+
+19
+00:01:44 --> 00:01:54
+Here, <b>welcome</b> is the <b>function</b> name
+<p><b>greet</b> is the <b>argument</b> with no default values and the <b>name argument</b> has a default value <b>World</b>.
+</p>
+
+20
+00:01:55 --> 00:02:02
+In a <b>function,</b> all the <b>arguments</b> with default values should come after non-default <b>arguments</b>.
+
+21
+00:02:03 --> 00:02:07
+Let us first call the <b>function welcome</b> with two <b>arguments</b>
+
+22
+00:02:08 --> 00:02:16
+Type, <b>welcome</b><i> inside brackets inside double quotes </i><b>Hi </b><i>comma inside double quotes</i><b> Chandru</b>
+
+23
+00:02:17 --> 00:02:20
+We get the expected welcome message,<b> Hi Chandru. </b>
+
+24
+00:02:21 --> 00:02:24
+Now let us call the <b>function</b> with one <b>argument</b> only.
+
+25
+00:02:25 --> 00:02:30
+Type, <b>welcome </b><i>inside brackets inside double quotes </i><b>Hello </b>
+
+26
+00:02:31 --> 00:02:34
+We get the output as <b>Hello World</b>.
+
+27
+00:02:35 --> 00:02:38
+Here,  <b>“Hello”</b> is passed to the parameter <b>greet </b>and
+
+28
+00:02:39 --> 00:02:43
+<b>“World” </b>is the default value of the <b>name</b> parameter.
+
+29
+00:02:44 --> 00:02:50
+Let us add another parameter <b>age</b> with default value as 23 as shown.
+
+30
+00:02:51 --> 00:02:57
+Now type, <b>welcome </b><i>inside brackets inside double quotes </i><b>Hello</b>
+
+31
+00:02:58 --> 00:03:05
+Here, <b>welcome function</b> still works since we have provided default value for <b>age</b>.
+
+32
+00:03:06 --> 00:03:11
+Default values allow us to add new <b>parameters</b> to an existing <b>function</b>.
+
+33
+00:03:12 --> 00:03:15
+It will not break the existing usage of the <b>function</b>.
+
+34
+00:03:16 --> 00:03:21
+Pause the video.
+<p>Try this exercise and then resume the video.
+</p>
+
+35
+00:03:22 --> 00:03:26
+Redefine the <b>function welcome</b>, by interchanging its <b>arguments</b>.
+
+36
+00:03:27 --> 00:03:33
+Place the <b>name argument</b> with its default value of "<b>World</b>" before the <b>greet argument</b>.
+
+37
+00:03:34 --> 00:03:37
+Switch to the <b>terminal</b> for the solution.
+
+38
+00:03:38 --> 00:03:41
+Type as shown.
+
+39
+00:03:42 --> 00:03:49
+We get an error that reads <b>SyntaxError: non-default argument follows default argument</b>.
+
+40
+00:03:50 --> 00:03:56
+When defining a <b>function</b> all the <b>arguments</b> with default values should come at the end.
+
+41
+00:03:57 --> 00:04:02
+Pause the video.
+<p>Try this exercise and then resume the video.
+</p>
+
+42
+00:04:03 --> 00:04:09
+Redefine the <b>function welcome</b> with a default value of "<b>Hello</b>" to the <b>greet argument</b>.
+
+43
+00:04:10 --> 00:04:13
+Then, call the <b>function</b> without any <b>arguments</b>.
+
+44
+00:04:14 --> 00:04:17
+Switch to the <b>terminal</b> for the solution.
+
+45
+00:04:18 --> 00:04:20
+Type as shown.
+
+46
+00:04:21 --> 00:04:25
+Then type, <b>welcome </b><i>open and close brackets</i>
+
+47
+00:04:26 --> 00:04:30
+As we can see, we get the output as<b> Hello World.</b>
+
+48
+00:04:31 --> 00:04:38
+Default values of both <b>parameters</b> are used since <b>function</b> is called without passing any value.
+
+49
+00:04:39 --> 00:04:42
+Next let us see what are <b>keyword arguments.</b>
+
+50
+00:04:43 --> 00:04:50
+We no need to remember the order of <b>arguments </b>while calling <b>functions</b> by passing<b> keyword arguments</b>.
+
+51
+00:04:51 --> 00:04:56
+Instead, we can use <b>name</b> of the <b>argument</b> to pass a <b>value </b>to it.
+
+52
+00:04:57 --> 00:05:03
+Let us define a <b>function</b> with name <b>marks </b>which takes three marks as <b>arguments</b>.
+
+53
+00:05:04 --> 00:05:10
+Type as shown.
+<p>Then we will call the <b>marks function</b> without specifying the <b>keywords</b>.
+</p>
+
+54
+00:05:11 --> 00:05:17
+Type, <b>marks </b><i>inside brackets </i><b>34</b><i> comma </i><b>23</b><i> comma </i><b>45</b>
+
+55
+00:05:18 --> 00:05:23
+We get the output as “<b>first: 34 second: 23 and third: 45</b>”
+
+56
+00:05:24 --> 00:05:30
+Here the <b>values</b> <b>34, 23 </b>and<b> 45 </b>are passed according to the <b>position.</b>
+
+57
+00:05:31 --> 00:05:34
+To confirm this, we will try with different values.
+
+58
+00:05:35 --> 00:05:41
+Type, <b>marks </b><i>inside brackets </i><b>34</b><i> comma </i><b>45 </b><i>comma </i><b>23</b>
+
+59
+00:05:42 --> 00:05:48
+We can see that the printed <b>values</b> are changed since they are passed according to the <b>position</b>.
+
+60
+00:05:49 --> 00:05:54
+Now let us pass two values without <b>keyword</b> and other one with <b>keyword.</b>
+
+61
+00:05:55 --> 00:06:03
+Type, <b>marks </b><i>inside brackets </i><b>34 </b><i>comma </i><b>23 </b><i>comma </i><b>third</b><i> is equal to </i><b>45</b>
+
+62
+00:06:04 --> 00:06:11
+Here first two values are passed according to the position and the third as <b>keyword argument</b>.
+
+63
+00:06:12 --> 00:06:16
+But, the <b>keyword arguments</b> should be specified at the end.
+
+64
+00:06:17 --> 00:06:25
+Now type, <b>marks </b><i>inside brackets </i><b>34 </b><i>comma </i><b>second </b><i>is equal to </i><b>23 </b><i>comma </i><b>45</b>
+
+65
+00:06:26 --> 00:06:31
+We get the <b>SyntaxError, positional argument follows keyword argument.</b>
+
+66
+00:06:32 --> 00:06:37
+This is because here the <b>keyword argument</b> is not specified at the end.
+
+67
+00:06:38 --> 00:06:42
+We can pass all the <b>parameters</b> as <b>keyword arguments</b>.
+
+68
+00:06:43 --> 00:06:53
+Type, <b>marks </b><i>inside brackets </i><b>second </b><i>is equal to </i><b>34 </b><i>comma </i><b>first</b><i> is equal to </i><b>23 </b><i>comma </i><b>third</b><i> is equal to </i><b>45</b>
+
+69
+00:06:54 --> 00:07:02
+Here even though the order of <b>keyword</b> is changed, we get the output as:
+<p>“<b>first: 23 second: 34 and third: 45</b>”
+</p>
+
+70
+00:07:03 --> 00:07:08
+Next we will learn to define a <b>function</b> to take only <b>keyword arguments.</b>
+
+71
+00:07:09 --> 00:07:11
+Type as shown.
+
+72
+00:07:12 --> 00:07:24
+Then to call the <b>function</b>, type,
+<p><b>marks </b><i>inside brackets </i><b>second </b><i>is equal to </i><b>34 </b><i>comma </i><b>first </b><i>is equal to </i><b>23 </b><i>comma </i><b>third </b><i>is equal to </i><b>45</b>
+</p>
+
+73
+00:07:25 --> 00:07:28
+Note the <b>asterisk</b> symbol at the starting of <b>parameters</b>.
+
+74
+00:07:29 --> 00:07:33
+It restricts the <b>function</b> to accept <b>keyword</b> only <b>arguments.</b>
+
+75
+00:07:34 --> 00:07:38
+Again we will try to call the <b>function</b> without <b>keyword arguments.</b>
+
+76
+00:07:39 --> 00:07:45
+Type, <b>marks </b><i>inside brackets </i><b>45 </b><i>comma</i><b> 34 </b><i>comma</i><b> 23</b>
+
+77
+00:07:46 --> 00:07:52
+It gives a <b>TypeError </b>as<b> marks() takes 0 positional arguments but 3 were given.</b>
+
+78
+00:07:53 --> 00:07:59
+This way we can enforce usage of <b>keyword </b>only <b>arguments</b> without<b> positional arguments.</b>
+
+79
+00:08:00 --> 00:08:04
+Next let us learn to use <b>arbitrary arguments</b>.
+
+80
+00:08:05 --> 00:08:11
+We may not always know in advance the number of <b>arguments</b> that will be passed into a <b>function</b>.
+
+81
+00:08:12 --> 00:08:18
+Use an asterisk(*) before an <b>argument</b> name to denote <b>arbitrary</b> number of <b>arguments</b>.
+
+82
+00:08:19 --> 00:08:24
+We can define a <b>function</b> to accept any number of <b>positional arguments</b>.
+
+83
+00:08:25 --> 00:08:37
+Type as shown.
+<p>Then type, <b>family </b><i>inside brackets inside double quotes </i><b>Duryodhana </b><i>comma inside double quotes </i><b>Dushasana</b>
+</p>
+
+84
+00:08:38 --> 00:08:42
+Here, we have called the <b>function</b> with multiple <b>arguments</b>.
+
+85
+00:08:43 --> 00:08:48
+These <b>arguments</b> get wrapped up into a <b>tuple</b> while passed into the <b>function</b>.
+
+86
+00:08:49 --> 00:08:52
+Now type as shown.
+
+87
+00:08:53 --> 00:09:00
+As you can see, we can call the <b>function family </b>with more values passed to the <b>names argument</b>.
+
+88
+00:09:01 --> 00:09:08
+We have passed 2 values in the first <b>call</b> and 4 values in the second <b>call</b> to the <b>function family</b>.
+
+89
+00:09:09 --> 00:09:14
+In both cases these values are assigned to the <b>parameter names.</b>
+
+90
+00:09:15 --> 00:09:20
+We can also define a <b>function</b> to receive <b>arbitrary</b> number of <b>keyword arguments.</b>
+<p><br/>
+</p>
+
+91
+00:09:21 --> 00:09:28
+Type as shown.
+<p>Then to call the <b>function</b> type as shown. 
+</p>
+
+92
+00:09:29 --> 00:09:34
+The <b>person function</b> prints a <b>dictionary</b> of <b>keyword arguments</b> passed to it.
+
+93
+00:09:35 --> 00:09:39
+Note the <b>double asterisk symbol </b>at the beginning of the <b>parameter</b> names.
+
+94
+00:09:40 --> 00:09:44
+It enables to pass zero or more <b>keyword arguments</b>.
+
+95
+00:09:45 --> 00:09:52
+Note: <b>Single asterisk (*)</b> symbol is used to accept <b>arbitrary number of positional arguments.</b>
+
+96
+00:09:53 --> 00:10:00
+And the <b>double asterisk (**) </b>symbol is used to accept <b>arbitrary number of keyword arguments.</b>
+
+97
+00:10:01 --> 00:10:05
+Now call the <b>person function</b> as shown.
+
+98
+00:10:06 --> 00:10:13
+Here we have passed 3 <b>keyword arguments</b> in the first case and 4 in the second case.
+
+99
+00:10:14 --> 00:10:19
+The <b>function</b> prints a <b>dictionary</b> of <b>keyword arguments</b> with values.
+
+100
+00:10:20 --> 00:10:21
+<b>Python</b> also provides <b>built-in functions. </b>
+
+101
+00:10:22 --> 00:10:28
+Some are  <b>abs()</b>
+<p><b>any()</b>
+</p>
+
+102
+00:10:29 --> 00:10:32
+<b>dir()</b>
+<p><b>help()</b>
+</p>
+
+103
+00:10:33 --> 00:10:38
+You can visit this link to get the full list of <b>built-in functions</b> and their usage.
+
+104
+00:10:39 --> 00:10:44
+This brings us to the end of this tutorial. Let us summarize.
+
+105
+00:10:45 --> 00:10:54
+In this tutorial, we have learned to define <b>functions</b> with,  <b>Default arguments</b>, <b>keyword arguments</b> and <b>Arbitrary arguments</b>
+
+106
+00:10:55 --> 00:10:59
+Here are some self assessment questions for you to solve.
+<p><br/>
+</p>
+
+107
+00:11:00 --> 00:11:07
+All the <b>arguments</b> of a <b>function</b> cannot have default values. - True or False?
+
+108
+00:11:08 --> 00:11:14
+The following is a valid <b>function</b> definition. True or False?
+
+109
+00:11:15 --> 00:11:19
+While <b>calling</b> a <b>function</b>, which one is correct in the following.
+
+110
+00:11:20 --> 00:11:27
+And the answers,
+<p>First. False. All the <b>arguments</b> of a <b>Python function</b> can have default values. 
+</p>
+
+111
+00:11:28 --> 00:11:34
+Second. False. All the <b>parameters</b> with default <b>arguments</b> should be defined at the end.
+
+112
+00:11:35 --> 00:11:43
+Third. While <b>calling</b> a <b>function</b>, only <b>keyword arguments</b> can be in any order, but should be called at the end.
+
+113
+00:11:44 --> 00:11:47
+Please post your timed queries in this forum.
+
+114
+00:11:48 --> 00:11:52
+Please post your general queries on Python in this forum.
+
+115
+00:11:53 --> 00:11:56
+FOSSEE team coordinates the TBC project.
+
+116
+00:11:57 --> 00:12:05
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website.
+</p>
+
+117
+00:12:06 --> 00:12:11
+This is Priya from IIT Bombay signing off. Thanks for watching.
+

@@ -1,0 +1,520 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:06
+Welcome to the spoken tutorial on <b>Basic Matrix Operations</b>.
+
+2
+00:00:07 --> 00:00:12
+In this tutorial, you will learn to, Create <b>matrices</b> from <b>lists</b>
+
+3
+00:00:13 --> 00:00:18
+Perform basic <b>matrix operations</b> like
+<p>addition
+</p>
+
+4
+00:00:19 --> 00:00:22
+subtraction and multiplication
+
+5
+00:00:23 --> 00:00:28
+Perform <b>operations</b> to find out
+<p><b>determinant</b> of a <b>matrix</b>
+</p>
+
+6
+00:00:29 --> 00:00:36
+<b>inverse</b> of a <b>matrix</b>
+<p><b>Eigen values</b> and <b>Eigen vectors</b> of a <b>matrix </b>
+</p>
+
+7
+00:00:37 --> 00:00:43
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p>
+
+8
+00:00:44 --> 00:00:50
+<b>Python 3.4.3</b> and  <b>IPython 5.1.0</b>
+
+9
+00:00:51 --> 00:00:55
+To practise this tutorial, you should have basic knowledge about
+
+10
+00:00:56 --> 00:00:57
+<b>Lists</b>
+
+11
+00:00:58 --> 00:01:05
+<b>Arrays </b>and <b>accessing parts of arrays </b> and
+<p>Theoretical knowledge of <b>matrix operations</b>
+</p>
+
+12
+00:01:06 --> 00:01:10
+If not, see the relevant <b>Python</b> tutorials on this website.
+
+13
+00:01:11 --> 00:01:15
+In <b>Python</b>, we create a <b>matrix</b> using <b>numpy matrix class.</b>
+
+14
+00:01:16 --> 00:01:21
+<b>Matrix operations</b> can be done using <b>numpy operators</b> and <b>functions</b>.
+
+15
+00:01:22 --> 00:01:24
+Let us start <b>ipython</b>.
+
+16
+00:01:25 --> 00:01:26
+Open the <b>terminal</b>.
+
+17
+00:01:27 --> 00:01:30
+Type <b>ipython3 </b>and press <b>Enter</b>.
+
+18
+00:01:31 --> 00:01:37
+<p>From here onwards, remember to press the <b>Enter</b> key after typing every <b>command</b> on the <b>terminal</b>.
+</p>
+
+19
+00:01:38 --> 00:01:40
+Let us create a <b>matrix m1.</b>
+
+20
+00:01:41 --> 00:01:46
+Type <b>from numpy import matrix</b>
+
+21
+00:01:47 --> 00:01:56
+Then type,  <b>m1 </b><i>is equal to</i><b> matrix </b><i>inside brackets inside square brackets </i><b>1</b><i> comma </i><b>2</b><i> comma </i><b>3</b><i> comma </i><b>4</b>
+
+22
+00:01:57 --> 00:01:59
+Now type <b>m1</b>
+
+23
+00:02:00 --> 00:02:04
+This creates a <b>matrix</b> with one row and four columns.
+
+24
+00:02:05 --> 00:02:14
+This can be verified by typing <b>m1.shape</b>
+<p>This gives the output as (1, 4)
+</p>
+
+25
+00:02:15 --> 00:02:22
+A <b>list</b> can also be converted to a <b>matrix</b> as follows,
+<p>Type as shown.
+</p>
+
+26
+00:02:23 --> 00:02:28
+You can see the <b>matrix m2</b> with values from <b>list l1.</b>
+
+27
+00:02:29 --> 00:02:35
+To convert an <b>array</b> to a <b>matrix</b>, use the <b>asmatrix method</b> in <b>numpy module</b>.
+
+28
+00:02:36 --> 00:02:41
+We can use <b>arange </b>and <b>reshape methods </b>to generate an <b>array</b>.
+
+29
+00:02:42 --> 00:02:48
+Type as shown.
+<p><b>arange</b> is a <b>method</b> available in<b> numpy.</b>
+</p>
+
+30
+00:02:49 --> 00:02:54
+Here it returns an <b>array</b> of evenly spaced values between <b>1 </b>and<b> 9.</b>
+
+31
+00:02:55 --> 00:03:01
+<b>reshape</b> is used to change the shape of the <b>array</b> to 2 rows and 4 columns.
+
+32
+00:03:02 --> 00:03:08
+<b>asmatrix </b>is a <b>method</b> available in <b>numpy </b>and it interprets the input as a <b>matrix</b>.
+
+33
+00:03:09 --> 00:03:14
+Pause the video.
+<p>Try this exercise and then resume the video.
+</p>
+
+34
+00:03:15 --> 00:03:24
+Create a two dimensional <b>matrix m3 </b>of <b>shape</b> 2 by 4 with the <b>elements</b> 5, 6, 7, 8, 9, 10, 11, 12.
+
+35
+00:03:25 --> 00:03:30
+Hint: Use <b>arange() </b>and <b>reshape() methods </b>and<b> asmatrix() function.</b>
+
+36
+00:03:31 --> 00:03:34
+Switch back to the <b>terminal</b> for the solution.
+
+37
+00:03:35 --> 00:03:47
+Type, <b>m3 </b><i>is equal to</i><b> asmatrix </b><i>inside brackets </i><b>arange </b><i>inside brackets </i><b>5 </b><i>comma </i><b>13 </b><i>dot </i><b>reshape </b><i>inside brackets </i><b>2</b><i> comma </i><b>4</b>
+
+38
+00:03:48 --> 00:03:53
+Type<b> m3</b> You can see the required output.
+
+39
+00:03:54 --> 00:04:01
+Next let us see some <b>matrix operations</b>.
+<p>Type, <b>m3 </b><i>plus</i><b> m2</b>
+</p>
+
+40
+00:04:02 --> 00:04:06
+It performs <b>element</b> by <b>element</b> addition, that is <b>matrix</b> addition.
+
+41
+00:04:07 --> 00:04:11
+Note that both the <b>matrices</b> should be of the same <b>shape</b>.
+
+42
+00:04:12 --> 00:04:16
+Similarly, type <b>m3</b><i> minus </i><b>m2</b>
+
+43
+00:04:17 --> 00:04:23
+It performs <b>matrix</b> subtraction, that is <b>element</b> by <b>element</b> subtraction.
+
+44
+00:04:24 --> 00:04:27
+Note that both the <b>matrices</b> should be of the same <b>shape</b>.
+
+45
+00:04:28 --> 00:04:35
+Now we can multiply a <b>scalar</b> i.e a number by a <b>matrix</b> as shown.
+
+46
+00:04:36 --> 00:04:42
+Next we will check the size of <b>m2 </b>by typing,
+<p><b>m2 dot shape.</b>
+</p>
+
+47
+00:04:43 --> 00:04:48
+We get a <b>tuple (2, 4).</b>
+<p><b>Matrix m2</b> is of the shape, two by four. 
+</p>
+
+48
+00:04:49 --> 00:04:54
+Let us create another <b>matrix</b>, of the order 4 by 2.
+
+49
+00:04:55 --> 00:05:06
+<p>Type, <b>m4 </b><i>is equal to</i><b> asmatrix </b><i>inside brackets </i><b>arange </b><i>inside brackets </i><b>1 </b><i>comma </i><b>9</b><i> dot </i><b>reshape </b><i>inside brackets </i><b>4</b><i> comma </i><b>2</b>
+</p>
+
+50
+00:05:07 --> 00:05:15
+Now to check the shape, type <b>m4.shape</b>
+<p>We get (4,2) as the shape of <b>m4</b>.
+</p>
+
+51
+00:05:16 --> 00:05:21
+The multiplication <b>operator <i>asterisk </i></b>is used for <b>matrix</b> multiplication.
+
+52
+00:05:22 --> 00:05:26
+Type <b>m2 </b><i>asterisk</i><b> m4</b>
+
+53
+00:05:27 --> 00:05:32
+Now we get output as multiplication of <b>m2</b> and <b>m4.</b>
+
+54
+00:05:33 --> 00:05:37
+Let us now see, how to find out the <b>transpose</b> of a <b>matrix.</b>
+
+55
+00:05:38 --> 00:05:45
+To see the content of <b>m4</b>, type <b>print</b><i> inside brackets </i><b>m4</b>
+
+56
+00:05:46 --> 00:05:52
+Now type, <b>print </b><i>inside brackets </i><b>m4</b><i> dot capital</i><b> T</b>
+
+57
+00:05:53 --> 00:05:58
+As you saw, <b>m4</b> dot<b> capital T</b> will give the <b>transpose</b> of a <b>matrix.</b>
+
+58
+00:05:59 --> 00:06:08
+We can get the  <b>determinant</b> of a <b>square matrix</b> by using the <b>function det() </b>in<b> numpy.linalg module</b>.
+
+59
+00:06:09 --> 00:06:14
+Pause the video.
+<p>Try this exercise and then resume the video.
+</p>
+
+60
+00:06:15 --> 00:06:19
+Find out the <b>determinant</b> of this 3 by 3 <b>matrix.</b>
+
+61
+00:06:20 --> 00:06:22
+Switch to the <b>terminal</b> for the solution.
+
+62
+00:06:23 --> 00:06:25
+Type as shown.
+
+63
+00:06:26 --> 00:06:34
+The <b>determinant</b> of <b>m5</b> can be found by issuing the <b>command</b>
+<p><i>det </i><b>inside brackets </b><i>m5'</i>
+</p>
+
+64
+00:06:35 --> 00:06:38
+We get <b>determinant</b> of <b>m5</b> as output.
+
+65
+00:06:39 --> 00:06:47
+We can get the  <b>inverse</b> of a <b>square matrix</b> by using <b>inv() function </b>in<b> numpy.linalg module</b>.
+
+66
+00:06:48 --> 00:06:51
+Let us find the <b>inverse</b> of the <b>matrix m5.</b>
+
+67
+00:06:52 --> 00:07:01
+Type as shown.
+<p>Then to see the <b>inverse</b>, type <b>im5</b>
+</p>
+
+68
+00:07:02 --> 00:07:08
+Type <b>from numpy import eye, allclose</b>
+
+69
+00:07:09 --> 00:07:21
+Then type, <b>allclose</b><i> inside brackets </i><b>im5 </b><i>asterisk</i><b> m5 </b><i>comma</i><b> asmatrix </b><i>inside brackets </i><b>eye </b><i>inside brackets </i><b>3</b>
+
+70
+00:07:22 --> 00:07:24
+This returns <b>True.</b>
+
+71
+00:07:25 --> 00:07:30
+We know that multiplication of a <b>matrix</b> with its <b>inverse</b> gives the <b>identity matrix</b>.
+
+72
+00:07:31 --> 00:07:39
+<b>Identity matrix</b> is created using <b>eye() function</b>. It is present in the <b>numpy module</b>.
+
+73
+00:07:40 --> 00:07:47
+Here <b>asmatrix </b><i>inside brackets </i><b>eye </b><i>inside brackets </i><b>3</b> gives <b>identity matrix</b> of size 3.
+
+74
+00:07:48 --> 00:07:54
+<b>allclose </b>is a <b>function</b> that returns <b>True</b> if two <b>arrays</b> are <b>element</b> wise equal.
+
+75
+00:07:55 --> 00:07:59
+To know more about these, we will check the documentation.
+
+76
+00:08:00 --> 00:08:04
+Type the <b>function</b> name followed by a question mark in <b>IPython console.</b>
+
+77
+00:08:05 --> 00:08:10
+Type <b>eye</b><i> question mark</i>
+
+78
+00:08:11 --> 00:08:14
+To quit the documentation, press <b>q</b>.
+
+79
+00:08:15 --> 00:08:21
+It is a good practice to read documentation of new <b>functions</b> that you come across.
+
+80
+00:08:22 --> 00:08:26
+Let us now move onto <b>Eigen vectors</b> and <b>Eigen values.</b>
+
+81
+00:08:27 --> 00:08:36
+<p>Given a <b>square matrix A</b>
+</p><p><b>eig </b><i>inside brackets</i><b> A </b><i>inside square brackets</i><b> 0 </b>gives its <b>eigenvalues</b>
+</p>
+
+82
+00:08:37 --> 00:08:42
+<b>eig </b><i>inside brackets</i><b> A </b><i>inside square brackets </i><b>1</b> gives its <b>eigenvector</b>
+
+83
+00:08:43 --> 00:08:48
+<b>eigvals </b><i>inside brackets </i><b>A </b>gives its <b>eigenvalues</b>
+
+84
+00:08:49 --> 00:08:57
+<b>eig</b> and <b>eigvals functions</b> are present in <b>numpy.linalg module</b>.
+
+85
+00:08:58 --> 00:09:06
+Let us find out the <b>eigenvalues</b> and <b>eigenvectors</b> of the <b>matrix m6</b>.
+<p>Type as shown.
+</p>
+
+86
+00:09:07 --> 00:09:13
+Now to see the value, type,<b>eig </b><i>inside brackets </i><b>m6</b>
+
+87
+00:09:14 --> 00:09:25
+<b>diag </b><i>inside brackets again inside brackets </i><b>1 </b><i>comma</i><b> 2 </b><i>comma </i><b>3 </b>
+<p>creates a <b>diagonal matrix</b> with 1,2,3 as diagonal <b>elements</b> and <b>0 </b>elsewhere .
+</p>
+
+88
+00:09:26 --> 00:09:30
+<b>diag() function </b>is present in<b> numpy module.</b>
+
+89
+00:09:31 --> 00:09:37
+Note that <b>eig </b><i>inside brackets </i><b>m6</b> returned a <b>tuple</b> of one <b>array</b> and one <b>matrix</b>.
+
+90
+00:09:38 --> 00:09:42
+The first <b>element</b> in the <b>tuple</b> is an <b>array</b> of three <b>eigen values</b>.
+
+91
+00:09:43 --> 00:09:47
+The second <b>element</b> in the <b>tuple</b> is a <b>matrix</b> of three <b>eigen vectors</b>.
+
+92
+00:09:48 --> 00:09:59
+To get <b>eigen values </b>type,<b>eig</b><i> underscore </i><b>value</b><i> is equal to</i><b> eig</b><i> inside brackets </i><b>m6 </b><i>inside square brackets </i><b>0</b>
+
+93
+00:10:00 --> 00:10:03
+Then type <b>eig </b><i>underscore </i><b>value</b>
+
+94
+00:10:04 --> 00:10:08
+As you can see <b>eig </b><i>underscore </i><b>value</b> contains <b>eigenvalues</b>.
+
+95
+00:10:09 --> 00:10:19
+To get <b>eigen vectors </b>type,<b>eig </b><i>underscore </i><b>vector </b><i>is equal to</i><b> eig</b><i> inside brackets </i><b>m6 </b><i>inside square brackets </i><b>1</b>
+
+96
+00:10:20 --> 00:10:24
+Then type <b>eig </b><i>underscore </i><b>vector</b>
+
+97
+00:10:25 --> 00:10:28
+<b>eig </b><i>underscore </i><b>vector </b>contains <b>eigen vector</b>.
+
+98
+00:10:29 --> 00:10:38
+The <b>eigen values</b> can also be computed using <b>eigvals() function</b>.
+<p>Type as shown.
+</p>
+
+99
+00:10:39 --> 00:10:43
+Then type <b>eig </b><i>underscore </i><b>value1</b>
+
+100
+00:10:44 --> 00:10:51
+You can see that, <b>eig </b><i>underscore </i><b>value </b>and<b> eig </b><i>underscore </i><b>value1 </b>are same.
+
+101
+00:10:52 --> 00:10:57
+This brings us to the end of this tutorial. Let us summarize.
+
+102
+00:10:58 --> 00:11:02
+In this tutorial, we have learnt to,
+<p>Create <b>matrices</b> using <b>arrays</b>
+</p>
+
+103
+00:11:03 --> 00:11:06
+Add, subtract and multiply <b>matrices</b>
+
+104
+00:11:07 --> 00:11:10
+Take <b>scalar</b> multiple of a <b>matrix</b>
+
+105
+00:11:11 --> 00:11:15
+Use the <b>function det()</b> to find the <b>determinant</b> of a <b>matrix</b>
+
+106
+00:11:16 --> 00:11:20
+Find out the <b>inverse</b> of a <b>matrix</b> using the <b>function inv() </b>
+
+107
+00:11:21 --> 00:11:29
+Find out the <b>eigen vectors</b> and <b>eigen values</b> of a <b>matrix</b>, using the <b>functions eig()</b> and <b>eigvals()</b>
+
+108
+00:11:30 --> 00:11:33
+Here are some self assessment questions for you to solve
+
+109
+00:11:34 --> 00:11:44
+First. A and B are two <b>matrix objects</b> of appropriate sizes. Which one of the below is correct for <b>matrix</b> multiplication?
+
+110
+00:11:45 --> 00:11:55
+Second. <b>eig </b><i>inside brackets </i><b>A</b><i> inside square brackets </i><b>1</b> and <b>eigvals </b><i>inside brackets </i><b>A</b> are the same. True or False?
+
+111
+00:11:56 --> 00:12:04
+And the answers,
+<p>First.  <b>Matrix</b> multiplication between A and B is done by, A <i>asterisk</i> B
+</p>
+
+112
+00:12:05 --> 00:12:18
+Second. False. <b>eig </b><i>inside brackets </i><b>A</b><i> inside square brackets </i><b>0</b> and <b>eigvals </b><i>inside brackets </i><b>A</b> are same, that is both will give the <b>eigen values</b> of <b>matrix</b> A.
+
+113
+00:12:19 --> 00:12:22
+Please post your timed queries in this forum.
+
+114
+00:12:23 --> 00:12:27
+Please post your general queries on Python in this forum.
+
+115
+00:12:28 --> 00:12:31
+FOSSEE team coordinates the TBC project.
+
+116
+00:12:32 --> 00:12:41
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website.
+</p>
+
+117
+00:12:42 --> 00:12:47
+This is Priya from IIT Bombay signing off.
+<p>Thanks for watching.
+</p>
+

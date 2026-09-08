@@ -1,0 +1,268 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:05
+Hello friends. Welcome to the tutorial on <b>plotting charts</b>
+
+2
+00:00:06 --> 00:00:17
+At the end of this tutorial, you will be able to
+<p>Create <b>pie charts</b>
+</p><p>Create <b>bar charts </b>and
+</p><p>Find more information on <b>matplotlib</b>
+</p>
+
+3
+00:00:18 --> 00:00:23
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 14.04</b> operating system
+</p>
+
+4
+00:00:24 --> 00:00:30
+<b>Python 3.4.3</b> and <b>IPython 5.1.0</b>
+
+5
+00:00:31 --> 00:00:38
+To practice this tutorial, you should know how to
+<p>run basic <b>Python</b> <b>commands</b> on the <b>ipython</b> <b>console</b>
+</p>
+
+6
+00:00:39 --> 00:00:41
+<b>Load data </b>from<b> </b>files<b> </b>and <b>Plot data</b>.
+
+7
+00:00:42 --> 00:00:46
+If not, see the relevant Python tutorials on this website.
+
+8
+00:00:47 --> 00:00:57
+Let us first open the <b>Terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously.
+<p>Now, type <b>ipython3</b> and press <b>Enter</b>. 
+</p>
+
+9
+00:00:58 --> 00:01:05
+Let us initialize the <b>pylab</b> package.
+<p>Type <b>%pylab </b>and press<b> Enter.</b>
+</p>
+
+10
+00:01:06 --> 00:01:11
+A <b>pie</b> <b>chart</b> is a circular chart divided into sectors, to illustrate numerical proportion
+
+11
+00:01:12 --> 00:01:21
+The syntax for pie() function is as follows: <b>pie <i>inside parentheses</i> values <i>comma</i> labels <i>equal to</i> labels</b>
+
+12
+00:01:22 --> 00:01:29
+Where <b>values are </b>the data to be plotted and <b>labels</b> – the label for each wedge in the pie chart
+
+13
+00:01:30 --> 00:01:34
+Plot a <b>pie</b> <b>chart</b> representing the profit percentage of company A.
+
+14
+00:01:35 --> 00:01:42
+Use the data from file <b>company-a-data.txt</b> available in the code file link of this tutorial
+
+15
+00:01:43 --> 00:01:47
+The data file has two columns with a set of values in each column.
+
+16
+00:01:48 --> 00:01:54
+The first column represents years. The second column represents the profit percentages.
+
+17
+00:01:55 --> 00:02:02
+To produce a scatter plot, we first need to load the data from the file using <b>loadtxt</b> command.
+
+18
+00:02:03 --> 00:02:27
+Let us clear the <b>terminal</b>.
+<p>Type <b>year <i>comma</i> profit <i>equal to</i> loadtxt <i>inside parentheses inside single quotes</i> add the path of the file company-a-data.txt <i>comma</i> unpack <i>equal to</i> True</b> and press <b>Enter</b>
+</p>
+
+19
+00:02:28 --> 00:02:32
+<b>unpack <i>equal to</i> True --> returns</b> the <b>transposed array </b>of <b>data</b>.
+
+20
+00:02:33 --> 00:02:40
+Type <b>clf <i>open and close parentheses</i> </b>to clear the plot window, if any plots executed previously.
+
+21
+00:02:41 --> 00:02:49
+Type <b>pie(profit <i>comma</i> labels equal to year)</b> and press <b>Enter</b>.
+
+22
+00:02:50 --> 00:02:54
+Notice that we passed two arguments to the function <b>pie()</b>.
+
+23
+00:02:55 --> 00:02:58
+First one being the <b>values,</b> which is <b>profit</b> in our case.
+
+24
+00:02:59 --> 00:03:04
+The next one being the set of <b>labels</b> to be used in the <b>pie chart</b>, which is <b>year</b> in our case.
+
+25
+00:03:05 --> 00:03:10
+Pause the video here.
+<p>Try out the following exercise and resume the video.
+</p>
+
+26
+00:03:11 --> 00:03:18
+Plot a <b>pie</b> <b>chart</b> with the same data with the following colors for each wedges.
+<p><b>white, red, black, magenta,</b>
+</p>
+
+27
+00:03:19 --> 00:03:20
+<b>yellow, blue, green, cyan,</b>
+
+28
+00:03:21 --> 00:03:23
+<b>yellow, magenta </b>and<b> blue</b>.
+
+29
+00:03:24 --> 00:03:28
+Hint: In your <b>ipython interpreter, </b>try typing <b>pie question mark</b>.
+
+30
+00:03:29 --> 00:03:38
+Solution to Exercise 2
+<p>Clear the <b>plot window </b>by typing <b>clf open and close parentheses</b> and press <b>Enter</b>.
+</p>
+
+31
+00:03:39 --> 00:03:56
+Type <b>pie inside parentheses profit comma labels equal to year comma colors equal to inside parentheses the color codes </b> and press <b>Enter</b>.
+
+32
+00:03:57 --> 00:04:03
+This will display a pie chart with each wedge having the color as specified in the parameters.
+
+33
+00:04:04 --> 00:04:11
+A <b>bar chart</b> is a <b>chart</b> with rectangular bars
+<p>with lengths proportional to the values that they represent.
+</p>
+
+34
+00:04:12 --> 00:04:27
+The syntax for bar chart is: <b>bar <i>inside parentheses</i> x <i>comma</i> y</b>
+<p>where <b>x </b> a sequence of data and <b>y </b> a sequence of data, the same length of x
+</p>
+
+35
+00:04:28 --> 00:04:32
+Plot a <b>bar chart</b> representing the profit percentage of company A.
+
+36
+00:04:33 --> 00:04:37
+Use the data from file <b>company-a-data.txt</b>.
+
+37
+00:04:38 --> 00:04:46
+Solution to Exercise 3
+<p>Clear the <b>plot window </b>by typing <b>clf <i>open and close parentheses</i></b>
+</p>
+
+38
+00:04:47 --> 00:04:55
+Type <b>bar <i>open and close parentheses</i> year <i>comma</i> profit</b> and press <b>Enter</b>.
+
+39
+00:04:56 --> 00:05:01
+This will display a bar chart representing the profit percentage of company A
+
+40
+00:05:02 --> 00:05:12
+Plot a <b>bar chart </b>as shown in the image:
+<p><b>Hint</b>: Bar chart is not filled and which is <b>hatched</b> with 45<sup>o</sup> slanting lines.
+</p>
+
+41
+00:05:13 --> 00:05:18
+The data for the chart may be obtained from the file <b>company-a-data.txt</b>.
+
+42
+00:05:19 --> 00:05:24
+Hint: In your <b>ipython interpreter, </b>try typing <b>bar <i>question mark</i></b>
+
+43
+00:05:25 --> 00:05:32
+Solution to Exercise 4
+<p>Clear the <b>plot window </b>by typing <b>clf <i>open and close parentheses</i></b>
+</p>
+
+44
+00:05:33 --> 00:05:53
+Type <b>bar <i>open and close parentheses</i> year <i>comma</i> profit <i>comma</i> fill <i>equal to</i> False <i>comma</i> hatch <i>equal to inside single quotes</i> <i>slanting line</i></b> and press <b>Enter</b>.
+
+45
+00:05:54 --> 00:06:01
+This will display a bar chart which is not filled and which is <b>hatched</b> with 45<sup>o</sup> slanting lines
+
+46
+00:06:02 --> 00:06:17
+Help about <b>matplotlib</b> can be obtained from <b>matplotlib.sourceforge.net/contents.html</b>
+<p>More plots can be seen at the following links
+</p>
+
+47
+00:06:18 --> 00:06:27
+This brings us to the end of this tutorial.
+<p>In this tutorial we learnt to, Plot a <b>pie</b> <b>chart</b> using <b>pie()</b> function
+</p>
+
+48
+00:06:28 --> 00:06:30
+Plot a <b>bar</b> <b>chart</b> using <b>bar()</b> function
+
+49
+00:06:31 --> 00:06:33
+And Access the <b>matplotlib </b>online help
+
+50
+00:06:34 --> 00:06:37
+Here are some self assessment questions for you to solve.
+
+51
+00:06:38 --> 00:06:44
+What statement can be issued to generate a bar chart with vertical line hatching?
+
+52
+00:06:45 --> 00:06:59
+And the answer is,  <b>bar x <i>comma</i> y <i>comma</i> fill <i> is equal to</i> False <i>comma</i> hatch <i>is equal to</i> a vertical line</b> is the correct option to generate a <b>bar</b> <b>chart</b> with vertical <b>line</b> <b>hatching</b>.
+
+53
+00:07:00 --> 00:07:03
+Please post your timed queries in this forum.
+
+54
+00:07:04 --> 00:07:08
+Please post your general queries on Python in this forum.
+
+55
+00:07:09 --> 00:07:12
+FOSSEE team coordinates the TBC project.
+
+56
+00:07:13 --> 00:07:22
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website.
+</p>
+
+57
+00:07:23 --> 00:07:28
+This is Trupti Kini from FOSSEE IIT Bombay signing off.
+<p>Thank you.
+</p>
+

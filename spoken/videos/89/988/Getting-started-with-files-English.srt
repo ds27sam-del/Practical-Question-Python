@@ -1,0 +1,410 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:06
+Hello Friends. Welcome to the tutorial on "Getting started with <b>files</b>".
+
+2
+00:00:07 --> 00:00:12
+At the end of this tutorial, you will learn to Open a file.
+
+3
+00:00:13 --> 00:00:15
+Read the contents of the file line by line.
+
+4
+00:00:16 --> 00:00:19
+Read the entire content of the file at once.
+
+5
+00:00:20 --> 00:00:25
+Append the lines of a file to a <b>list</b> and Close the file.
+
+6
+00:00:26 --> 00:00:39
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p><p><b>Python 3.4.3 </b>and <b>IPython 5.1.0</b>
+</p>
+
+7
+00:00:40 --> 00:00:47
+To practice this tutorial, you should know about
+<p><b>Lists</b> and <b>for statement</b>
+</p>
+
+8
+00:00:48 --> 00:00:53
+If not, see the pre-requisite <b>Python</b> tutorials on this website.
+
+9
+00:00:54 --> 00:01:00
+To open a file for reading or writing, we can use a <b>built in function</b> called <b>open()</b>.
+
+10
+00:01:01 --> 00:01:11
+<b>Open() function</b> returns a <b>file object</b>.
+<p>The syntax is shown here.
+</p><p><b>Filename</b>  is the name of the file to be opened.
+</p>
+
+11
+00:01:12 --> 00:01:16
+<b>Mode</b>- This indicates how the file is going to be opened.
+
+12
+00:01:17 --> 00:01:19
+r is for <b>Read mode</b>
+
+13
+00:01:20 --> 00:01:22
+w is for <b>Write mode</b>
+
+14
+00:01:23 --> 00:01:31
+a represents <b>Appending mode</b> and r+  for both <b>Read and Write mode</b>
+<p>Specifying <b>mode</b> is optional.
+</p>
+
+15
+00:01:32 --> 00:01:37
+Let us open a file <b>pendulum.txt</b> in a text editor.
+
+16
+00:01:38 --> 00:01:48
+This file contains 2 data columns, <b>length</b> and <b>time</b> of <b>pendulum</b>.
+<p>We will be using this text file for our demonstration.
+</p>
+
+17
+00:01:49 --> 00:01:59
+The file <b>pendulum.txt</b> is available in the <b>Code File link</b> of this tutorial.
+<p>Please download it in <b>Home directory</b> and use it.
+</p>
+
+18
+00:02:00 --> 00:02:06
+Let us first open the <b>Terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously.
+
+19
+00:02:07 --> 00:02:11
+Type <b>ipython3</b> and press <b>Enter</b>.
+
+20
+00:02:12 --> 00:02:19
+Let us initialise the <b>pylab package</b>.
+<p>Type <b>%pylab </b>and press<b> Enter.</b>
+</p>
+
+21
+00:02:20 --> 00:02:22
+Let us clear the <b>terminal</b>.
+
+22
+00:02:23 --> 00:02:26
+Let us open the file <b>pendulum.txt.</b>
+
+23
+00:02:27 --> 00:02:37
+Type <b>f</b><i> is equal to</i><b> open</b><i> inside parentheses inside quotes </i><b>pendulum </b><i>dot </i><b>txt</b>
+
+24
+00:02:38 --> 00:02:42
+Here the <b>mode</b> is not specified. By default, it is <b>‘r’</b>.
+
+25
+00:02:43 --> 00:02:47
+Let us type <b>f</b> on the <b>terminal</b> to see what it is.
+
+26
+00:02:48 --> 00:02:56
+The <b>file object f</b> shows the filename and <b>mode</b> of the file which is open.
+
+27
+00:02:57 --> 00:03:05
+'<b>r' </b>stands for <b>read only mode</b>.
+<p>As you can see, this <b>file</b> is open in <b>read only mode</b>.
+</p>
+
+28
+00:03:06 --> 00:03:10
+Now let us learn to read the whole <b>file</b> into a single <b>variable</b>.
+
+29
+00:03:11 --> 00:03:17
+Type <b>pend </b><i>equal to </i><b>f </b><i>dot </i><b>read<i> </i></b><i>open and close parentheses.</i>
+
+30
+00:03:18 --> 00:03:26
+We use the <b>read method</b> to read all the contents of the file into the <b>variable pend</b>
+<p>Press <b>Enter</b>
+</p>
+
+31
+00:03:27 --> 00:03:33
+To use <b>read method</b> we use the <b>file object dot read method</b>.
+
+32
+00:03:34 --> 00:03:43
+Now, let us see what <b>pend </b>contains, by typing <b>print </b><i>inside parentheses </i><b>pend.</b>
+<p>Press <b>Enter</b>
+</p>
+
+33
+00:03:44 --> 00:03:49
+We can see that <b>pend</b> has all the data of the <b>file pendulum.txt</b>.
+
+34
+00:03:50 --> 00:03:55
+Type just <b>pend</b> to see more explicitly, what it contains.
+
+35
+00:03:56 --> 00:04:00
+We can see the <b>newline characters</b> as well, in the output.
+
+36
+00:04:01 --> 00:04:06
+Let us learn to split the <b>variable pend</b> into a <b>list</b> of lines in the file.
+
+37
+00:04:07 --> 00:04:13
+We use the <b>method splitlines</b> to split a file of data into <b>list</b> of lines.
+
+38
+00:04:14 --> 00:04:20
+For this we need to store this <b>list </b>in a <b>variable</b>, say <b>pend_list</b>
+
+39
+00:04:21 --> 00:04:32
+Type <b>pend_list </b><i>equal to</i><b> pend </b><i>dot </i><b>splitlines </b><i>open and close parentheses</i>
+<p>Press <b>Enter</b>
+</p>
+
+40
+00:04:33 --> 00:04:36
+Type <b>pend </b><i>underscore </i><b>list </b>
+<p>Press <b>Enter</b>
+</p>
+
+41
+00:04:37 --> 00:04:40
+We got the data into <b>list</b> of lines.
+
+42
+00:04:41 --> 00:04:46
+<b>pend_list</b> does not contain <b>newline characters </b>like <b>\n</b>.
+
+43
+00:04:47 --> 00:04:52
+This is because the <b>string pend</b> is split on the <b>newline characters</b>.
+
+44
+00:04:53 --> 00:04:56
+Let us close the <b>file</b> opened into <b>f</b>.
+
+45
+00:04:57 --> 00:05:03
+Type <b>f  dot close </b> <i>open and close parentheses</i>
+<p>Press <b>Enter</b>
+</p>
+
+46
+00:05:04 --> 00:05:10
+It is a good programming practice  to <b>close</b> any <b>file objects</b> that we have opened
+<p>after their job is done.
+</p>
+
+47
+00:05:11 --> 00:05:16
+Pause the video here, try out the following exercise and then resume the video.
+
+48
+00:05:17 --> 00:05:22
+Re-open the file <b>pendulum.txt</b> with <b>f</b> as the <b>file object</b>.
+
+49
+00:05:23 --> 00:05:26
+Recall that we have closed the file earlier.
+
+50
+00:05:27 --> 00:05:29
+Let us switch back to the terminal.
+
+51
+00:05:30 --> 00:05:33
+Let us now move on to reading files line by line.
+
+52
+00:05:34 --> 00:05:46
+To re-open the file again, type
+<p><b>f </b><i>is equal to </i><b>open </b><i>inside parentheses inside quotes </i><b>pendulum.txt</b>
+</p>
+
+53
+00:05:47 --> 00:05:53
+Now, to read the file line-by-line, we <b>iterate</b> over the <b>file object</b> using the <b>for loop</b>.
+
+54
+00:05:54 --> 00:06:02
+Let us <b>iterate</b> over the <b>file</b> line-wise and <b>print</b> each of the lines.
+<p>Let us clear the <b>terminal</b>.
+</p>
+
+55
+00:06:03 --> 00:06:15
+Type <b>for line in f colon</b> press <b>Enter</b>
+<p><b>four spaces print inside parentheses line</b>
+</p>
+
+56
+00:06:16 --> 00:06:20
+Here, <b>line</b> is a <b>loop variable</b>, and it is not a <b>keyword</b>.
+
+57
+00:06:21 --> 00:06:29
+We could have used any other <b>variable</b> name, but <b>line</b> seems meaningful enough.
+<p>Press <b>Enter</b> twice.
+</p>
+
+58
+00:06:30 --> 00:06:36
+Instead of just printing the lines, let us append them into a <b>list</b>, say <b>line_list</b>.
+
+59
+00:06:37 --> 00:06:41
+We first <b>initialize</b> a <b>line_list </b>as an <b>empty-list</b>
+
+60
+00:06:42 --> 00:06:53
+Type, <b>line <i>underscore </i>list <i>is</i> <i>equal to </i>open and close square brackets.</b>
+<p>Press Enter
+</p>
+
+61
+00:06:54 --> 00:07:09
+Type the code as
+<p><b>for line in open <i>inside parentheses inside quotes </i>pendulum <i>dot</i> txt colon</b> press <b>Enter</b>
+</p>
+
+62
+00:07:10 --> 00:07:22
+<b><i>four space</i> line<i> underscore</i> list <i>dot </i>append <i>inside parentheses</i> line</b>
+<p>Press <b>Enter</b> twice.
+</p>
+
+63
+00:07:23 --> 00:07:28
+Here, the <b>for loop </b>reads the file <b>pendulum.txt </b>line-by-line.
+
+64
+00:07:29 --> 00:07:34
+The <b>append method</b> will add each of the line to the <b>list, line_list.</b>
+
+65
+00:07:35 --> 00:07:41
+We could, as usual close the file using <b>f.close() </b>and re-open it.
+
+66
+00:07:42 --> 00:07:49
+But, this time, let's leave the <b>file object f </b>and directly open the file within the <b>for statement</b>.
+
+67
+00:07:50 --> 00:07:54
+This will save us the trouble of closing the file, each time we open it.
+
+68
+00:07:55 --> 00:08:04
+Let us see what <b>line_list</b> contains.
+<p>Type <b>line <i>underscore </i> list </b>and press <b>Enter.</b>
+</p>
+
+69
+00:08:05 --> 00:08:12
+<b>line <i>underscore </i> list</b> is a <b>list</b> of the lines in the file, along with the <b>newline characters</b>.
+
+70
+00:08:13 --> 00:08:19
+We can strip out the <b>newline characters</b> from the lines by using some <b>string methods</b>.
+
+71
+00:08:20 --> 00:08:24
+This will be covered in the further tutorial on <b>strings</b>.
+
+72
+00:08:25 --> 00:08:37
+This brings us to the end of this tutorial.
+<p>In this tutorial, we learnt to - Open and close files using the <b>open</b> and <b>close methods</b> respectively.
+</p>
+
+73
+00:08:38 --> 00:08:42
+Read the data in the files as a whole, by using the <b>read method</b>.
+
+74
+00:08:43 --> 00:08:49
+Read the data in the files line by line by iterating over the <b>file object</b> using the <b>for loop</b>.
+
+75
+00:08:50 --> 00:08:55
+Append the lines of a file to a <b>list</b> using the <b>append method</b> within the <b>for loop</b>.
+
+76
+00:08:56 --> 00:09:00
+Here are some self assessment questions for you to solve
+
+77
+00:09:01 --> 00:09:06
+1. The <b>open function</b> returns a
+<p><b>string</b>, <b>list</b>, <b>file object</b>, <b>function</b>
+</p>
+
+78
+00:09:07 --> 00:09:10
+2. What does the <b>function splitlines()</b> do.
+
+79
+00:09:11 --> 00:09:13
+Displays the data as <b>strings</b> all in a line
+
+80
+00:09:14 --> 00:09:17
+Displays the data line by line as <b>strings</b>
+
+81
+00:09:18 --> 00:09:23
+Displays the data line by line but not as <b>strings</b>
+
+82
+00:09:24 --> 00:09:30
+And the answers are,
+<p>1. <b>open function</b> returns a <b>file object</b>
+</p>
+
+83
+00:09:31 --> 00:09:36
+<b>splitlines() </b>displays the data line by line as <b>strings</b>
+
+84
+00:09:37 --> 00:09:40
+Please post your timed queries in this forum.
+
+85
+00:09:41 --> 00:09:45
+Please post your general queries on Python in this forum.
+
+86
+00:09:46 --> 00:09:49
+FOSSEE team coordinates the TBC project.
+
+87
+00:09:50 --> 00:10:00
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website.
+</p>
+
+88
+00:10:01 --> 00:10:06
+Thats it for the tutorial. This is Trupti Kini from IIT Bombay (or FOSSEE, if you wish) signing off.
+<p>Thank you.
+</p>
+

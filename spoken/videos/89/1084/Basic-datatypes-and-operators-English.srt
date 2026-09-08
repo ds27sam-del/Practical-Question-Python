@@ -1,0 +1,348 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:05
+Welcome to the spoken tutorial on <b>Data types and operators</b>.
+
+2
+00:00:06 --> 00:00:15
+In this tutorial, we will learn about-
+<p><b>Data types </b>in<b> Python </b>like
+</p><p>Numbers and
+</p><p>Boolean 
+</p>
+
+3
+00:00:16 --> 00:00:24
+and <b>Operators </b>in<b> Python</b> like
+<p>Arithmetic operators and
+</p><p>Boolean operators 
+</p>
+
+4
+00:00:25 --> 00:00:38
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04 </b>operating system
+<b>Python 3.4.3 </b>and
+<b>IPython 5.1.0</b>
+</p>
+
+5
+00:00:39 --> 00:00:46
+To practise this tutorial,
+<p>you should know how to run basic <b>Python </b>commands on the <b>ipython console.</b>
+</p>
+
+6
+00:00:47 --> 00:00:51
+If not, see the relevant <b>Python </b>tutorials on this website.
+
+7
+00:00:52 --> 00:01:00
+There are three <b>built-in data types</b> in <b>Python</b> to represent numbers.
+<p><b>int </b>
+<b>float </b>and
+<b>complex </b>
+</p>
+
+8
+00:01:01 --> 00:01:05
+Let us start <b>ipython.</b>
+<p>Open the <b>terminal.</b>
+</p>
+
+9
+00:01:06 --> 00:01:11
+Type <b>ipython3 </b>and press <b>Enter</b>.
+
+10
+00:01:12 --> 00:01:18
+From here onwards, remember to press the <b>Enter</b> key after typing every command on the <b>terminal</b>.
+
+11
+00:01:19 --> 00:01:25
+Let's first see about <b>int</b>.  Type <b>a </b><i>is equal to</i><b> 13 </b>
+
+12
+00:01:26 --> 00:01:31
+Type <b>a</b> Now, we have our first <b>int</b> variable <b>a</b>.
+
+13
+00:01:32 --> 00:01:41
+To see the type of <b>a,</b> type, <b>type </b><i>inside parentheses</i><b> a</b>.This means that <b>a</b> is of <b>integer data type</b>.
+
+14
+00:01:42 --> 00:01:47
+There are some <b>functions</b> associated with the <b>int</b> <b>data type</b> to manipulate it.
+
+15
+00:01:48 --> 00:01:57
+These can be explored by typing <b>a dot </b>and then press the <b>tab</b> key. Here you can see the list of <b>functions</b>.
+
+16
+00:01:58 --> 00:02:01
+<b>int data type</b> can hold <b>integers</b> of any size.
+
+17
+00:02:02 --> 00:02:14
+Let us see an example. Type <b>b </b><i>is equal to</i><b> </b>20 times <b>9</b> Here we are storing 9, repeated 20 times in <b>b.</b>
+
+18
+00:02:15 --> 00:02:22
+Type<b> type </b><i>inside parentheses</i><b> b</b> We can see that <b>type</b> of b is <b>integer</b>.
+
+19
+00:02:23 --> 00:02:32
+Next we will see about <b>float data type</b>.  Type <b>p </b><i>is equal to</i><b> 3.141592 </b>
+
+20
+00:02:33 --> 00:02:40
+Type <b>type </b><i>inside parentheses </i><b>p</b> We can see that <b>type</b> of p is <b>float.</b>
+
+21
+00:02:41 --> 00:02:50
+The last <b>data type</b> in the list is <b>complex</b> number. Type <b>c </b><i>is equal to</i><b> 3.2 </b>plus <b>4.6j </b>
+
+22
+00:02:51 --> 00:02:59
+It is just a combination of two <b>floats</b>.  The imaginary part being defined by<b> j </b>notation instead of<b> i</b>.
+
+23
+00:03:00 --> 00:03:08
+<b>Complex numbers</b> have a lot of <b>functions</b> specific to them.  Type <b>c dot </b>and then press the <b>tab</b> key.
+
+24
+00:03:09 --> 00:03:14
+Let us try some of them. Type <b>c dot real </b>
+
+25
+00:03:15 --> 00:03:17
+Type <b>c dot imag</b>
+
+26
+00:03:18 --> 00:03:26
+<b>c dot real</b> gives the <b>real part</b> and <b>c dot imag</b> gives the <b>imaginary part </b>of the <b>complex</b> number.
+
+27
+00:03:27 --> 00:03:34
+We can get the <b>absolute value</b> of c by typing, <b>abs </b><i>inside parentheses </i><b>c</b>
+
+28
+00:03:35 --> 00:03:46
+<b>Python</b> also has <b>Boolean</b> as a built-in <b>type</b>. To try it out, just type, <b>t </b><i>is equal to</i><b> True, </b>T in capital
+
+29
+00:03:47 --> 00:03:57
+Now you can apply different <b>Boolean operations</b> on <b>t</b>. For example, type <b>f </b><i>is equal to</i><b> not t </b>
+
+30
+00:03:58 --> 00:04:02
+To see the value of f, type <b>f</b>
+
+31
+00:04:03 --> 00:04:09
+Type <b>f or t</b>. The output is <b>True</b>.
+
+32
+00:04:10 --> 00:04:15
+Type <b>f and t</b>. The output is <b>False</b>.
+
+33
+00:04:16 --> 00:04:20
+What if you want to apply one <b>operator</b> before another?
+
+34
+00:04:21 --> 00:04:32
+We can use <b>parentheses</b> for <b>precedence</b>. Let us write a small code to check this out.
+<p>Type, <b>a </b><i>is equal to </i><b>False</b>
+</p>
+
+35
+00:04:33 --> 00:04:36
+Type, <b>b </b><i>is equal to </i><b>True</b>
+
+36
+00:04:37 --> 00:04:40
+Type, <b>c </b><i>is equal to </i><b>True</b>
+
+37
+00:04:41 --> 00:04:45
+Now we will check how <b>precedence</b> changes with <b>parenthesis</b>.
+
+38
+00:04:46 --> 00:04:50
+Let us try two <b>expressions</b> and their <b>evaluations</b>.
+
+39
+00:04:51 --> 00:04:56
+Type, <i>inside parentheses</i><b> a and b or c </b>
+
+40
+00:04:57 --> 00:05:00
+This expression gives the value <b>True</b>.
+
+41
+00:05:01 --> 00:05:10
+Now type <b>a and </b><i>inside parentheses </i><b>b or c </b> It gives the value <b>False</b>.
+
+42
+00:05:11 --> 00:05:15
+Let's now look at some <b>operators</b> available in <b>Python3.</b>
+
+43
+00:05:16 --> 00:05:23
+<b>Python</b> uses plus sign for <b>addition.</b>  Type, <b>23</b> plus <b>74</b>
+
+44
+00:05:24 --> 00:05:31
+Minus sign for <b>subtraction</b>.Type, <b>23 </b>minus <b>56</b>
+
+45
+00:05:32 --> 00:05:40
+Asterisk sign for <b>multiplication.</b> Type, <b>45 </b>asterisk <b>76</b>
+
+46
+00:05:41 --> 00:05:50
+slash sign for <b>division.</b> Type, <b>384</b> slash <b>16</b>
+
+47
+00:05:51 --> 00:05:54
+Let us move ahead with operators.
+
+48
+00:05:55 --> 00:06:02
+<b>Percentage</b> <b>sign</b> for <b>modulo operation.</b> <b>Modulo</b> operator gives reminder value.
+
+49
+00:06:03 --> 00:06:07
+Type, <b>87 </b>percentage sign <b>6 </b>
+
+50
+00:06:08 --> 00:06:16
+Two asterisks for an <b>exponent</b>. Type, <b>7 </b>asterisk asterisk <b>8</b>
+
+51
+00:06:17 --> 00:06:24
+In case, we may want to use the current value of <b>variable</b> in which the <b>result</b> is stored in the expression.
+
+52
+00:06:25 --> 00:06:29
+We can do that by putting the <b>operator</b> before <i><b>equal</b> to</i>.
+
+53
+00:06:30 --> 00:06:34
+Let us say, <b>a </b><i>is equal to </i><b>73 </b>
+
+54
+00:06:35 --> 00:06:43
+Type, <b>a </b>asterisk equal to <b>34</b>  To see the value of <b>a</b>, type, <b>a</b>
+
+55
+00:06:44 --> 00:06:51
+Again we will assign the same value to <b>a </b>by typing, <b>a </b><i>is equal to </i><b>73</b>
+
+56
+00:06:52 --> 00:06:57
+Type, <b>a</b><i> is equal to </i><b>a </b>asterisk <b>34. </b>
+
+57
+00:06:58 --> 00:07:04
+Type <b>a</b> You can see that both the expressions are giving the same value.
+
+58
+00:07:05 --> 00:07:14
+Pause the video. Try this exercise and then resume the video. Find the square root of 3 using Python.
+
+59
+00:07:15 --> 00:07:23
+The solution is on your screen. 3 asterisk asterisk 0.5 gives the square root of 3.
+
+60
+00:07:24 --> 00:07:29
+Pause the video. Try this exercise and then resume the video.
+
+61
+00:07:30 --> 00:07:33
+Will you get the same value for the below expressions?
+
+62
+00:07:34 --> 00:07:36
+Switch to the terminal for the solution.
+
+63
+00:07:37 --> 00:07:44
+Type, <b>3</b> asterisk asterisk <b>0.5</b>. This <b>operation</b> gives a float.
+
+64
+00:07:45 --> 00:07:58
+Type, <b>3</b> asterisk asterisk <b>1/2 </b>This <b>operation</b> also gives a <b>float,</b> but different value.
+<p>Hence, we will not get the same value for the expressions.
+</p>
+
+65
+00:07:59 --> 00:08:10
+To get the same value, type, <b>3</b> asterisk asterisk <i>inside parentheses</i><b> 1/2</b>
+<p>We can see that now the values are same.
+</p>
+
+66
+00:08:11 --> 00:08:14
+This brings us to the end of this tutorial.
+
+67
+00:08:15 --> 00:08:21
+In this tutorial, we have learnt about,<b> </b>
+<p><b>data types </b>in<b> Python </b>like
+Numbers and
+Boolean and
+</p>
+
+68
+00:08:22 --> 00:08:27
+<b>Operators </b>in<b> Python</b> like
+<p>Arithmetic Operators and
+Boolean Operators 
+</p>
+
+69
+00:08:28 --> 00:08:41
+Here are some self assessment questions for you to solve
+<p>What are the three <b>built-in data types</b> in <b>Python</b> to represent numbers?
+</p><p>Which operator is used to find exponent?
+</p>
+
+70
+00:08:42 --> 00:08:50
+And the answers,<b> </b>
+<p>1. The built-in data types are
+<b>int </b>
+<b>float</b> and
+<b>complex </b>
+</p>
+
+71
+00:08:51 --> 00:08:55
+2.**Two asterisks are used to find <b>exponent</b>.
+
+72
+00:08:56 --> 00:08:59
+Please post your timed queries in this forum.
+
+73
+00:09:00 --> 00:09:04
+Please post your general queries on Python in this forum.
+
+74
+00:09:05 --> 00:09:08
+FOSSEE team coordinates the TBC project.
+
+75
+00:09:09 --> 00:09:19
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website.
+</p>
+
+76
+00:09:20 --> 00:09:25
+This is Priya from IIT Bombay signing off. Thanks for watching.
+

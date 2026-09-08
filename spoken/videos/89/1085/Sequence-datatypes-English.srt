@@ -1,0 +1,638 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:05
+Welcome to the tutorial on <b>Sequence data types</b>.
+
+2
+00:00:06 --> 00:00:15
+In this tutorial, we will learn about-
+<p><b>Sequence Data types</b> such as <b>List </b>,  <b>String </b>and <b>Tuple</b>
+</p>
+
+3
+00:00:16 --> 00:00:19
+Accessing the above <b>data types</b> using <b>index</b>
+
+4
+00:00:20 --> 00:00:23
+Convert list to <b>tuple</b> and vice-versa and
+
+5
+00:00:24 --> 00:00:27
+Convert <b>string</b> to <b>list</b> and vice-versa.
+
+6
+00:00:28 --> 00:00:34
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p>
+
+7
+00:00:35 --> 00:00:41
+<b>Python 3.4.3 </b>and  <b>IPython 5.1.0</b>
+
+8
+00:00:42 --> 00:00:49
+To practise this tutorial, you should know how to
+<p>run basic <b>Python </b>commands on the <b>ipython console</b>
+</p>
+
+9
+00:00:50 --> 00:00:54
+If not, see the relevant <b>Python </b>tutorials on this website.
+
+10
+00:00:55 --> 00:01:00
+<b>Sequence data types</b> are those in which elements are kept in a sequential order.
+
+11
+00:01:01 --> 00:01:04
+The elements are accessed using <b>index numbers</b>.
+
+12
+00:01:05 --> 00:01:13
+The <b>sequence data types</b> in Python are
+<p><b>list </b>,  <b>string </b>and <b>tuple </b>
+</p>
+
+13
+00:01:14 --> 00:01:17
+First let us understand what is <b>list</b>.
+
+14
+00:01:18 --> 00:01:23
+<b>List</b> is a container that holds a number of <b>objects</b> in the given order.
+
+15
+00:01:24 --> 00:01:31
+For example: <b>num </b><i>underscore</i><b> list </b><i>is equal to inside square brackets</i><b> 1, 2, 3, 4</b>
+
+16
+00:01:32 --> 00:01:35
+A<b> list</b> can store data of any <b>type</b>.
+
+17
+00:01:36 --> 00:01:48
+<b>List</b> is most useful when storing data of identical <b>type</b>.
+<p>Examples:  Name of books in a library and Passengers on a flight 
+</p>
+
+18
+00:01:49 --> 00:01:53
+Let us start <b>ipython3 pylab.</b>
+<p>Open the <b>terminal.</b>
+</p>
+
+19
+00:01:54 --> 00:02:01
+Type <b>ipython3 </b><i>space hyphen hyphen </i><b>pylab </b>and press <b>Enter.</b>
+
+20
+00:02:02 --> 00:02:08
+From here onwards, remember to press the <b>Enter</b> key after typing every command on the <b>terminal</b>.
+
+21
+00:02:09 --> 00:02:19
+Now we will create our first <b>list.</b>
+<p>Type, <b>num </b><i>underscore </i><b>list </b><i>is equal to inside square brackets </i><b>1, 2, 3, 4</b>
+</p>
+
+22
+00:02:20 --> 00:02:23
+Type, <b>num </b><i>underscore </i><b>list</b>
+
+23
+00:02:24 --> 00:02:29
+Comma-separated items enclosed in <b>square brackets</b> constitute a <b>list</b>.
+
+24
+00:02:30 --> 00:02:33
+We can have a <b>list</b> something like this.
+
+25
+00:02:34 --> 00:02:44
+Type, <b>var </b><i>underscore </i><b>list </b><i>is equal to inside square brackets </i><b>1, 1.2, </b><i>inside square brackets </i><b>1,2</b>
+
+26
+00:02:45 --> 00:02:47
+Type, <b>var </b><i>underscore </i><b>list</b>
+
+27
+00:02:48 --> 00:02:52
+Now let us look at another <b>sequence data type, strings</b>.
+
+28
+00:02:53 --> 00:02:59
+Type <b>greeting </b><i>underscore </i><b>string </b><i>is equal to inside double quotes </i><b>hello</b>
+
+29
+00:03:00 --> 00:03:03
+Type <b>greeting </b><i>underscore </i><b>string</b>
+
+30
+00:03:04 --> 00:03:07
+It is now a<b> string variable </b>with the value<b> hello.</b>
+
+31
+00:03:08 --> 00:03:13
+Python <b>strings</b> can actually be defined in three different ways as follows.
+
+32
+00:03:14 --> 00:03:18
+<b>k </b><i>is equal to inside single quotes </i><b>Single quote</b>
+
+33
+00:03:19 --> 00:03:25
+<b>l </b><i>is equal to inside double quotes </i><b>Let's see how to include a single quote</b>
+
+34
+00:03:26 --> 00:03:32
+<b>m </b><i>is equal to inside triple quotes </i><b>This is another “example” for string</b>
+
+35
+00:03:33 --> 00:03:39
+Here single, double and triple quotes are used as<b> delimiters.</b>
+
+36
+00:03:40 --> 00:03:44
+The last in the list of <b>sequence data types</b> is <b>tuple</b>.
+
+37
+00:03:45 --> 00:03:55
+Type <b>person </b><i>underscore </i><b>tuple </b><i>is equal to inside brackets </i><b>17 comma </b><i>inside double quotes</i><b> Ram comma 56.8</b>
+
+38
+00:03:56 --> 00:04:00
+This tuple contains <b>age</b>,<b>name</b> and <b>weight</b> of a person.
+
+39
+00:04:01 --> 00:04:06
+To create a <b>tuple</b> we use normal brackets unlike square brackets for <b>list</b>.
+
+40
+00:04:07 --> 00:04:11
+Next, let us see how to access the <b>list</b> using <b>index</b> numbers.
+
+41
+00:04:12 --> 00:04:17
+Type, <b>num </b><i>underscore </i><b>list</b><i> inside square brackets </i><b>2</b>
+
+42
+00:04:18 --> 00:04:22
+<b>num </b><i>underscore </i><b>list</b><i> inside square brackets </i><b>-1</b>
+
+43
+00:04:23 --> 00:04:28
+Recall that, the <b>index</b> of the <b>elements</b> starts with 0 instead of 1.
+
+44
+00:04:29 --> 00:04:32
+Now let us access the <b>string elements</b>.
+
+45
+00:04:33 --> 00:04:38
+Type, <b>greeting </b><i>underscore </i><b>string</b><i> inside square brackets</i><b> 1</b>
+
+46
+00:04:39 --> 00:04:43
+<b>greeting </b><i>underscore </i><b>string</b><i> inside square brackets</i><b> 3</b>
+
+47
+00:04:44 --> 00:04:48
+<b>greeting </b><i>underscore </i><b>string</b><i> inside square brackets</i><b> -2</b>
+
+48
+00:04:49 --> 00:04:53
+We can see that the output is displayed as per the <b>index</b> value.
+
+49
+00:04:54 --> 00:04:57
+Next let us <b>access tuple elements</b>.
+
+50
+00:04:58 --> 00:05:03
+Type <b>person </b><i>underscore </i><b>tuple </b><i>inside square brackets</i><b> 2</b>
+
+51
+00:05:04 --> 00:05:09
+<b>person </b><i>underscore </i><b>tuple </b><i>inside square brackets</i><b> -3</b>
+
+52
+00:05:10 --> 00:05:15
+The output shows the weight and age of the person as per the <b>index</b> value.
+
+53
+00:05:16 --> 00:05:20
+Next, we will see about how to add <b>sequences</b>.
+
+54
+00:05:21 --> 00:05:26
+Type <b>num </b><i>underscore </i><b>list</b><i> plus </i><b>var </b><i>underscore </i><b>list </b>
+
+55
+00:05:27 --> 00:05:31
+Addition gives a new <b>sequence</b> containing both the <b>sequences.</b>
+
+56
+00:05:32 --> 00:05:35
+Likewise, we will do for <b>string data type</b>.
+
+57
+00:05:36 --> 00:05:43
+Type <b>a </b><i>underscore </i><b>string</b><i> is equal to inside double quotes </i><b> space another string</b>
+
+58
+00:05:44 --> 00:05:48
+<b>greeting </b><i>underscore </i><b>string</b><i> plus </i><b>a </b><i>underscore </i><b>string</b>
+
+59
+00:05:49 --> 00:05:52
+We can see that both the <b>strings</b> are added now.
+
+60
+00:05:53 --> 00:05:55
+Next we will see for <b>tuple</b>.
+
+61
+00:05:56 --> 00:06:03
+Type, <b>t2</b><i> is equal to inside brackets inside double quotes </i><b>Student comma</b>
+
+62
+00:06:04 --> 00:06:09
+Adding a <b>comma</b> after <b>Student</b> is important to make <b>t2</b> a <b>tuple</b>.
+
+63
+00:06:10 --> 00:06:14
+Type, <b>person </b><i>underscore </i><b>tuple</b><i> plus </i><b>t2</b>
+
+64
+00:06:15 --> 00:06:19
+Now we can see that <b>Student</b> is added to the <b>tuple</b>.
+
+65
+00:06:20 --> 00:06:24
+Next let us see how to find the length of a variable.
+
+66
+00:06:25 --> 00:06:33
+We use <b>len function</b> for that.
+<p>Type, <b>len </b><i>inside brackets </i><b>num </b><i>underscore </i><b>list</b>
+</p>
+
+67
+00:06:34 --> 00:06:37
+The output shows the number of <b>objects</b> of the <b>list</b>.
+
+68
+00:06:38 --> 00:06:43
+Type, <b>len </b><i>inside brackets </i><b>greeting </b><i>underscore </i><b>string</b>
+
+69
+00:06:44 --> 00:06:48
+<b>len </b><i>inside brackets </i><b>person </b><i>underscore </i><b>tuple</b>
+
+70
+00:06:49 --> 00:06:54
+Next we will learn to check the presence of an <b>element</b> using the '<b>in'</b> <b>keyword</b>
+
+71
+00:06:55 --> 00:06:58
+Type, <b>3 in num </b><i>underscore </i><b>list</b>
+
+72
+00:06:59 --> 00:07:03
+<i>Inside single quotes</i><b> H in greeting </b><i>underscore </i><b>string</b>
+
+73
+00:07:04 --> 00:07:08
+<i>Inside double quotes</i><b> Sita in person </b><i>underscore </i><b>tuple</b>
+
+74
+00:07:09 --> 00:07:13
+We can see that the output displays <b>True</b> and <b>False</b> accordingly.
+
+75
+00:07:14 --> 00:07:18
+Next we will find the maximum and minimum values.
+
+76
+00:07:19 --> 00:07:22
+We use <b>max function </b>to find the maximum value.
+
+77
+00:07:23 --> 00:07:27
+Type, <b>max </b><i>inside brackets </i><b>num </b><i>underscore </i><b>list</b>
+
+78
+00:07:28 --> 00:07:32
+The <b>min function </b>is used to find minimum value.
+
+79
+00:07:33 --> 00:07:37
+Type, <b>min </b><i>inside brackets </i><b>greeting </b><i>underscore </i><b>string</b>
+
+80
+00:07:38 --> 00:07:44
+For <b>string</b> data type, <b>ASCII</b> value is used to get the maximum and minimum values.
+
+81
+00:07:45 --> 00:07:53
+Next we will find the sum of a <b>list</b>.
+<p>Type, <b>sum </b><i>inside brackets </i><b>num </b><i>underscore </i><b>list</b>
+</p>
+
+82
+00:07:54 --> 00:08:00
+So far we have talked about many similar features of <b>list</b>, <b>string</b> and <b>tuple</b>.
+
+83
+00:08:01 --> 00:08:07
+But there are many important features in <b>list</b> that differ from <b>string</b> and <b>tuple</b>.
+
+84
+00:08:08 --> 00:08:11
+Let us see them using some examples.
+
+85
+00:08:12 --> 00:08:19
+Type, <b>num </b><i>underscore </i><b>list </b><i>inside square brackets </i><b>1 </b><i>is equal to </i><b>9 </b>
+
+86
+00:08:20 --> 00:08:27
+<b>num </b><i>underscore </i><b>list</b>
+<p>Here the value at index 1 is assigned to 9.
+</p>
+
+87
+00:08:28 --> 00:08:36
+Type, <b>greeting </b><i>underscore </i><b>string </b><i>inside square brackets </i><b>1 </b><i>is equal to inside single quotes </i><b>k</b>
+
+88
+00:08:37 --> 00:08:44
+The first <b>command</b> executes without a problem.
+<p>But there is an error in the second one. 
+</p>
+
+89
+00:08:45 --> 00:08:55
+Now let us try it in <b>tuple</b>.
+<p>Type <b>person </b><i>underscore </i><b>tuple </b><i>inside square brackets </i><b>0 </b><i>is equal to </i><b>23</b>
+</p>
+
+90
+00:08:56 --> 00:09:04
+We can see the same <b>error</b> again.
+<p>This is because <b>strings</b> and <b>tuples</b>  cannot change the <b>value</b> at a particular <b>index.</b>
+</p>
+
+91
+00:09:05 --> 00:09:09
+But we can convert <b>list</b> to <b>tuple</b> and <b>tuple</b> to <b>list.</b>
+
+92
+00:09:10 --> 00:09:18
+First let us learn to convert <b>list</b> to <b>tuple</b>.
+<p>Type as shown
+</p>
+
+93
+00:09:19 --> 00:09:28
+<b>t </b><i>is equal to </i><b>tuple </b><i>inside brackets </i><b>list </b><i>underscore </i><b>tuple</b>
+<p><b>Tuple function</b> converts the <b>list</b> to <b>tuple</b>.
+</p>
+
+94
+00:09:29 --> 00:09:35
+Type, <b>t</b>
+<p>Now the <b>list</b> is successfully converted to <b>tuple</b>. 
+</p>
+
+95
+00:09:36 --> 00:09:43
+Next let us learn to convert <b>tuple</b> to <b>list</b>.
+<p>Type as shown<b>.</b>
+</p>
+
+96
+00:09:44 --> 00:09:50
+Type, <b>l </b><i>is equal to </i><b>list </b><i>inside brackets </i><b>tuple </b><i>underscore </i><b>list</b>
+
+97
+00:09:51 --> 00:09:54
+<b>List function</b> converts the <b>tuple</b> to <b>list</b>.
+
+98
+00:09:55 --> 00:09:57
+Type, <b>l</b>
+
+99
+00:09:58 --> 00:10:01
+Now the <b>tuple</b> is successfully converted to <b>list</b>.
+
+100
+00:10:02 --> 00:10:11
+Next let us learn to convert <b>string</b> to <b>list</b> and <b>list</b> to <b>string</b>.
+<p>Let us say we have the following <b>string</b>. 
+</p>
+
+101
+00:10:12 --> 00:10:18
+Type <b>otherstring</b><i> dot </i><b>split</b><i> inside brackets inside single quotes comma</i>
+
+102
+00:10:19 --> 00:10:22
+This produces a <b>list</b> with the <b>string</b> split at <b>comma</b>.
+
+103
+00:10:23 --> 00:10:28
+<b>join</b> <b>function</b> does the opposite.
+<p>It joins a <b>list</b> to make a <b>string</b>. 
+</p>
+
+104
+00:10:29 --> 00:10:32
+Let us say we have the following <b>list</b>.
+
+105
+00:10:33 --> 00:10:40
+Type, <i>inside single quotes comma dot </i><b>join </b><i>inside brackets </i><b>otherlist</b>
+
+106
+00:10:41 --> 00:10:44
+Thus we get a <b>list</b> joined on <b>commas</b>.
+
+107
+00:10:45 --> 00:10:48
+Similarly we can do on <b>spaces</b>.
+
+108
+00:10:49 --> 00:10:51
+Type as shown.
+
+109
+00:10:52 --> 00:10:57
+Note that the <b>list</b> has to be a <b>list</b> of <b>strings</b> to apply <b>join operation</b>.
+
+110
+00:10:58 --> 00:11:05
+Type, <i>inside single quotes space dot </i><b>join </b><i>inside brackets </i><b>spacestring</b>
+
+111
+00:11:06 --> 00:11:09
+We can see that the <b>list</b> is joined on <b>spaces</b>.
+
+112
+00:11:10 --> 00:11:15
+Pause the video.
+<p>Try this exercise and then resume the video.
+</p>
+
+113
+00:11:16 --> 00:11:20
+Check if 3 is an <b>element</b> of the following <b>list</b>.
+
+114
+00:11:21 --> 00:11:24
+Change the third <b>element</b> in the <b>list</b> to 21.
+
+115
+00:11:25 --> 00:11:28
+Switch to the <b>terminal</b> for the solution.
+
+116
+00:11:29 --> 00:11:36
+Type, <b>l</b><i> is equal to inside square brackets </i><b>1,7,5,3,4</b>
+
+117
+00:11:37 --> 00:11:44
+<b>3 in l</b>
+<p>The output is <b>True</b>. So the element 3 is in the list.
+</p>
+
+118
+00:11:45 --> 00:11:50
+Type, <b>l</b><i> inside square brackets </i><b>3</b><i> is equal to </i><b>21</b>
+
+119
+00:11:51 --> 00:11:57
+Type, <b>l</b>
+<p>We can see that the element 3 is changed to 21.
+</p>
+
+120
+00:11:58 --> 00:12:03
+Pause the video.
+<p>Try this exercise and then resume the video.
+</p>
+
+121
+00:12:04 --> 00:12:09
+Convert the string <b>"Elizabeth is queen of England</b>" to <b>"Elizabeth is queen" </b>
+
+122
+00:12:10 --> 00:12:13
+Switch to the terminal for the solution.
+
+123
+00:12:14 --> 00:12:20
+Type <b>s</b><i> is equal to inside double quotes </i><b>Elizabeth is queen of england</b>
+
+124
+00:12:21 --> 00:12:27
+<b>stemp</b><i> is equal to </i><b>s.split</b><i> open and close brackets</i>
+
+125
+00:12:28 --> 00:12:39
+<b>s</b><i> is equal to inside single quotes space dot </i><b>join </b><i>inside brackets </i><b>stemp </b><i>inside square brackets colon </i><b>3</b>
+
+126
+00:12:40 --> 00:12:45
+Type, <b>s</b>
+<p>We got the required output.
+</p>
+
+127
+00:12:46 --> 00:12:49
+This brings us to the end of this tutorial.
+
+128
+00:12:50 --> 00:12:58
+In this tutorial, we have learnt to,
+<p>Use the <b>sequence data types</b> such as <b>List, String </b>and<b> Tuple </b>
+</p>
+
+129
+00:12:59 --> 00:13:04
+Split and join a list using <b>split</b> and <b>join functions </b>respectively
+
+130
+00:13:05 --> 00:13:08
+Convert <b>list</b> to <b>tuple</b> and vice-versa and
+
+131
+00:13:09 --> 00:13:12
+Convert <b>string</b> to <b>tuple</b> and vice-versa
+
+132
+00:13:13 --> 00:13:16
+Here are some self assessment questions for you to solve
+
+133
+00:13:17 --> 00:13:21
+First. What is the major difference between <b>tuple</b> and <b>list</b>?
+
+134
+00:13:22 --> 00:13:26
+Second. Split the below <b>string</b> on <b>whitespaces</b>
+
+135
+00:13:27 --> 00:13:33
+And the answers,
+<p>First. The major difference between <b>tuple</b> and <b>list</b> is that,
+</p>
+
+136
+00:13:34 --> 00:13:37
+<b>Tuple</b> cannot change the value at a particular index
+
+137
+00:13:38 --> 00:13:40
+But <b>list</b> can change the value
+
+138
+00:13:41 --> 00:13:45
+<b>Tuple</b> is used to store data related to an item
+
+139
+00:13:46 --> 00:13:50
+But <b>list</b> is typically used to store items of identical <b>type</b>
+
+140
+00:13:51 --> 00:13:57
+Second. To split the <b>string</b> on <b>whitespace</b>, we use the<b> split function</b> without any <b>argument</b>
+
+141
+00:13:58 --> 00:14:01
+Please post your timed queries in this forum.
+
+142
+00:14:02 --> 00:14:06
+Please post your general queries on Python in this forum.
+
+143
+00:14:07 --> 00:14:10
+FOSSEE team coordinates the TBC project.
+
+144
+00:14:11 --> 00:14:18
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website.
+</p>
+
+145
+00:14:19 --> 00:14:24
+This is Priya from IIT Bombay signing off.
+<p>Thanks for watching.
+</p>
+

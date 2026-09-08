@@ -1,0 +1,317 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:04
+Welcome to the spoken tutorial on <b>Dictionaries</b>.
+
+2
+00:00:05 --> 00:00:24
+In this tutorial, we will learn to,
+<p>Create <b>dictionaries</b>
+</p><p>Add and delete <b>data</b> from <b>dictionaries</b>
+</p><p>Retrieve <b>data</b> from <b>dictionaries</b>
+</p><p>Check for presence of <b>keys</b> and
+</p><p><b>Iterate</b> over elements.
+</p>
+
+3
+00:00:25 --> 00:00:39
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p><p><b>Python 3.4.3 </b>and
+</p><p><b>IPython 5.1.0</b>
+</p>
+
+4
+00:00:40 --> 00:00:53
+To practise this tutorial, you should know how to
+<p>use<b> basic data types </b>and<b> operators</b>
+</p><p>If not, see the relevant <b>Python</b> tutorials on this website.
+</p>
+
+5
+00:00:54 --> 00:00:57
+First we will learn about <b>dictionaries</b>.
+
+6
+00:00:58 --> 00:01:11
+<b>Dictionary</b> is an unordered collection of items which has <b>key:value</b> pairs.
+<p><b>Dictionary</b> is used to look up for a specific <b>key</b> and retrieve the corresponding <b>value</b>. 
+</p>
+
+7
+00:01:12 --> 00:01:17
+<b>Keys</b> are unique within a dictionary while <b>values</b> may not be.
+
+8
+00:01:18 --> 00:01:22
+The values of a dictionary can be of any data type.
+
+9
+00:01:23 --> 00:01:30
+But the keys must be of immutable data type such as <b>strings</b>, <b>numbers</b> or <b>tuples</b>.
+
+10
+00:01:31 --> 00:01:36
+Let us start <b>ipython</b>. Open the <b>terminal.</b>
+
+11
+00:01:37 --> 00:01:49
+Type <b>ipython3 </b>and press <b>Enter.</b> From here onwards, remember to press the <b>Enter</b> key after typing every command on the <b>terminal</b>.
+
+12
+00:01:50 --> 00:01:53
+Let us start by creating an empty <b>dictionary</b>.
+
+13
+00:01:54 --> 00:02:05
+Type, <b>empty </b><i>is equal to</i><b> </b><i>open and close curly braces</i> Note that unlike <b>lists</b>, <b>curly</b> <b>braces</b> are used to define a <b>dictionary</b>.
+
+14
+00:02:06 --> 00:02:10
+Now let us see how to create a non empty <b>dictionary</b>.
+
+15
+00:02:11 --> 00:02:28
+Type as shown. Note that,
+<p>Each <b>key:value pair</b> is separated by a <b>comma</b>,
+</p><p>Each <b>key</b> is separated from its value by a colon, and 
+</p><p>The whole thing is enclosed in curly braces.
+</p>
+
+16
+00:02:29 --> 00:02:43
+Here, we have defined four entries in the <b>dictionary</b> <b>student</b>.  The <b>keys</b> are <b>name, age, gender, class.</b>
+
+17
+00:02:44 --> 00:02:49
+Type, <b>student</b> to see its content.
+
+18
+00:02:50 --> 00:02:54
+Next let us learn to access the dictionary elements.
+
+19
+00:02:55 --> 00:03:00
+The value of a <b>dictionary</b> can be accessed using the corresponding<b> key</b>.
+
+20
+00:03:01 --> 00:03:06
+The <b>syntax </b>is: <b>dictionary </b><i>underscore </i><b>name </b><i>inside square brackets </i><b>key</b>
+
+21
+00:03:07 --> 00:03:11
+Now let us access the value for the key<b> ‘name’.</b>
+
+22
+00:03:12 --> 00:03:20
+Type, <b>print</b> <i>inside brackets </i><b>student </b><i>inside square brackets inside single quotes </i><b>name</b>
+
+23
+00:03:21 --> 00:03:25
+As expected it<b> </b>printed the output as<b> raj.</b>
+
+24
+00:03:26 --> 00:03:30
+Now we will retrieve the value for the key<b> ‘class’</b>
+
+25
+00:03:31 --> 00:03:42
+Type, <b>print</b> <i>inside brackets </i><b>student </b><i>inside square brackets inside single quotes </i><b>class</b>
+<p>It displays the output as 10.
+</p>
+
+26
+00:03:43 --> 00:03:48
+If we try to access a <b>value</b> with a wrong <b>key</b>, we get an error.
+
+27
+00:03:49 --> 00:03:55
+Type, <b>student </b><i>inside square brackets inside single quotes </i><b>height</b>
+
+28
+00:03:56 --> 00:04:04
+The <b>interpreter</b> gave us the <b>KeyError:</b> '<b>height'</b> This is because, <b>key 'height' </b>is not present in the <b>student dictionary.</b>
+
+29
+00:04:05 --> 00:04:08
+This is about creating <b>dictionaries.</b>
+
+30
+00:04:09 --> 00:04:14
+Next, let us see how to <b>add</b> or <b>delete</b> <b>items </b>in a <b>dictionary</b>.
+
+31
+00:04:15 --> 00:04:28
+First let us <b>add</b> an element<b> height </b>to the <b>dictionary</b> <b>student.</b>
+<p>Type, <b>student </b><i>inside square brackets inside single quotes </i><b>height </b><i>is equal to</i><b> 6.2</b>
+</p>
+
+32
+00:04:29 --> 00:04:41
+Let us now check the content of the <b>dictionary.</b>
+<p>Type, <b>student</b> You can see that <b>key-value</b> '<b>height': 6.2 </b>is added to the <b>dictionary student.</b>
+</p>
+
+33
+00:04:42 --> 00:04:55
+Next let us modify the <b>element class </b>of the <b>dictionary</b> <b>student.</b>
+<p>Type, <b>student </b><i>inside square brackets inside single quotes </i><b>class </b><i>is equal to </i><b>11</b>
+</p>
+
+34
+00:04:56 --> 00:05:01
+Now, to check the content of the dictionary, type, <b>student</b>
+
+35
+00:05:02 --> 00:05:05
+As you can see, the value for <b>class</b> <b>key</b> is changed to <b>11 .</b>
+
+36
+00:05:06 --> 00:05:19
+Next let us learn to delete <b>age </b>from the <b>dictionary</b> <b>student.</b>
+<p>Type, <b>del student </b><i>inside square brackets inside single quotes </i><b>age</b>
+</p>
+
+37
+00:05:20 --> 00:05:28
+Type, <b>student</b> You can see that now <b>key-value</b> '<b>age': 16</b> is deleted from <b>student. </b>
+
+38
+00:05:29 --> 00:05:38
+Next let us see how to check whether a <b>key</b> is present in a <b>dictionary</b>.
+<p>For that we can use the <b>method in.</b>
+</p>
+
+39
+00:05:39 --> 00:05:47
+The method<b> in</b> will return <b>True</b> if the key is found in the <b>dictionary.</b> It will return <b>False</b> if <b>key</b> is not present.
+
+40
+00:05:48 --> 00:05:54
+Note that we can check only for the presence of the <b>keys</b> in <b>dictionaries</b> and not values.
+
+41
+00:05:55 --> 00:06:02
+<b>Keys </b>of a <b>dictionary </b>are not ordered.  Hence, <b>slicing</b> and <b>striding</b> are not valid on <b>dictionaries</b>.
+
+42
+00:06:03 --> 00:06:05
+Let us try it with an example.
+
+43
+00:06:06 --> 00:06:16
+Type, <i>inside single quotes </i><b>school in student</b> We get <b>False, </b>since the <b>key 'school' </b>is not present in <b>student.</b>
+
+44
+00:06:17 --> 00:06:24
+Type, <i>inside single quotes </i><b>name in student</b> We get <b>True</b>, as expected.
+
+45
+00:06:25 --> 00:06:39
+Next let us see how to retrieve keys and values of a dictionary.
+<p>Method <b>keys</b>() is used for getting a <b>list</b> of <b>keys</b>
+</p><p>Method<b> values() </b>is<b> </b>used<b> </b>for getting a <b>list</b> of <b>values</b>.
+</p>
+
+46
+00:06:40 --> 00:06:55
+Now let us try the above methods with examples. Type, <b>student</b><i> dot </i><b>keys </b><i>open and close brackets </i> It returns the <b>list</b> of <b>keys</b> of the <b>dictionary</b> <b>student.</b>
+
+47
+00:06:56 --> 00:07:06
+Type, <b>student </b><i>dot </i><b>values </b><i>open and close brackets </i>
+<p>It returns the <b>list</b> of <b>values</b> of the <b>dictionary</b> <b>student.</b>
+</p>
+
+48
+00:07:07 --> 00:07:15
+Next let us see the <b>items method.</b>
+<p>Type, <b>student </b><i>dot </i><b>items </b><i>open and close brackets</i>
+</p>
+
+49
+00:07:16 --> 00:07:21
+It returns a <b>list</b> of <b>tuples</b> of <b>key-value pairs</b> of the <b>dictionary student.</b>
+
+50
+00:07:22 --> 00:07:29
+The order of items of the list returned by<b> keys(), values() </b>and<b> items()</b> cannot be predicted.
+
+51
+00:07:30 --> 00:07:34
+In <b>dictionaries, </b>they are not in the order in which we inserted them.
+
+52
+00:07:35 --> 00:07:40
+Pause the video. Try this exercise and then resume the video.
+
+53
+00:07:41 --> 00:07:49
+Print the <b>keys</b> and <b>values</b> of the <b>dictionary student</b> one by one. Hint: use the <b>method</b> <b>items</b> and <b>for loop.</b>
+
+54
+00:07:50 --> 00:07:53
+Switch back to the terminal for the solution.
+
+55
+00:07:54 --> 00:08:01
+Type as shown. It displays the keys and values one by one.
+
+56
+00:08:02 --> 00:08:07
+This brings us to the end of this tutorial. Let us summarize.
+
+57
+00:08:08 --> 00:08:21
+In this tutorial, we have learnt to,
+<p>Create <b>dictionaries</b>
+</p><p>Access <b>elements</b> of a <b>dictionary</b> using <b>keys</b>
+</p><p>Add <b>elements</b> to a <b>dictionary</b> by assigning a <b>value</b> to a <b>key</b>
+</p>
+
+58
+00:08:22 --> 00:08:33
+Delete <b>elements</b> from a <b>dictionary</b> by using the <b>function</b> <b>del</b>
+<p>Retrieve the <b>keys</b> and <b>values</b> by using the <b>methods</b> <b>keys</b>() and <b>values() </b>respectively  
+</p>
+
+59
+00:08:34 --> 00:08:38
+and  Iterate over <b>elements</b> of a <b>dictionary</b> using a <b>for loop</b>.
+
+60
+00:08:39 --> 00:08:54
+Here are some self assessment questions for you to solve
+<p><b>Dictionary d </b>is defined as shown:
+</p><p>How do you retrieve the <b>value 'b'?</b>
+</p><p>Delete <b>value 'b' </b>from the <b>dictionary d</b>
+</p>
+
+61
+00:08:55 --> 00:09:09
+And the answers,
+<p><b>d </b><i>inside square brackets</i><b> 2 </b>gives the <b>value 'b'</b>
+</p><p><b>del d </b><i>inside square brackets </i><b>2 </b>deletes the <b>value ‘b’</b>
+</p>
+
+62
+00:09:10 --> 00:09:13
+Please post your timed queries in this forum.
+
+63
+00:09:14 --> 00:09:18
+Please post your general queries on Python in this forum.
+
+64
+00:09:19 --> 00:09:22
+FOSSEE team coordinates the TBC project.
+
+65
+00:09:23 --> 00:09:33
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India. For more details, visit this website.
+
+66
+00:09:34 --> 00:09:39
+This is Priya from IIT Bombay, signing off. Thanks for watching.
+

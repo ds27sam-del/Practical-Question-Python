@@ -1,0 +1,455 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:05
+Hello friends! Welcome to the tutorial on "<b>Embellishing a Plot</b>".
+
+2
+00:00:06 --> 00:00:15
+At the end of this tutorial, we will learn to- modify the attributes of the <b>plot</b> -color, line style, linewidth,
+
+3
+00:00:16 --> 00:00:19
+add a title to the <b>plot</b> with <b>embedded LaTeX</b>,
+
+4
+00:00:20 --> 00:00:25
+label <b>x </b>and <b>y axes</b>, add annotations to the <b>plot</b>,
+
+5
+00:00:26 --> 00:00:29
+set and get the <b>limits </b>of <b>axes</b>.
+
+6
+00:00:30 --> 00:00:36
+To record this tutorial, I am using:
+<p><b>Ubuntu Linux 14.04</b> operating system, 
+</p>
+
+7
+00:00:37 --> 00:00:42
+<b>Python 3.4.3</b>,
+<p><b>IPython 5.1.0</b>
+</p>
+
+8
+00:00:43 --> 00:00:53
+To practice this tutorial, you should know how to <b>run</b> basic <b>Python command</b>s on the <b>ipython console</b> and use the <b>Plots</b> interactively.
+
+9
+00:00:54 --> 00:00:58
+If not, see the pre-requisite <b>Python </b>tutorials on this website.
+
+10
+00:00:59 --> 00:01:04
+Let us start <b>ipython3</b>.
+<p>Open the <b>terminal.</b>
+</p>
+
+11
+00:01:05 --> 00:01:10
+Type <b>ipython3 </b>and press <b>Enter.</b>
+
+12
+00:01:11 --> 00:01:14
+Let us initialise the <b>pylab package</b>.
+
+13
+00:01:15 --> 00:01:20
+Type: <b>percentage pylab </b>and press<b> Enter.</b>
+
+14
+00:01:21 --> 00:01:25
+We shall first make a simple <b>plot</b> and start modifying it.
+
+15
+00:01:26 --> 00:01:39
+Type: <b>x = linspace</b> inside the brackets<b> minus 2 comma 4 comma 20 </b>and press <b>Enter.</b>
+
+16
+00:01:40 --> 00:01:48
+Then type <b>plot</b> inside the brackets <b>x comma sin(x) </b>and press <b>Enter.</b>
+
+17
+00:01:49 --> 00:01:52
+We can now see the <b>sine curve </b>in the <b>plot </b>window.
+
+18
+00:01:53 --> 00:01:58
+The default colour and thickness of the line is as decided by <b>pylab</b>.
+
+19
+00:01:59 --> 00:02:02
+Let us now change the <b>parameters</b> of this <b>curve</b>.
+
+20
+00:02:03 --> 00:02:08
+We can pass additional <b>arguments </b>to the <b>plot command </b>to do this.
+
+21
+00:02:09 --> 00:02:15
+We shall first clear the <b>plot </b>window by typing <b>clf() </b>in the <b>ipython console.</b>
+
+22
+00:02:16 --> 00:02:19
+You can now see a blank <b>plot window</b>.
+
+23
+00:02:20 --> 00:02:25
+Now, plot the same <b>sine curve </b>with an additional <b>color argument</b>.
+
+24
+00:02:26 --> 00:02:43
+So, we will type <b>plot</b> inside the brackets <b>x comma sin(x) comma</b> inside <b>inverted commas r </b>and press <b>Enter.</b>
+<p>Here, the <b>argument 'r' </b>is for red color. 
+</p>
+
+25
+00:02:44 --> 00:02:49
+On the <b>plot window</b>, the same <b>sine curve </b>is now seen in red color.
+
+26
+00:02:50 --> 00:02:53
+Do not close the <b>plot window</b>, just minimize it.
+
+27
+00:02:54 --> 00:02:59
+We can alter the thickness of the line by using the '<b>linewidth' argument</b>.
+
+28
+00:03:00 --> 00:03:04
+This time we will draw the <b>cosine curve </b>on the <b>plot </b>window.
+
+29
+00:03:05 --> 00:03:17
+So, type <b>plot</b> inside  brackets <b>x comma cos(x) comma linewidth is equal to 2 </b>and press <b>Enter.</b>
+
+30
+00:03:18 --> 00:03:23
+A <b>cosine curve </b>with line thickness 2 is produced in the <b>plot </b>window.
+
+31
+00:03:24 --> 00:03:30
+Let us now try to plot a <b>sine curve </b>in blue color with <b>linewidth </b>as 3.
+
+32
+00:03:31 --> 00:03:38
+Here onwards, press the <b>Enter</b> key to <b>execute</b> every <b>command</b> that we type on the <b>Ipython console</b>.
+
+33
+00:03:39 --> 00:03:43
+Let us first clear the <b>plot </b>window by typing <b>clf(). </b>
+
+34
+00:03:44 --> 00:03:47
+You will again see a blank <b>plot window</b>.
+
+35
+00:03:48 --> 00:04:02
+Now type<b> plot</b> inside the brackets <b>x comma sin(x) comma</b> inside <b>inverted commas b comma linewidth is equal to 3</b>.
+
+36
+00:04:03 --> 00:04:07
+A combination of <b>color</b> and <b>linewidth</b> would do the job for us.
+
+37
+00:04:08 --> 00:04:15
+To get the <b>plot </b>in dotted style instead of a solid style, put a <b>dot</b> in <b>linestyle.</b>
+
+38
+00:04:16 --> 00:04:19
+First, type <b>clf() </b>to clear the <b>plot </b>window.
+
+39
+00:04:20 --> 00:04:31
+Now type <b>plot</b> inside the brackets <b>x comma sin(x) comma</b> inside <b>inverted commas dot.</b>
+
+40
+00:04:32 --> 00:04:35
+We get the <b>sine curve </b>in dotted style.
+
+41
+00:04:36 --> 00:04:39
+Let's see the information of <b>plot</b>.
+
+42
+00:04:40 --> 00:04:46
+Type: <b>plot question mark </b>and press <b>Enter</b>.
+
+43
+00:04:47 --> 00:04:51
+Pause the video. Try this exercise and then resume the video .
+
+44
+00:04:52 --> 00:04:59
+Plot the <b>curve</b> of <b>x verses cos(x)</b> in red <b>dash line</b> and <b>linewidth</b> 3.
+
+45
+00:05:00 --> 00:05:03
+Let us switch to the <b>console </b>for the solution.
+
+46
+00:05:04 --> 00:05:07
+Type <b>clf() </b>to clear the <b>plot </b>window.
+
+47
+00:05:08 --> 00:05:24
+Now type <b>plot</b> inside the brackets <b>x comma cos(x) comma</b> inside <b>inverted commas r hyphen hyphen comma linewidth equals to 3</b>.
+
+48
+00:05:25 --> 00:05:29
+We use a combination of <b>linewidth argument</b> and <b>linestyle</b>.
+
+49
+00:05:30 --> 00:05:37
+Now we know how to produce a bare minimum plot with <b>color, style</b> and <b>thickness</b>.
+
+50
+00:05:38 --> 00:05:41
+Let us look at modifying the <b>plot </b>further.
+
+51
+00:05:42 --> 00:05:50
+Let us start with a <b>plot</b> for the <b>function minus x square plus 4x minus 5. </b>
+
+52
+00:05:51 --> 00:06:15
+Now type <b>plot</b> inside the brackets <b>x comma minus x multiplied by x plus 4 multiplied by x minus 5 comma</b> inside <b>inverted commas r comma linewidth is equal to 2</b>.
+
+53
+00:06:16 --> 00:06:20
+We will see the curve of this equation in the <b>plot </b>window.
+
+54
+00:06:21 --> 00:06:25
+But the figure does not have any description describing the <b>plot</b>.
+
+55
+00:06:26 --> 00:06:30
+To add a title to the <b>plot</b>, use the <b>title</b> command.
+
+56
+00:06:31 --> 00:06:47
+So, type <b>title</b> inside the brackets inside <b>inverted commas Parabolic function minus x square plus 4x minus 5</b>.
+
+57
+00:06:48 --> 00:06:53
+The <b>title</b> command, as you can see, takes a <b>string</b> as an <b>argument.</b>
+
+58
+00:06:54 --> 00:07:02
+We can see the<b> title</b> on the <b>plot</b> window. But it is not <b>format</b>ted and does not look clean.
+
+59
+00:07:03 --> 00:07:08
+It would look even more shabby if there were fractions and <b>complex function</b>s.
+
+60
+00:07:09 --> 00:07:13
+Let us write the<b> title </b>in<b> LaTeX</b> format for a neater look.
+
+61
+00:07:14 --> 00:07:19
+For <b>LaTeX</b> format, we put a dollar sign before and after the <b>string</b>.
+
+62
+00:07:20 --> 00:07:37
+Type <b>title</b> inside the brackets<b> r</b> inside <b>inverted commas Parabolic function dollar minus x square plus 4x minus 5 dollar</b>.
+
+63
+00:07:38 --> 00:07:44
+Here, 'r' means that the <b>string</b> is to be treated as a <b>raw string</b>.
+
+64
+00:07:45 --> 00:07:48
+It will ignore all <b>escape codes</b>.
+
+65
+00:07:49 --> 00:07:54
+As we can see that the <b>polynomial</b> in the <b>title </b>is now formatted.
+
+66
+00:07:55 --> 00:08:02
+Although we have <b>title</b>, the <b>plot</b> is not complete without labelling the <b>x </b>and <b>y axes</b>.
+
+67
+00:08:03 --> 00:08:08
+So, we will <b>label x</b> and <b>y axes</b> in <b>LaTeX style</b>.
+
+68
+00:08:09 --> 00:08:29
+Type <b>xlabel</b> inside the brackets<b> r</b> inside <b>inverted commas dollar x dollar </b>and<b> ylabel</b> inside brackets <b>r</b> inside <b>inverted commas dollar y dollar </b>.
+
+69
+00:08:30 --> 00:08:33
+The <b>plot </b>is now almost complete.
+
+70
+00:08:34 --> 00:08:41
+Now we will name the points considering <b>point(2 comma minus 1)</b> as <b>local maxima</b>.
+
+71
+00:08:42 --> 00:08:45
+To name a point, we use the <b>function annotate</b>.
+
+72
+00:08:46 --> 00:09:02
+Type <b>annotate</b> inside the brackets inside <b>inverted commas local maxima comma xy equals to</b> inside brackets <b>2 comma minus 1</b>.
+
+73
+00:09:03 --> 00:09:08
+We can see the <b>local maxima</b> at point 2 comma minus 1.
+
+74
+00:09:09 --> 00:09:14
+The first <b>argument</b> in <b>annotate</b> command is the name of the point.
+
+75
+00:09:15 --> 00:09:19
+The second <b>argument</b> represents the <b>coordinates </b>of the point.
+
+76
+00:09:20 --> 00:09:28
+It is a <b>tuple</b> containing two numbers. The first is <b>x coordinate</b> and second is <b>y coordinate</b>.
+
+77
+00:09:29 --> 00:09:38
+Next, type <b>xlim brackets</b>
+<p><b>xlim function </b>returns the current <b>x axis limits.</b>
+</p>
+
+78
+00:09:39 --> 00:09:48
+Then type <b>ylim brackets</b>. <b>ylim function</b> returns the current <b>y-axis limits</b>.
+
+79
+00:09:49 --> 00:10:01
+Set the <b>limits</b> of x-axis from <b>minus 4</b> to <b>5</b> by typing <b>xlim inside the brackets minus 4 comma 5</b>.
+
+80
+00:10:02 --> 00:10:06
+Similarly, set the <b>limits</b> of y-axis in a similar manner.
+
+81
+00:10:07 --> 00:10:18
+Type <b>ylim</b> inside the brackets <b>minus 15 comma 2.</b>
+
+82
+00:10:19 --> 00:10:23
+Pause the video. Try this exercise and then resume the video.
+
+83
+00:10:24 --> 00:10:30
+Make an <b>annotation</b> called "<b>root</b>" at the point <b>(minus 4 comma 0)</b>.
+
+84
+00:10:31 --> 00:10:34
+What happens to the first <b>annotation</b>?
+
+85
+00:10:35 --> 00:10:38
+Switch to the <b>Ipython console </b>for the solution.
+
+86
+00:10:39 --> 00:10:52
+Type <b>annotate</b> inside the brackets inside <b>inverted commas root comma xy is equal to  minus 4 comma 0</b>.
+
+87
+00:10:53 --> 00:10:58
+Every <b>annotate</b> command makes a new annotation on the figure.
+
+88
+00:10:59 --> 00:11:15
+This brings us to the end of this tutorial. In this tutorial, we have learnt to:
+<p>modify the <b>attributes</b> of a <b>plot</b> like <b>color, line width, line style</b> by passing additional <b>arguments</b>, 
+</p>
+
+89
+00:11:16 --> 00:11:19
+add <b>title </b>to a plot using '<b>title</b> command,
+
+90
+00:11:20 --> 00:11:27
+incorporate <b>LaTeX</b> style formatting by adding a $ sign before and after the <b>string</b>,
+
+91
+00:11:28 --> 00:11:33
+label <b>x</b> and <b>y axes</b> using <b>xlabel()</b> and <b>ylabel()</b> commands,
+
+92
+00:11:34 --> 00:11:38
+add annotations to a plot using <b>annotate()</b> command,
+
+93
+00:11:39 --> 00:11:45
+get and set the <b>limits</b> of axes using <b>xlim()</b> and <b>ylim()</b> commands.
+
+94
+00:11:46 --> 00:11:50
+Here are some self assessment questions for you to solve.
+
+95
+00:11:51 --> 00:11:59
+Draw a <b>plot</b> of <b>cosine graph</b> between <b>minus 2pi</b> to <b>2pi</b> with line thickness 4.
+
+96
+00:12:00 --> 00:12:08
+Read the documentation and find out, is there a way to modify the alignment of text in the command <b>ylabel</b>.
+
+97
+00:12:09 --> 00:12:30
+And the answers are-
+<p>In order to plot a <b>cosine graph</b> between the points <b>minus 2pi</b> and <b>2pi</b> with line thickness 4, we use the <b>linspace</b> and<b> plot</b> command as- 
+</p><p><b>x equals to linspace inside the brackets minus 2pi comma 2pi.</b>
+</p>
+
+98
+00:12:31 --> 00:12:37
+<b>plot (x comma cos(x) comma linewidth equals to 4)</b>
+
+99
+00:12:38 --> 00:12:47
+The answer to the second question is:
+<p>No. We do not have an option to modify the alignment of text in the command <b>ylabel</b>. 
+</p>
+
+100
+00:12:48 --> 00:12:50
+Do you have questions on THIS <b>Spoken Tutorial?</b>
+
+101
+00:12:51 --> 00:12:54
+Choose the minute and second where you have the question.
+
+102
+00:12:55 --> 00:13:02
+Explain your question briefly.
+<p>Someone from the <b>FOSSEE</b> team will answer them. Please visit this site. 
+</p>
+
+103
+00:13:03 --> 00:13:07
+Do you have any general / technical questions on Python?
+
+104
+00:13:08 --> 00:13:11
+Please visit the FOSSEE forum and post your question.
+
+105
+00:13:12 --> 00:13:17
+The <b>FOSSEE </b>team coordinates coding of solved examples of popular books.
+
+106
+00:13:18 --> 00:13:26
+We give honorarium and certificates for those who do this.
+<p>For more details, please visit this website. 
+</p>
+
+107
+00:13:27 --> 00:13:33
+The <b>Spoken Tutorial</b> project is funded by <b>NMEICT, MHRD,</b> Govt. of India.
+
+108
+00:13:34 --> 00:13:39
+This is Usha from <b>IIT Bombay</b>, signing off. Thanks for watching.
+

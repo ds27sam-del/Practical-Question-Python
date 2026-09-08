@@ -1,0 +1,216 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:05
+Hello friends! Welcome to the tutorial on "<b>Saving Plots</b>".
+
+2
+00:00:06 --> 00:00:14
+At the end of this tutorial, you will be able to -
+<p>save <b>plot</b>s using <b>savefig() function</b>,
+</p><p>save plots in different <b>format</b>s.
+</p>
+
+3
+00:00:15 --> 00:00:27
+To record this tutorial, I am using:
+<p><b>Ubuntu Linux 14.04</b> operating system,
+</p><p><b>Python 3.4.3</b>,
+</p><p><b>IPython 5.1.0</b>
+</p>
+
+4
+00:00:28 --> 00:00:39
+To practise this tutorial, you should know how to use <b>Plot</b> command interactively.
+<p>If not, see the prerequisite <b>Python tutorials</b> on this website.
+</p>
+
+5
+00:00:40 --> 00:00:53
+Let us first open the <b>Terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously.
+<p>Now, type <b>ipython3</b> and press <b>Enter</b>. 
+</p>
+
+6
+00:00:54 --> 00:01:04
+Let us initialise the '<b>pylab' package</b>.
+<p>Type <b>percentage pylab </b>and press<b> Enter</b>.
+</p>
+
+7
+00:01:05 --> 00:01:09
+Let us plot a <b>sine curve</b> from<b> minus 3 pi</b> to <b>3 pi. </b>
+
+8
+00:01:10 --> 00:01:13
+First, we will calculate the required points for the plot.
+
+9
+00:01:14 --> 00:01:27
+To do this, type:
+<p><b>x equals to linspace(minus 3 star pi comma 3 star pi comma 100) </b>in the <b>console</b>.
+</p>
+
+10
+00:01:28 --> 00:01:32
+Let us <b>plot</b> a <b>sine curve</b> for the points stored in <b>variable x</b>.
+
+11
+00:01:33 --> 00:01:46
+Type: <b>plot(x comma sin(x)) </b>in the <b>console</b> and press <b>Enter. </b>
+<p>Don't close the <b>plot window</b> for rest of the tutorial.
+</p>
+
+12
+00:01:47 --> 00:01:53
+Here you can see we have made a very basic <b>sine plot</b>. Now let us see how to <b>save</b> the <b>plot.</b>
+
+13
+00:01:54 --> 00:02:04
+For saving the plot, we will use the '<b>savefig()' function.</b>
+<p>Syntax: <b>savefig(fname)</b>
+</p><p><b>savefig function</b> takes one <b>argument</b> which is the filename. 
+</p>
+
+14
+00:02:05 --> 00:02:11
+Type: <b>savefig('sine.png') </b>and press<b> Enter</b>.
+
+15
+00:02:12 --> 00:02:15
+This saves the file in present <b>working directory</b>.
+
+16
+00:02:16 --> 00:02:26
+The characters after the <b>dot </b>in the filename is the <b>extension</b>. It determines the <b>format</b> in which you want to <b>save</b> the file.
+
+17
+00:02:27 --> 00:02:33
+To check the current working directory, type <b>pwd </b>in the <b>console</b> and press <b>Enter</b>.
+
+18
+00:02:34 --> 00:02:52
+To save the file in a different directory, type full <b>path</b> of the directory before the filename.
+<p>Type: <b>savefig('slash home slash fossee slash sine.png')</b>
+</p>
+
+19
+00:02:53 --> 00:02:58
+Note that the above<b> file path </b>is for<b> Linux</b> based file systems.
+
+20
+00:02:59 --> 00:03:14
+For<b> Windows, </b>give the entire <b>file path</b> as shown here. Here <b>fossee</b> is the <b>username </b>in<b> Windows</b> and <b>sine.png </b>file is to be saved on <b>Desktop</b>.
+
+21
+00:03:15 --> 00:03:23
+Here we have used an <b>extension dot png.</b> This will ensure that the image is saved as a <b>PNG</b> file.
+
+22
+00:03:24 --> 00:03:29
+Now let us locate the file <b>sine.png</b> which we had saved earlier.
+
+23
+00:03:30 --> 00:03:34
+We have saved the file to
+<p><b>(slash)home(slash)fossee</b>.
+</p>
+
+24
+00:03:35 --> 00:03:39
+Let us navigate to <b>(slash)home(slash)fossee</b> using the file browser.
+
+25
+00:03:40 --> 00:03:45
+Open the <b>sine.png </b>file to see the plotted <b>sine curve. </b>
+
+26
+00:03:46 --> 00:03:56
+<b>savefig</b> can save the plot in many formats such as-
+<p><b>pdf - portable document format, </b>
+</p><p><b>ps - post script, </b>
+</p>
+
+27
+00:03:57 --> 00:04:09
+<b>eps - encapsulated post script, </b>to be used with <b>LaTeX </b>documents,
+<p><b>svg - scalable vector graphics, </b>
+</p><p><b>.png - portable network graphics </b>.
+</p>
+
+28
+00:04:10 --> 00:04:15
+Pause the video here, try out the following exercise and resume the video.
+
+29
+00:04:16 --> 00:04:22
+Save the <b>sine plot</b> in the <b>eps format</b>.  Let us see the output for this exercise.
+
+30
+00:04:23 --> 00:04:34
+Type: <b>savefig('slash home slash fossee slash sine.eps')</b> and press <b>Enter.</b>
+
+31
+00:04:35 --> 00:04:47
+Now let us go to <b>slash home slash fossee</b> and see the new file created. We see the file <b>sine.eps</b> here.
+
+32
+00:04:48 --> 00:04:59
+Pause the video here, try out the following exercise and resume the video.
+<p>Save the <b>sine plot</b> in <b>PDF, PS</b> and <b>SVG formats</b>.
+</p>
+
+33
+00:05:00 --> 00:05:16
+This brings us to the end of this tutorial. In this tutorial, we have learnt to:
+<p>1. Save plots using the <b>savefig() </b>function.
+</p><p>2. Save the plots in different formats like
+<b> pdf, ps, png, svg</b> and <b>eps</b>.
+</p>
+
+34
+00:05:17 --> 00:05:39
+Here are some assignment questions for you to solve.
+<p>1. Which command is used to save a <b>plot</b>?
+<b>saveplot()</b>,
+</p><p><b>savefig()</b>,
+</p><p><b>savefigure()</b>,
+</p><p><b>saveplt()</b>
+</p><p>2. <b>savefig('sine.png')</b> saves the <b>plot</b> in-
+</p><p>the <b>root directory 'slash' (on GNU/Linux, Unix based systems), '<u>C</u>:' (on windows)</b>,
+</p>
+
+35
+00:05:40 --> 00:05:49
+will result in an <b>error</b> as <b>full path</b> is not supplied,
+<p>the current <b>working directory</b>,
+</p><p>predefined directory like “<b>slash documents.”</b>
+</p>
+
+36
+00:05:50 --> 00:06:01
+And the answers are-
+<p>1. To save a plot, we use the <b>savefig() function.</b>
+</p><p>2. If we save a file without complete path,  it gets saved in the current <b>working directory</b>.
+</p>
+
+37
+00:06:02 --> 00:06:06
+Please post your timed questions in this forum.
+
+38
+00:06:07 --> 00:06:11
+Please post your general queries on <b>Python</b> in this forum.
+
+39
+00:06:12 --> 00:06:15
+<b>FOSSEE</b> team coordinates the <b>TBC project</b>.
+
+40
+00:06:16 --> 00:06:24
+<b>Spoken Tutorial</b> project is funded by <b>NMEICT, MHRD,</b> Govt. of India. For more details, visit this website.
+
+41
+00:06:25 --> 00:06:30
+This is Prabhu from <b>IIT Bombay</b>, signing off. Thank you.
+

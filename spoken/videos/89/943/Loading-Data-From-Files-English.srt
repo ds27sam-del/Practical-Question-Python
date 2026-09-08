@@ -1,0 +1,266 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:06
+Hello friends and welcome to the <b>spoken tutorial</b> on <b>"loading data from files".</b>
+
+2
+00:00:07 --> 00:00:20
+In this tutorial, you will learn to:
+<p>read data from files which contain data in:
+</p><p>single <b>column format</b>
+</p><p>or multiple columns separated by <b>space</b>s or other <b>delimiter</b>s.
+</p>
+
+3
+00:00:21 --> 00:00:36
+To record this tutorial, I am using:
+<p><b>Ubuntu Linux 14.04</b> operating system,
+</p><p><b>Python 3.4.3</b>,
+</p><p><b>IPython 5.1.0</b>.
+</p>
+
+4
+00:00:37 --> 00:00:42
+You should know how to <b>run</b> basic <b>Python</b> commands on the <b>ipython console.</b>
+
+5
+00:00:43 --> 00:00:48
+If not, for relevant <b>Python tutorials</b>, please visit this website.
+<p><a class="external text" href="http://spoken-tutorial.org/" rel="nofollow">http://spoken-tutorial.org</a>
+</p>
+
+6
+00:00:49 --> 00:01:01
+Let us first open the <b>Terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously. Now, type <b>ipython3</b> and press <b>Enter</b>.
+
+7
+00:01:02 --> 00:01:11
+Let us initialise the <b>pylab</b> package.
+<p>Type <b>percent pylab </b>and press<b> Enter.</b>
+</p>
+
+8
+00:01:12 --> 00:01:21
+Let us begin with reading the file<b> primes.txt</b>. This file contains a list of prime numbers listed in a column.
+
+9
+00:01:22 --> 00:01:28
+Type: <i> </i><b>cat</b><i>(space)</i><b>primes</b><i>(dot)</i><b>txt</b><i> </i>
+
+10
+00:01:29 --> 00:01:37
+We can use the<b> cat</b> command to fetch data from the file and display it on the terminal. Press <b>Enter</b>.
+
+11
+00:01:38 --> 00:01:42
+We see the prime numbers are displayed on the terminal.
+
+12
+00:01:43 --> 00:01:49
+Now we can use the <b>loadtxt()</b> command to store this list into the variable<b> primes</b>.
+
+13
+00:01:50 --> 00:02:06
+So, type: <b>primes</b><i>(equal to)</i><b>loadtxt</b><i>(within parentheses)(within double quotes)</i><b>primes</b><i>(dot)</i><b>txt</b> and press <b>Enter.</b>
+
+14
+00:02:07 --> 00:02:12
+Please make sure that you provide the correct path to the file, '<b>primes.txt'.</b>
+
+15
+00:02:13 --> 00:02:17
+The file, in our case, is present in the <b>home</b> folder.
+
+16
+00:02:18 --> 00:02:24
+<b>primes</b> is now a sequence of prime numbers that was listed in the file <b>primes.txt</b>.
+
+17
+00:02:25 --> 00:02:28
+Now let us display the contents in the variable <b>primes.</b>
+
+18
+00:02:29 --> 00:02:40
+So, type: <b>print</b> (within parentheses) <b>primes</b> and press <b>Enter</b>. We see the sequence printed.
+
+19
+00:02:41 --> 00:02:50
+We observe that all the numbers end with a period ‘.’ . This is because all these numbers are <b>floats.</b>
+
+20
+00:02:51 --> 00:03:00
+Now, type: <b>cat</b><i>(space)</i><b>pendulum</b><i>(dot)</i><b>txt </b> and press <b>Enter</b>.
+
+21
+00:03:01 --> 00:03:14
+This file contains two columns of data. This first column contains the length of the pendulum.
+<p>The second column contains the corresponding time period.
+</p>
+
+22
+00:03:15 --> 00:03:22
+Let us now read the data from the file into the variable<b> pend</b> using the<b> loadtxt</b> command.
+
+23
+00:03:23 --> 00:03:38
+So, type: <b>pend</b><i>(equal to)</i><b>loadtxt</b><i>(within parentheses)(within double quotes)</i><b>pendulum</b><i>(dot)</i><b>txt</b><i> </i>and press<b> Enter.</b>
+
+24
+00:03:39 --> 00:03:46
+Please note that <b>loadtxt</b> needs both the columns of the file to have equal number of rows.
+
+25
+00:03:47 --> 00:03:59
+Now, print the variable<b> pend</b> to see what it contains.
+<p>Type: <i> </i><b>print</b><i>(within parentheses)</i><b>pend</b><i> </i>and press<b> Enter.</b>
+</p>
+
+26
+00:04:00 --> 00:04:06
+Notice that the variable has two sequences containing two columns of the data file.
+
+27
+00:04:07 --> 00:04:15
+Let us use an additional argument of the<b> loadtxt</b> command to read the data into two separate sequences.
+
+28
+00:04:16 --> 00:04:41
+So, type <b>L</b>(comma)<b>T</b><i>(equal to)</i><b>loadtxt</b><i>(within parentheses within double quotes)</i><b>pendulum</b><i>(dot)</i><b>txt</b><i>(after double quotes comma)</i><b>unpack</b><i>(equal to)</i><b>True</b><i> </i>
+<p>and press <b>Enter.</b>
+</p>
+
+29
+00:04:42 --> 00:04:46
+Now print the variables<b> L</b> and<b> T</b> to see what they contain.
+
+30
+00:04:47 --> 00:05:00
+Type: <i> </i><b>print</b><i>(within parentheses)</i><b>L</b><i> </i>and press<b> Enter</b>.
+<p>Type: <i> </i><b>print</b><i>(within parentheses)</i><b>T </b>and press<b> Enter</b>.
+</p>
+
+31
+00:05:01 --> 00:05:11
+Notice, that<b> L</b> and<b> T</b> now contain the first and second columns of data from the <b>pendulum.txt </b>respectively.
+
+32
+00:05:12 --> 00:05:19
+<b>unpack(equal to)True</b> has made the two columns into two separate and simple sequences.
+
+33
+00:05:20 --> 00:05:26
+Pause the video over here and try out the following exercise and resume the video.
+
+34
+00:05:27 --> 00:05:32
+Read the data from the file<b> pendulum</b><i>(underscore)</i><b>semicolon</b><i>(dot)</i><b>txt. </b>
+
+35
+00:05:33 --> 00:05:44
+This file contains data in two columns. These columns are separated by semicolons.
+<p>Use the<b> IPython</b> help to see how to do this.
+</p>
+
+36
+00:05:45 --> 00:05:49
+Let us look at the solution. Switch to the terminal.
+
+37
+00:05:50 --> 00:05:53
+First we will see the content of the file.
+
+38
+00:05:54 --> 00:06:11
+So, type: <b>cat</b> space <b>pendulum</b><i>(underscore)</i><b>semicolon</b><i>(dot)</i><b>txt</b> and press <b> Enter</b>. We see the two columns separated by a semicolon.
+
+39
+00:06:12 --> 00:06:47
+Now, type: <i> </i><b>L</b><i>(comma)</i><b>T</b><i>(equal to)</i><b>loadtxt</b><i> (within parentheses within double quotes) </i><b>pendulum</b><i>(underscore)</i><b>semicolon</b><i> (dot)</i><b>txt</b><i>(after double quotes comma)</i><b>unpack</b><i>(equal to)</i><b>True</b><i>(comma)</i><b>delimiter</b><i>(equal to)(within double quotes)</i><b>semicolon</b><i>.</i>
+<p>And press <b>Enter</b>.
+</p>
+
+40
+00:06:48 --> 00:07:02
+Now, <b>print</b><i>(within parentheses)</i><b>L</b> and press <b>Enter.</b>
+<p><b>print</b><i>(within parentheses)</i><b>T </b> and press <b>Enter. </b>
+</p>
+
+41
+00:07:03 --> 00:07:08
+This will display the contents inside the two variables <b>L</b> and <b>T.</b>
+
+42
+00:07:09 --> 00:07:19
+This brings us to the end of this tutorial. In this tutorial, we have learnt to read data from files using the <b>loadtxt()</b> command.
+
+43
+00:07:20 --> 00:07:30
+The data can be in:
+<p>a single column format or multiple column format, separated by <b>space</b>s or other <b>delimiter</b>s.
+</p>
+
+44
+00:07:31 --> 00:07:57
+Here are some self assessment questions for you to solve.
+<p>1. <b>loadtxt</b> can read data only from a file with one column. Is it <b>True</b> or <b>False</b>?
+</p><p>2. Given a file<b> data.txt</b> with three columns of data separated by spaces.
+Read it into 3 separate simple sequences.
+</p>
+
+45
+00:07:58 --> 00:08:08
+3. Given a file<b> data.txt</b> with three columns of data separated by <b>colon</b>. Read it into 3 separate simple sequences.
+
+46
+00:08:09 --> 00:08:16
+Now, let us look at the answers. The answer to the first question is <b>False</b>.
+
+47
+00:08:17 --> 00:08:24
+The <b>loadtxt() </b>command can read data from files having single columns as well as multiple columns.
+
+48
+00:08:25 --> 00:08:34
+The answer to the second question is-
+<p>To separate data into three columns, we use the<b> loadtxt()</b> command as follows:
+</p>
+
+49
+00:08:35 --> 00:08:49
+<b>x(</b><i>equal to)</i><b>loadtxt</b><i>(within parentheses and within double quotes</i>)<b>data</b><i>(dot</i>)<i>txt</i>(after double quotes <i>comma</i>)<b>unpack</b>(equal to)<b>True</b>.
+
+50
+00:08:50 --> 00:09:02
+The answer to the third question is-
+<p>We read into three separate sequences by using an additional <b>argument</b> of <b>delimiter</b> in the <b>loadtxt</b> command.
+</p>
+
+51
+00:09:03 --> 00:09:21
+So, <b>x</b>(<i>equal to</i>)<b>loadtxt</b>(<i> within parentheses, within double quotes</i>)<b>data</b><i>(dot)</i><b>txt</b>(after double quotes <i>comma)</i><b>unpack</b><i>(equal to)</i><b>True</b><i>(comma)</i><b>delimiter</b><i>(equal to</i>)<i>(within double quotes)</i><b>colon</b>.
+
+52
+00:09:22 --> 00:09:28
+Do you have questions on THIS <b>Spoken Tutorial?</b>. Please visit this site.
+
+53
+00:09:29 --> 00:09:36
+Do you have any general / technical questions? Please visit the forum given in the link.
+
+54
+00:09:37 --> 00:09:42
+The <b>FOSSEE </b>team coordinates coding of solved examples of popular books.
+
+55
+00:09:43 --> 00:09:51
+We give honorarium and certificates for those who do this. For more details, please visit this site.
+
+56
+00:09:52 --> 00:09:58
+The <b>Spoken Tutorial</b> project is funded by <b>NMEICT, MHRD,</b> Govt. of India.
+
+57
+00:09:59 --> 00:10:04
+This is Prathamesh Salunke from <b>IIT Bombay</b>, signing off. Thanks for watching.
+

@@ -1,0 +1,437 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:05
+Welcome to the spoken tutorial on <b>Manipulating Lists</b>.
+
+2
+00:00:06 --> 00:00:11
+In this tutorial, we will learn about
+<p><b>slicing</b> and <b>striding</b> of <b>lists</b>
+</p>
+
+3
+00:00:12 --> 00:00:14
+<b>Sort</b> and <b>reverse lists</b>.
+
+4
+00:00:15 --> 00:00:22
+To record this tutorial, I am using  <b>Ubuntu Linux 16.04</b> operating system
+
+5
+00:00:23 --> 00:00:29
+<b>Python 3.4.3</b>
+<p>and <b>IPython 5.1.0</b>
+</p>
+
+6
+00:00:30 --> 00:00:40
+To practise this tutorial, you should know how to run basic <b>Python </b>commands on the <b>ipython console </b>and  use <b>lists</b>
+
+7
+00:00:41 --> 00:00:45
+If not, see the relevant <b>Python </b>tutorials on this website.
+
+8
+00:00:46 --> 00:00:52
+We have already learnt about <b>list</b> and how to access individual <b>elements</b> in the <b>list.</b>
+
+9
+00:00:53 --> 00:00:56
+Now we will see about <b>slicing</b> of <b>lists</b>.
+
+10
+00:00:57 --> 00:01:03
+The syntax for <b>slicing</b> is <b>p </b><i>inside square brackets</i><b> start </b><i>colon </i><b>stop</b>.
+
+11
+00:01:04 --> 00:01:10
+It returns all the <b>elements</b> of <b>p</b> between <b>start</b> and <b>stop </b>values.
+
+12
+00:01:11 --> 00:01:15
+The <b>element</b> with the <b>stop index</b> value will not be included.
+
+13
+00:01:16 --> 00:01:20
+Let us start <b>ipython.</b>
+<p>Open the <b>terminal.</b>
+</p>
+
+14
+00:01:21 --> 00:01:26
+Type <b>ipython3 </b>and press <b>Enter.</b>
+
+15
+00:01:27 --> 00:01:33
+From here onwards, remember to press the <b>Enter</b> key after typing every command on the <b>terminal</b>.
+
+16
+00:01:34 --> 00:01:44
+Let us understand the <b>slicing</b> with an example.
+<p>Type, <b>primes </b><i>is equal to</i><b> </b>then type as shown. 
+</p>
+
+17
+00:01:45 --> 00:01:51
+Now we will try to obtain all the <b>primes</b> between 10 and 20 from the above <b>list</b> of <b>primes.</b>
+
+18
+00:01:52 --> 00:01:58
+Type, <b>primes </b><i>inside square brackets</i><b> 4 </b><i>colon</i><b> 8</b>
+
+19
+00:01:59 --> 00:02:02
+Recall that the <b>start</b> index value is 0.
+
+20
+00:02:03 --> 00:02:11
+Observe that the first <b>element</b> we want is 11 which has index 4 in the list.
+<p>So, <b>start</b> value is 4. 
+</p>
+
+21
+00:02:12 --> 00:02:18
+Also, 19 is the last <b>element</b> we require which has <b>index</b> 7 in the <b>list</b>.
+
+22
+00:02:19 --> 00:02:25
+The <b>element</b> with <b>index</b> equal to <b>stop value</b> will not be included.
+<p>So, <b>end</b> value is 8. 
+</p>
+
+23
+00:02:26 --> 00:02:31
+Pause the video.
+<p>Try this exercise and then resume the video. 
+</p>
+
+24
+00:02:32 --> 00:02:36
+Obtain the <b>primes</b> less than 10, from the list <b>primes</b>.
+
+25
+00:02:37 --> 00:02:40
+Switch back to <b>terminal</b> for the solution
+
+26
+00:02:41 --> 00:02:46
+Type, <b>primes </b><i>inside square brackets</i><b> 0 </b><i>colon </i><b>4 </b>
+
+27
+00:02:47 --> 00:02:51
+Observe that in this case, our <b>start</b> value is 0.
+
+28
+00:02:52 --> 00:03:00
+7 is the last <b>element</b> we require which has <b>index</b> 3 in the <b>list</b>.
+<p>So, the <b>end</b> value is 4. 
+</p>
+
+29
+00:03:01 --> 00:03:05
+Next we will learn to use <b>step value</b> in slicing.
+
+30
+00:03:06 --> 00:03:12
+Type 0 to 13 in a <b>list</b> and assign it to a variable <b>num</b> as shown.
+
+31
+00:03:13 --> 00:03:18
+Let us say, we want all the odd numbers less than 10 from the <b>list num</b>.
+
+32
+00:03:19 --> 00:03:24
+We will specify the <b>step value</b> in which the <b>slice</b> must be obtained.
+
+33
+00:03:25 --> 00:03:30
+Type <b>num </b><i>inside square brackets </i><b>1</b><i> colon </i><b>10</b><i> colon </i><b>2</b>
+
+34
+00:03:31 --> 00:03:38
+We have to start from <b>element</b> with <b>index</b> 1 upto <b>index</b> 10 in steps of 2.
+
+35
+00:03:39 --> 00:03:44
+It is called <b>striding</b> of <b>list</b>.
+<p>Press <b>Enter </b>to get the output. 
+</p>
+
+36
+00:03:45 --> 00:03:47
+We got the odd numbers less than 10.
+
+37
+00:03:48 --> 00:03:52
+When no <b>step</b> is specified, it is assumed to be 1.
+
+38
+00:03:53 --> 00:03:58
+Similarly, there are default values for <b>start</b> and <b>stop </b>as well.
+
+39
+00:03:59 --> 00:04:03
+Type, <b>num </b><i>inside square brackets colon </i><b>10</b>
+
+40
+00:04:04 --> 00:04:07
+It gives the first 10 elements of the list.
+
+41
+00:04:08 --> 00:04:14
+If we don't specify the <b>start value</b>, the first <b>element</b> of the <b>list</b> is taken as starting.
+
+42
+00:04:15 --> 00:04:20
+Type, <b>num </b><i>inside square brackets </i><b>10</b><i> colon </i>
+
+43
+00:04:21 --> 00:04:25
+This gives us all the <b>elements</b> from 10th <b>element </b>to the end.
+
+44
+00:04:26 --> 00:04:32
+If we don't specify the <b>stop value</b>, the elements till the last <b>index</b> of the <b>list</b> will be returned.
+
+45
+00:04:33 --> 00:04:39
+<b>Start</b> or <b>end</b> value can be negative to indicate that they are counted from the end of the <b>list</b>.
+
+46
+00:04:40 --> 00:04:44
+Next let us get all the even numbers in the list "<b>num</b>"
+
+47
+00:04:45 --> 00:04:50
+Observe that all the even numbers are at even index locations.
+
+48
+00:04:51 --> 00:04:57
+So, type <b>num </b><i>inside square brackets colon colon </i><b>2</b>
+
+49
+00:04:58 --> 00:05:03
+We got all the even numbers.
+<p>This is called <b>striding.</b>
+</p>
+
+50
+00:05:04 --> 00:05:09
+Pause the video.
+<p>Try this exercise and then resume the video. 
+</p>
+
+51
+00:05:10 --> 00:05:14
+Obtain all the multiples of three from the list <b>num</b>.
+
+52
+00:05:15 --> 00:05:18
+Switch back to <b>terminal</b> for the solution
+
+53
+00:05:19 --> 00:05:24
+Type, <b>num </b><i>inside square brackets colon colon </i><b>3</b>
+
+54
+00:05:25 --> 00:05:30
+It gives us every third <b>element</b> from the <b>list</b> (i.e) multiples of 3.
+
+55
+00:05:31 --> 00:05:34
+Next let us learn to sort a <b>list</b>.
+
+56
+00:05:35 --> 00:05:44
+Type, <b>a </b><i>is equal to inside square brackets </i><b>5, 1, 6, 7, 7, 10 </b>
+
+57
+00:05:45 --> 00:05:48
+<b>sort method</b> is used to sort a <b>list</b>.
+
+58
+00:05:49 --> 00:05:54
+Type, <b>a.sort </b><i>open and close brackets</i>
+
+59
+00:05:55 --> 00:06:03
+Type, <b>a </b>to get the output.
+<p>We can see that the contents of the <b>list a</b> is sorted now. 
+</p>
+
+60
+00:06:04 --> 00:06:07
+Python provides a built-in <b>function</b> called <b>sorted.</b>
+
+61
+00:06:08 --> 00:06:13
+<b>sorted function</b> sorts the <b>list</b> which is passed as an <b>argument</b> to it.
+
+62
+00:06:14 --> 00:06:16
+It returns a new <b>sorted list. </b>
+
+63
+00:06:17 --> 00:06:22
+Again we will assign the same value to <b>a</b> as shown.
+
+64
+00:06:23 --> 00:06:27
+Type, <b>sorted </b><i>inside brackets</i><b> a</b>
+
+65
+00:06:28 --> 00:06:33
+We can store this <b>sorted list</b> into another <b>list variable sa.</b>
+
+66
+00:06:34 --> 00:06:40
+Type, <b>sa </b><i>is equal to</i><b> sorted </b><i>inside brackets</i><b> a</b>
+
+67
+00:06:41 --> 00:06:45
+To see the <b>sorted list</b>, type <b>sa</b>
+
+68
+00:06:46 --> 00:06:51
+Python also provides the <b>reverse</b> method which <b>reverses</b> the <b>list</b> in place.
+
+69
+00:06:52 --> 00:07:00
+Type, <b>r </b><i>is equal to</i><b> </b><i>inside square brackets </i><b>1 comma 2 comma 3 comma 4 comma 5 </b>
+
+70
+00:07:01 --> 00:07:05
+<b>r dot reverse </b><i>open and close brackets</i>
+
+71
+00:07:06 --> 00:07:09
+To see the <b>list r</b>, type, <b>r</b>
+
+72
+00:07:10 --> 00:07:12
+We got the <b>reverse</b> of the <b>list</b>.
+
+73
+00:07:13 --> 00:07:16
+The original <b>list r</b> is changed now.
+
+74
+00:07:17 --> 00:07:21
+To <b>reverse</b> a <b>list</b>, we can also use <b>striding</b> with negative <b>values</b>.
+
+75
+00:07:22 --> 00:07:26
+Again we will assign the same value to <b>r</b> as shown.
+
+76
+00:07:27 --> 00:07:32
+Type, <b>r </b><i>inside square brackets colon colon </i>minus 1
+
+77
+00:07:33 --> 00:07:37
+We can also store this new <b>reversed list</b> in another<b> variable</b>.
+
+78
+00:07:38 --> 00:07:45
+Type, <b>ra </b><i>is equal to</i><b> r </b><i>inside square brackets colon colon </i>minus 1
+
+79
+00:07:46 --> 00:07:50
+To see the <b>reversed list</b>, type <b>ra</b>
+
+80
+00:07:51 --> 00:07:56
+Pause the video.
+<p>Try this exercise and then resume the video. 
+</p>
+
+81
+00:07:57 --> 00:08:05
+Given below is the <b>list</b> of marks of a student in an examination.
+<p>Obtain a <b>list</b> with marks in descending order. 
+</p>
+
+82
+00:08:06 --> 00:08:09
+Switch back to the <b>terminal</b> for the solution.
+
+83
+00:08:10 --> 00:08:13
+Type the <b>list</b> of marks as shown.
+
+84
+00:08:14 --> 00:08:25
+To get the marks in descending order type,
+<p><b>sorted </b><i>inside brackets </i><b>marks </b><i>inside square brackets</i> <i>colon colon </i>minus <b>1</b>
+</p>
+
+85
+00:08:26 --> 00:08:37
+We can also get the same output by typing,
+<p><b>sorted </b><i>inside brackets </i><b>marks comma reverse</b><i> equal to</i><b> True</b>
+</p>
+
+86
+00:08:38 --> 00:08:43
+This brings us to the end of this tutorial.
+<p>Let us summarize. 
+</p>
+
+87
+00:08:44 --> 00:08:51
+In this tutorial, we have learnt to,  Obtain the parts of <b>lists</b> using <b>slicing</b> and <b>striding</b>.
+
+88
+00:08:52 --> 00:08:59
+<b>Sort lists</b> using the <b>sort</b> method.
+<p>Use the method <b>reverse</b> to reverse the <b>lists</b>. 
+</p>
+
+89
+00:09:00 --> 00:09:04
+Here are some self assessment questions for you to solve
+
+90
+00:09:05 --> 00:09:10
+First. Given the <b>list primes</b>. How do you obtain the last 4 prime numbers?
+
+91
+00:09:11 --> 00:09:18
+Second. Given a <b>list p</b>, of unknown length. Obtain the first 3 characters of it.
+
+92
+00:09:19 --> 00:09:29
+And the answers,
+<p>First. The last four primes can be obtained from the given <b>list</b> as, 
+</p><p><b>primes</b> <i>inside square brackets </i>minus 4 <i>colon</i>
+</p>
+
+93
+00:09:30 --> 00:09:36
+Second. The first 3 characters can be obtained as,
+<p><b>p</b> <i>inside square brackets colon </i>3 
+</p>
+
+94
+00:09:37 --> 00:09:40
+Please post your timed queries in this forum.
+
+95
+00:09:41 --> 00:09:45
+Please post your general queries on Python in this forum.
+
+96
+00:09:46 --> 00:09:49
+FOSSEE team coordinates the TBC project.
+
+97
+00:09:50 --> 00:10:00
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website. 
+</p>
+
+98
+00:10:01 --> 00:10:06
+This is Priya from IIT Bombay signing off. Thanks for watching.
+

@@ -1,0 +1,281 @@
+Narration
+
+1
+00:00:01 --> 00:00:06
+Welcome to the spoken tutorial on <b>Handling errors and exceptions.</b>
+
+2
+00:00:07 --> 00:00:13
+In this tutorial, you will learn to,  Understand <b>errors</b> and <b>exceptions</b>
+
+3
+00:00:14 --> 00:00:16
+Handle <b>errors</b> and <b>exceptions</b>
+
+4
+00:00:17 --> 00:00:24
+To record this tutorial, I am using  <b>Ubuntu Linux 16.04</b> operating system
+
+5
+00:00:25 --> 00:00:31
+<b>Python 3.4.3</b> and <b>IPython 5.1.0</b>
+
+6
+00:00:32 --> 00:00:42
+To practise this tutorial, you should know how to use <b>functions</b> and carry-out <b>testing</b> and <b>debugging.</b>
+
+7
+00:00:43 --> 00:00:47
+If not, see the relevant <b>Python</b> tutorials on this website.
+
+8
+00:00:48 --> 00:00:56
+In <b>Python</b> there are two kinds of errors: <b>syntax errors</b> and <b>exceptions</b>
+
+9
+00:00:57 --> 00:01:03
+<b>Syntax errors</b> are caused by incorrect usages and these are detected by <b>parser. </b>
+
+10
+00:01:04 --> 00:01:10
+For example: <b>if True print inside brackets inside double quotes done</b>
+
+11
+00:01:11 --> 00:01:16
+It will give <b>Syntax Error</b> since <b>colon</b> is missing after <b>True.</b>
+
+12
+00:01:17 --> 00:01:22
+<b>Exception</b> is an <b>error</b> that occurs during <b>execution</b> of a <b>program. </b>
+
+13
+00:01:23 --> 00:01:29
+<b>Python</b> generates an <b>exception</b> that can be handled, which avoids the <b>program</b> to crash.
+
+14
+00:01:30 --> 00:01:36
+For example: 1/0
+<p>It will give <b>ZeroDivisionError</b> exception.
+</p>
+
+15
+00:01:37 --> 00:01:42
+Let us see these examples in action. Open the <b>terminal.</b>
+
+16
+00:01:43 --> 00:01:47
+Type <b>ipython3</b> and press <b>Enter.</b>
+
+17
+00:01:48 --> 00:01:54
+From here onwards remember to press the <b>Enter</b> key after typing every <b>command</b> on the <b>terminal.</b>
+
+18
+00:01:55 --> 00:02:02
+Now type <b>if True print</b> inside brackets inside double quotes <b>done. </b>
+
+19
+00:02:03 --> 00:02:05
+The output shows <b>SyntaxError.</b>
+
+20
+00:02:06 --> 00:02:12
+It displays an ‘arrow’ pointing at the earliest point in the line where the <b>error</b> was detected.
+
+21
+00:02:13 --> 00:02:19
+In our case, the error is caused by missing colon after <b>True</b> in <b>If</b> clause
+
+22
+00:02:20 --> 00:02:28
+Now type, <b>1 / 0</b>
+<p><b>Python</b> throws an <b>exception</b> called <b>ZeroDivisionError.</b>
+</p>
+
+23
+00:02:29 --> 00:02:35
+Even though the expression is syntactically correct, we cannot divide a number by zero.
+
+24
+00:02:36 --> 00:02:41
+<b>Exception</b> is a special kind of failure reported by the <b>programming language.</b>
+
+25
+00:02:42 --> 00:02:47
+Let us see how can be deal with the <b>Exceptions</b> that occured in <b>Programs</b>
+
+26
+00:02:48 --> 00:02:56
+Type <b>a</b> = <b>input</b> inside brackets inside double quotes <b>Enter an integer</b>
+
+27
+00:02:57 --> 00:03:06
+I will enter <b>ac</b> as input. Now type, <b>num</b> is equal to <b>int</b> inside brackets <b>a</b>
+
+28
+00:03:07 --> 00:03:16
+When you run this code, it throws a <b> 'ValueError' Exception</b>. This is because, we are trying to convert the <b>string</b> to <b>integer.</b>
+
+29
+00:03:17 --> 00:03:26
+So now we can <b> 'catch exceptions</b> and write <b>code</b> to <b>handle</b> it. For this we have <b>try</b> and <b>except clause</b> in <b>Python.</b>
+
+30
+00:03:27 --> 00:03:37
+Here is the syntax of <b>try....except...else blocks</b>. First, the <b>statements</b> between the <b>try</b> and <b>except keywords</b> is executed.
+
+31
+00:03:38 --> 00:03:43
+If the <b>statements</b> do not cause any <b>exception</b>, the <b>except clause</b> is skipped.
+
+32
+00:03:44 --> 00:03:51
+If the <b>statements</b> cause any <b>exception</b>, then <b>except clause</b> is executed if <b>exception</b> name matches.
+
+33
+00:03:52 --> 00:03:56
+And the <b>execution</b> continues after the <b>try statement</b>
+
+34
+00:03:57 --> 00:04:04
+The <b>code</b> in the <b>else-block executes</b> if the <b>code</b> in the <b>try: block</b> does not raise an <b>exception.</b>
+
+35
+00:04:05 --> 00:04:11
+Type as shown. Give <b>ac</b> as <b>input.</b>
+
+36
+00:04:12 --> 00:04:15
+Now we will type the <b>try</b> and <b>except blocks.</b>
+
+37
+00:04:16 --> 00:04:19
+Press <b>Enter</b> twice to get the <b>output.</b>
+
+38
+00:04:20 --> 00:04:27
+In the previous example, We encountered a problem because we tried to convert the <b>string ‘ac’ </b> to <b>integer.</b>
+
+39
+00:04:28 --> 00:04:33
+Here conversion of <b>string value</b> to an integer is given inside <b>try block.</b>
+
+40
+00:04:34 --> 00:04:40
+<b>ValueError exception</b> is raised and so the <b>output</b> is displayed as <b>Wrong input.</b>
+
+41
+00:04:41 --> 00:04:52
+In the previous example, we found out what caused the <b>error</b> and then resolved to get a solution for it. This whole process is called <b>debugging.</b>
+
+42
+00:04:53 --> 00:04:58
+Next we will see another <b>case</b> in <b>try except statement </b> with <b>else clause.</b>
+
+43
+00:04:59 --> 00:05:09
+Lets change our previous <b>code</b> slightly. Type as shown.
+<p>I will give <b>input</b> as 23.
+</p>
+
+44
+00:05:10 --> 00:05:19
+Now type as shown. This <b>try… except statement</b> has an optional <b>else clause.</b>
+
+45
+00:05:20 --> 00:05:24
+It is useful if the <b>try clause</b> does not raise an <b>exception.</b>
+
+46
+00:05:25 --> 00:05:33
+Lets see another example for <b>debugging</b>. Create a file <b>mymodule.py</b> with the following <b>code.</b>
+
+47
+00:05:34 --> 00:05:38
+The <b>variable ‘i’ </b> is iterated from 0 to 9.
+
+48
+00:05:39 --> 00:05:51
+Let us <b>run</b> this <b>code</b> in <b>Ipython. </b>
+<p>Type, <b>from mymodule import test</b>
+</p><p><b>test </b> open and close brackets
+</p>
+
+49
+00:05:52 --> 00:05:58
+<b>Interpreter</b> gives us <b>ZeroDivisionError</b> because there is a <b>division by zero error.</b>
+
+50
+00:05:59 --> 00:06:05
+To find the value which caused the <b>error</b>, type Percentage <b>debug</b>
+
+51
+00:06:06 --> 00:06:10
+The <b>code</b> which caused the <b>error</b> is shown by an arrow.
+
+52
+00:06:11 --> 00:06:17
+The <b>prompt</b> has changed to <b>ipdb</b> which is the <b>ipython debugger mode.</b>
+
+53
+00:06:18 --> 00:06:23
+Using this <b>debugger</b> here, you can access <b>variables</b> in the previous <b>code block.</b>
+
+54
+00:06:24 --> 00:06:28
+We can check values of <b>variables</b> to inspect what went wrong.
+
+55
+00:06:29 --> 00:06:35
+For example, on typing ‘i’, we get 5 as <b>output.</b>
+
+56
+00:06:36 --> 00:06:41
+This means that the <b>error</b> was caused when the value of i became 5.
+
+57
+00:06:42 --> 00:06:47
+To exit from the <b>ipdb prompt</b>, press q and press <b>Enter.</b>
+
+58
+00:06:48 --> 00:06:53
+This brings us to the end of this tutorial. Let us summarize.
+
+59
+00:06:54 --> 00:06:59
+In this tutorial, we have learnt about <b>Errors</b> and <b>exceptions.</b>
+
+60
+00:07:00 --> 00:07:08
+Handling <b>exception</b> using <b>try</b> and <b>except</b>. Using <b>percentage debug</b> for <b>debugging</b> in <b>ipython.</b>
+
+61
+00:07:09 --> 00:07:16
+Here is a self assessment question for you to solve
+<p>How do you start the <b>debugger</b> on <b>ipython</b>?
+</p>
+
+62
+00:07:17 --> 00:07:24
+And the answer,  We start the <b>debugger</b> on <b>ipython</b> by saying, <b>percentage debug</b>
+
+63
+00:07:25 --> 00:07:28
+Please post your timed queries in this forum.
+
+64
+00:07:29 --> 00:07:33
+Please post your general queries on Python in this forum.
+
+65
+00:07:34 --> 00:07:37
+FOSSEE team coordinates the TBC project.
+
+66
+00:07:38 --> 00:07:48
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India. For more details, visit this website.
+
+67
+00:07:49 --> 00:07:54
+This is Priya from IIT Bombay signing off. Thank you.
+

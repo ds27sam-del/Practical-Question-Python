@@ -1,0 +1,323 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:06
+Welcome to the spoken tutorial on <b>Image manipulation using arrays</b>.
+
+2
+00:00:07 --> 00:00:18
+In this tutorial, you will learn to -
+<p>Read <b>images</b> into <b>arrays</b>
+</p><p>Perform processing on them using simple array manipulations 
+</p>
+
+3
+00:00:19 --> 00:00:34
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p><p><b>Python 3.4.3 </b>and
+</p><p><b>IPython 5.1.0</b>
+</p>
+
+4
+00:00:35 --> 00:00:45
+To practise this tutorial, you should know how to   run basic <b>Python commands</b> on the <b>ipython console </b>and  access parts of <b>arrays</b>.
+
+5
+00:00:46 --> 00:00:50
+If not, see the relevant <b>Python </b>tutorials on this website.
+
+6
+00:00:51 --> 00:00:59
+Please download the files<b> Squares.png </b>and <b>Python.png</b> from the <b>Code files</b> link of this tutorial.
+
+7
+00:01:00 --> 00:01:03
+Save the files in the current <b>working directory</b>.
+
+8
+00:01:04 --> 00:01:08
+First we will learn how to <b>access</b> parts of an <b>array</b>.
+
+9
+00:01:09 --> 00:01:15
+For this purpose, we shall use the image <b>Squares.png</b> present in the current <b>working directory</b>.
+
+10
+00:01:16 --> 00:01:20
+Let us start <b>ipython</b>. Open the <b>terminal</b>.
+
+11
+00:01:21 --> 00:01:25
+Type <b>ipython3 </b>and press <b>Enter.</b>
+
+12
+00:01:26 --> 00:01:32
+From here onwards remember to press the <b>Enter</b> key after typing every <b>command</b> on the <b>terminal</b>.
+
+13
+00:01:33 --> 00:01:37
+To read an <b>image</b> into an <b>array</b>, we use the <b>imread command</b>.
+
+14
+00:01:38 --> 00:01:43
+Let us now read the data in <b>Squares.png</b> into the array <b>img</b>.
+
+15
+00:01:44 --> 00:01:50
+Type, <b>import matplotlib.pyplot as plt</b>
+
+16
+00:01:51 --> 00:02:01
+Then type, <b>img</b><i> is equal to</i><b> plt.imread </b><i>inside brackets inside single quotes </i><b>Squares.png </b>
+
+17
+00:02:02 --> 00:02:08
+In the first line <b>pyplot</b> is imported from <b>matplotlib </b>module with <b>plt </b>as alias.
+
+18
+00:02:09 --> 00:02:14
+This is to make use of <b>methods</b> like <b>imread </b>which are part of <b>pyplot.</b>
+
+19
+00:02:15 --> 00:02:20
+We can see the image by using the <b>functions imshow</b> followed by <b>show</b>.
+
+20
+00:02:21 --> 00:02:32
+Type, <b>plt.imshow </b><i>inside brackets </i><b>img</b> Then type, <b>plt.show </b><i>open and close brackets</i>
+
+21
+00:02:33 --> 00:02:40
+It displays the image in a separate popup window.The original image is in the black and white.
+
+22
+00:02:41 --> 00:02:48
+But here we do not see black and white, because <b>imshow</b> has <b>mapped</b> black and white to different colors.
+
+23
+00:02:49 --> 00:02:52
+This can be changed by using a different <b>color map</b>.
+
+24
+00:02:53 --> 00:02:57
+Close the image window to return to the <b>IPython console</b>.
+
+25
+00:02:58 --> 00:03:12
+In order to see the original black and white image type, <b>plt.imshow </b><i>inside brackets </i><b>img </b><i>comma</i><b> cmap </b><i>is equal to inside single quotes </i><b>gray</b>
+
+26
+00:03:13 --> 00:03:21
+Then type, <b>plt.show </b><i>open and close brackets</i>. Now we can see the image in black and white.
+
+27
+00:03:22 --> 00:03:23
+Close the image now.
+
+28
+00:03:24 --> 00:03:33
+To see what has been read into <b>img</b> variable, type,<b>img</b>. We can see that an <b>array</b> is displayed.
+
+29
+00:03:34 --> 00:03:43
+To check the <b>dimensions</b> of any <b>array</b>, we can use <b>shape function</b>.  Type, <b>img.shape </b>
+
+30
+00:03:44 --> 00:03:53
+As we can see, we got the dimensions of the image. The image<b> Squares.png</b> has the dimensions of 300 by 300.
+
+31
+00:03:54 --> 00:03:58
+Now, we wish to obtain the top left quarter of the image.
+
+32
+00:03:59 --> 00:04:05
+To do this, we need to access top half of the rows and left half of the columns of the <b>array</b>.
+
+33
+00:04:06 --> 00:04:10
+We know that the shape of the image is 300 by 300.
+
+34
+00:04:11 --> 00:04:18
+For <b>top</b>-<b>left</b> <b>corner</b> of the <b>image </b>we need first 150 <b>rows</b> and the first 150 <b>columns</b>.
+
+35
+00:04:19 --> 00:04:26
+So type, <b>img </b><i>inside square brackets colon</i><b> 150 </b><i>comma colon</i><b> 150</b>
+
+36
+00:04:27 --> 00:04:31
+This gives us the <b>top</b>-<b>left</b> <b>corner</b> of the <b>image</b>.
+
+37
+00:04:32 --> 00:04:41
+We use the <b>imshow command</b> to see the slice we obtained in the form of an image. Type as shown.
+
+38
+00:04:42 --> 00:04:47
+We got the required slice now. Close this image.
+
+39
+00:04:48 --> 00:04:53
+Pause the video. Try this exercise and then resume the video.
+
+40
+00:04:54 --> 00:05:01
+Obtain the square in the center of the image <b>Squares.png</b> with size 150 by 150.
+
+41
+00:05:02 --> 00:05:20
+Since we need to get center of the image, we take rows from one-fourth to three-fourth of the rows i.e. from <b>75</b> to <b>225</b> and  columns from one-fourth to three-fourth of the columns, i.e. from <b>75</b> to <b>225</b>
+
+42
+00:05:21 --> 00:05:24
+Switch to the <b>terminal</b> for the solution.
+
+43
+00:05:25 --> 00:05:33
+Type as shown. Hence, we get the center of the image. Close this image.
+
+44
+00:05:34 --> 00:05:38
+You can also save the sliced image <b>array</b> to a new variable.
+
+45
+00:05:39 --> 00:05:55
+Type, <b>img1</b><i> is equal to</i><b> img</b><i> inside square brackets </i><b>75 </b><i>colon </i><b>225 </b><i>comma</i><b> 75 </b><i>colon </i><b>225]</b> Then to see the image type as shown.
+
+46
+00:05:56 --> 00:05:58
+Close this image window
+
+47
+00:05:59 --> 00:06:02
+We also know how to <b>stride</b> over an <b>array.</b>
+
+48
+00:06:03 --> 00:06:07
+For that we can drop alternate rows and columns out of the image.
+
+49
+00:06:08 --> 00:06:15
+Type, <b>img </b><i>inside square brackets colon colon </i><b>2 </b><i>comma colon colon </i><b>2</b>
+
+50
+00:06:16 --> 00:06:23
+To see this image, type as shown. We can see that the scale has reduced.
+
+51
+00:06:24 --> 00:06:29
+We can observe some <b>blurring</b> near the <b>edges </b>if you scale it down further.
+
+52
+00:06:30 --> 00:06:34
+Close the image window to return to the <b>IPython console</b>.
+
+53
+00:06:35 --> 00:06:40
+To increase the <b>step</b> to 4, type as shown.
+
+54
+00:06:41 --> 00:06:44
+Close the image window to return to the <b>IPython console</b>.
+
+55
+00:06:45 --> 00:06:53
+We shall use the <b>Python.png</b> present in the current <b>working directory</b>.Now we have an <b>RGB</b> image.
+
+56
+00:06:54 --> 00:06:57
+Let us slice the image and see what happens.
+
+57
+00:06:58 --> 00:07:02
+Type as shown. We can see the image.
+
+58
+00:07:03 --> 00:07:06
+Close the image window to return to the <b>IPython console</b>.
+
+59
+00:07:07 --> 00:07:11
+To check the dimensions of <b>img</b>, we can use <b>shape function</b>.
+
+60
+00:07:12 --> 00:07:15
+Type, <b>img.shape </b>
+
+61
+00:07:16 --> 00:07:27
+The third number shows that there are 4 channels. These are corresponding to red, green, blue, and transparency value of the image.
+
+62
+00:07:28 --> 00:07:38
+The first number shows that the height of the image is 600. The second number shows that the width of the image is also 600.
+
+63
+00:07:39 --> 00:07:42
+Now we will slice the red channel of the <b>array</b>.
+
+64
+00:07:43 --> 00:07:52
+Type, <b>plt.imshow </b><i>inside brackets</i><b> img </b><i>inside square brackets colon comma colon comma </i><b>0</b>
+
+65
+00:07:53 --> 00:07:59
+Then type, <b>plt.show </b><i>open and close brackets.</i>
+
+66
+00:08:00 --> 00:08:03
+We got the required red channel of the <b>array</b>.
+
+67
+00:08:04 --> 00:08:05
+Close this image.
+
+68
+00:08:06 --> 00:08:11
+This brings us to the end of this tutorial. Let us summarize.
+
+69
+00:08:12 --> 00:08:18
+In this tutorial, we have learned to,
+<p>Read <b>images</b> into <b>arrays</b> and manipulate them. 
+</p>
+
+70
+00:08:19 --> 00:08:22
+Here is a self assessment question for you to solve
+
+71
+00:08:23 --> 00:08:28
+The shape of the variable <b>img</b> is (600, 600, 4).
+
+72
+00:08:29 --> 00:08:38
+What will be the shape of <b>img1</b> if <b>img1</b> <i>is equal to</i> <b>img</b> <i>inside brackets colon colon </i>2 <i>comma colon colon </i>4
+
+73
+00:08:39 --> 00:08:44
+And the answer is, (300, 150, 4)
+
+74
+00:08:45 --> 00:08:48
+Please post your timed queries in this forum.
+
+75
+00:08:49 --> 00:08:53
+Please post your general queries on Python in this forum.
+
+76
+00:08:54 --> 00:08:57
+FOSSEE team coordinates the TBC project.
+
+77
+00:08:58 --> 00:09:06
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India. For more details, visit this website.
+
+78
+00:09:07 --> 00:09:12
+This is Priya from IIT Bombay signing off. Thanks for watching.
+

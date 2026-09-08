@@ -1,0 +1,328 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:06
+Hello Friends. Welcome to the tutorial on "<b>Getting Started with Strings</b>".
+
+2
+00:00:07 --> 00:00:23
+At the end of this tutorial, you will learn to,
+<p>Define strings in different ways. 
+</p><p>Concatenate strings. 
+</p><p>Print a string repeatedly. 
+</p><p>Access individual elements of the string. 
+</p>
+
+3
+00:00:24 --> 00:00:38
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p><p><b>Python 3.4.3</b> and <b>IPython 5.1.0</b>
+</p>
+
+4
+00:00:39 --> 00:00:47
+To practise this tutorial, you should know how to
+<p>run basic <b>Python </b>commands on the <b>ipython console</b>
+</p>
+
+5
+00:00:48 --> 00:00:53
+If not, see the pre-requisite <b>Python </b>tutorials on this website.
+
+6
+00:00:54 --> 00:01:02
+What are <b>strings</b>?
+<p>In <b>Python,</b> any character within a <b>single/ double/ triple quotes </b>is<b> </b>a<b> string.</b>
+</p>
+
+7
+00:01:03 --> 00:01:12
+For example:
+<p>Single, double, and triple <b>quotes</b> can be used to denote a <b>string </b>as shown here.
+</p>
+
+8
+00:01:13 --> 00:01:18
+<b>Strings</b> in triple <b>quotes</b> can be written in multiple <b>lines</b>.
+
+9
+00:01:19 --> 00:01:29
+We can also define empty <b>strings</b>. <b>String</b> is a collection of characters which cannot be modified after it is created.
+
+10
+00:01:30 --> 00:01:41
+Let us first open the <b>Terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously. Type <b>ipython3</b> and press <b>Enter</b>.
+
+11
+00:01:42 --> 00:01:50
+Let us initialise the <b>pylab</b> package.Type <b>%pylab </b>and press<b> Enter.</b>
+
+12
+00:01:51 --> 00:01:57
+Let us clear the terminal.
+<p>We can assign a <b>string</b> to a <b>variable </b>called <b>a.</b>
+</p>
+
+13
+00:01:58 --> 00:02:08
+Type <b>a </b><i>is equal to inside any quotes</i> <b>Hello</b> <i>comma</i> <b>World</b> <b>exclamation mark </b>and
+<p>Press <b>Enter</b>
+</p>
+
+14
+00:02:09 --> 00:02:15
+Now let us learn string concatenation. Let us assign strings to variables.
+
+15
+00:02:16 --> 00:02:31
+Type
+<p><b>x <i>is equal to</i></b><i> inside quotes</i> <b>Hello</b>
+</p><p>Press <b>Enter</b>
+</p><p><b>y <i>is equal to</i></b><i> inside quotes</i> <b>World</b>
+</p><p>Press <b>Enter</b>
+</p>
+
+16
+00:02:32 --> 00:02:51
+Now, let us add the two strings.
+<p><b>z <i>is equal to </i>x plus</b> <i>inside quotes</i> <b>comma plus y plus</b> <i>inside quotes <b>exclamation mark.</b></i>
+</p><p>Press <b>Enter</b>
+</p>
+
+17
+00:02:52 --> 00:03:03
+<b>print</b> <i>inside parentheses</i> <b>z</b>
+<p>Press <b>Enter</b>
+</p><p>Here <b>x </b>and <b>y</b> are <b>string variables</b>.
+</p>
+
+18
+00:03:04 --> 00:03:08
+The <b>addition</b> <b>operation</b> performs the <b>concatenation</b> of two <b>strings</b>.
+
+19
+00:03:09 --> 00:03:13
+Here we can see the output of string concatenation.
+
+20
+00:03:14 --> 00:03:22
+Let us clear the <b>terminal</b>.
+<p>What if we multiply a string with an integer?
+</p><p>Let us find out!
+</p>
+
+21
+00:03:23 --> 00:03:32
+Recall<b> x</b> string.
+<p>Press <b>Enter</b>
+</p><p><b>x </b><i>multiplied by</i> <b>5</b>
+</p><p>Press <b>Enter</b>
+</p>
+
+22
+00:03:33 --> 00:03:38
+The <b>string</b> <b>Hello</b> is repeated 5 times after <b>multiplying</b>.
+
+23
+00:03:39 --> 00:03:50
+Pause the video. Try this exercise and then resume the video.
+<p>Obtain the <b>string</b> as shown without <b>typing</b> out all the twenty <b>hyphens</b>. 
+</p>
+
+24
+00:03:51 --> 00:04:13
+Switch to the terminal for solution. Type, <b>s <i>is equal to</i></b><i> inside quotes</i> <b>two percentages <i>plus</i></b><i> inside quotes <b>hyphen multiplied by</b></i><b> twenty <i>plus</i></b><i> inside quotes</i> <b> two percentages</b>
+<p>Press <b>Enter</b>
+</p>
+
+25
+00:04:14 --> 00:04:19
+<b>print</b> <i>inside parentheses </i> <b>s</b> Press <b>Enter</b>
+
+26
+00:04:20 --> 00:04:29
+Let's now look at <b>accessing</b> individual <b>elements</b> of <b>strings</b>.  We can access individual <b>elements</b> in the <b>string</b> using the <b>subscripts.</b>
+
+27
+00:04:30 --> 00:04:46
+Let us clear the <b>terminal</b>.
+<p>Recall <b>a.</b>
+</p><p>Press <b>Enter</b>.
+</p><p>Type, <b>a </b><i>inside square brackets</i> <b>zero</b> press <b>Enter</b>, gives us the first <b>character</b> of the <b>string</b>. 
+</p>
+
+28
+00:04:47 --> 00:04:56
+The <b>indexing</b> starts from 0 and goes up to <b>(n-1)</b>.
+<p>where <b>n</b> is the total number of <b>characters</b> in a <b>string</b>. 
+</p>
+
+29
+00:04:57 --> 00:05:01
+We can <b>access</b> the <b>strings</b> from the end using <b>negative indices.</b>
+
+30
+00:05:02 --> 00:05:10
+<b>a </b><i>inside square brackets </i><b>minus one<i> </i></b>gives us the last <b>element</b> of the <b>string</b> i.e. <b>exclamation mark</b>
+
+31
+00:05:11 --> 00:05:20
+<b>a </b><i>inside square brackets </i><b>minus two</b> gives us the second <b>element</b> from the end of the <b>string</b> i.e. <b>d</b>
+
+32
+00:05:21 --> 00:05:32
+Pause the video. Try this exercise and then resume the video. Given a string, <b>s</b> which is <b>Hello World</b>, what is the output of the following
+
+33
+00:05:33 --> 00:05:34
+Switch to the <b>terminal</b>.
+
+34
+00:05:35 --> 00:05:45
+Let us clear the <b>terminal</b>.
+<p>Type
+</p><p><b>s <i>is equal to</i></b><i> inside quotes</i> <b> Hello World </b>press <b>Enter</b>
+</p>
+
+35
+00:05:46 --> 00:05:58
+<b>s </b><i>inside square brackets <b>minus</b></i><b> five</b> gives <b>W </b>
+<p>Similarly we will get <b>e </b> for s[-10].
+</p>
+
+36
+00:05:59 --> 00:06:11
+<b>s </b><i>inside square brackets </i><b>minus 15</b> gives us an <b>IndexError. </b> Since the string given to us is only 11 <b>characters</b> long.
+
+37
+00:06:12 --> 00:06:19
+<b>s </b><i>inside square brackets </i><b>15 </b>again gives <b>IndexError </b>for the same reason.
+
+38
+00:06:20 --> 00:06:30
+Let us attempt to change one of the <b>characters</b> in a <b>string</b>.
+<p>Let us clear the <b>terminal</b>.
+</p><p>Recall <b>x</b>
+</p><p>Press <b>Enter</b>
+</p>
+
+39
+00:06:31 --> 00:06:43
+Let us manipulate <b>x.</b>
+<p><b>x </b> <i>inside square brackets </i> <b>zero <i>equal to</i></b><i> inside quotes </i> <b>B </b>press <b>Enter</b>
+</p>
+
+40
+00:06:44 --> 00:06:51
+Why do we get an error?
+<p>Initially the value of <b>x[0]</b> is <b>‘H’</b>.
+</p>
+
+41
+00:06:52 --> 00:07:01
+Now we are trying to assign another value <b>‘B’</b> to <b>x[0]</b>. Recall, strings cannot be modified after it is created.
+
+42
+00:07:02 --> 00:07:07
+We can split and join the strings by using the functions : <b>split()</b> and<b> join()</b>
+
+43
+00:07:08 --> 00:07:16
+To join a string, the syntax is <b>str <i>dot join</i></b><i> inside parentheses</i> <b>sequence</b>
+
+44
+00:07:17 --> 00:07:18
+Switch to the <b>terminal</b>.
+
+45
+00:07:19 --> 00:07:21
+Let us clear the <b>terminal</b>
+
+46
+00:07:22 --> 00:07:40
+Type <b>s <i>is equal to</i></b><i> inside quotes <b>hyphen </b></i>press <b>Enter</b> <b>seq <i>is equal to</i></b><i> inside parentheses </i> <b>a <i>comma </i>b <i>comma </i> c </b>press <b>Enter</b>
+
+47
+00:07:41 --> 00:07:48
+<b>print s <i>dot</i> join'<i> inside parentheses </i></b><i>seq <b>press </b>Enter</i>
+
+48
+00:07:49 --> 00:07:56
+We will get output as <b>a </b><i>hyphen </i><b>b </b><i>hyphen </i><b>c</b> It has joined <b>a, b, c</b> with <b>hyphen</b>.
+
+49
+00:07:57 --> 00:08:04
+To split a string, syntax is <b>str dot split </b><i>open and close parentheses </i>
+
+50
+00:08:05 --> 00:08:18
+Switch to the <b>terminal</b>
+<p>Type as shown press <b>Enter</b> <b>print str dot split</b> <i>open and close parentheses</i> press <b>Enter</b>
+</p>
+
+51
+00:08:19 --> 00:08:24
+We get the output like this. It has split the strings at <b>spaces</b>.
+
+52
+00:08:25 --> 00:08:27
+This brings us to the end of this tutorial.
+
+53
+00:08:28 --> 00:08:41
+In this tutorial, we have learnt to,<b> </b>
+<p>Define strings in different ways. 
+</p><p>Concatenate strings. 
+</p><p>Print a string repeatedly and Access individual elements of the string. 
+</p>
+
+54
+00:08:42 --> 00:08:45
+Here are some self assessment questions for you to solve
+
+55
+00:08:46 --> 00:09:00
+1. Write code to assign the string ’ is called the apostrophe, to variable s
+<p>2. How will you change <b>s</b> <b>is equal to hello</b> to <b>s</b> <b>is equal to capital H Hello</b>.
+</p>
+
+56
+00:09:01 --> 00:09:06
+3. The variables <b>s</b> and <b>t</b> are strings and <b>r</b> is integer.
+
+57
+00:09:07 --> 00:09:16
+They are assigned with the values as shown below, What is the output of <b>s</b> <i>multiplied by</i> <b>r</b><i> plus</i> <b>t</b> <i>multiplied by</i> <b>r</b>?
+
+58
+00:09:17 --> 00:09:28
+And the answers,
+<p>The given string can be assigned in this manner 
+</p><p>Strings cannot be manipulated after it is assigned a value
+</p>
+
+59
+00:09:29 --> 00:09:40
+The operation <b>s</b> <i>multiplied by</i> <b>r</b><i> plus</i> <b>t</b> <i>multiplied by</i> <b>r</b> will print each of the two words twice as <b>HelloHelloWorldWorld </b>
+
+60
+00:09:41 --> 00:09:44
+Please post your timed queries in this forum.
+
+61
+00:09:45 --> 00:09:49
+Please post your general queries on Python in this forum.
+
+62
+00:09:50 --> 00:09:53
+FOSSEE team coordinates the TBC project.
+
+63
+00:09:54 --> 00:10:03
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India. For more details, visit this website.
+
+64
+00:10:04 --> 00:10:09
+This is Trupti Kini from IIT Bombay signing off. Thank you.
+

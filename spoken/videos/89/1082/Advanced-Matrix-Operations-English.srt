@@ -1,0 +1,311 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:06
+Welcome to the spoken tutorial on <b>Advanced matrix operations</b>.
+
+2
+00:00:07 --> 00:00:13
+In this tutorial, you will learn to, find<b> Frobenius</b> and <b>infinity norm</b> of a <b>matrix</b>
+
+3
+00:00:14 --> 00:00:18
+Find <b>singular value decomposition</b> of a <b>matrix</b>.
+
+4
+00:00:19 --> 00:00:25
+To record this tutorial, I am using <b>Ubuntu Linux 16.04</b> operating system
+
+5
+00:00:26 --> 00:00:32
+<b>Python 3.4.3 </b>and  <b>IPython 5.1.0</b>
+
+6
+00:00:33 --> 00:00:45
+To practise this tutorial, you should know about
+<p><b>Lists, arrays </b>and accessing parts of <b>arrays </b>and performing basic<b> matrix operations</b>
+</p>
+
+7
+00:00:46 --> 00:00:50
+If not, see the relevant <b>Python</b> tutorials on this website.
+
+8
+00:00:51 --> 00:00:54
+First we will see about <b>flatten</b> function.
+
+9
+00:00:55 --> 00:01:00
+<b>flatten() function</b> returns a copy of the <b>array</b>, collapsed into one <b>dimension</b>.
+
+10
+00:01:01 --> 00:01:07
+It can be used to convert a <b>multidimensional matrix</b> into a <b>single dimension matrix</b>
+
+11
+00:01:08 --> 00:01:12
+Let us start <b>ipython</b>.
+<p>Open the <b>terminal.</b>
+</p>
+
+12
+00:01:13 --> 00:01:24
+Type, <b>ipython3 </b>and press <b>Enter</b>.
+<p>From here onwards, remember to press the <b>Enter</b> key after typing every <b>command</b> on the <b>terminal</b>. 
+</p>
+
+13
+00:01:25 --> 00:01:28
+Now let us see how to create <b>arrays</b>
+
+14
+00:01:29 --> 00:01:34
+Type <b>from numpy import asmatrix comma arange</b>
+
+15
+00:01:35 --> 00:01:47
+<b>a</b><i> is equal to</i><b> asmatrix </b><i>inside brackets</i><b> arange </b><i>inside brackets </i><b>1</b><i> comma </i><b>10</b><i> dot </i><b>reshape </b><i>inside brackets </i><b>3 </b><i>comma </i><b>3</b>
+
+16
+00:01:48 --> 00:01:56
+Then type, <b>a</b>
+<p>Now type, <b>a</b><i> dot </i><b>flatten</b><i> open and close brackets</i>
+</p>
+
+17
+00:01:57 --> 00:02:01
+First we imported<b> arange function</b> from <b>numpy module</b>.
+
+18
+00:02:02 --> 00:02:07
+Here, we can see <b>3 by 3 matrix</b> is converted into one <b>dimensional matrix</b>.
+
+19
+00:02:08 --> 00:02:11
+Next we will see about <b>frobenius norm.</b>
+
+20
+00:02:12 --> 00:02:17
+It is defined as the <b>square root</b> of the sum of the <b>absolute squares</b> of its <b>elements</b>.
+
+21
+00:02:18 --> 00:02:23
+Pause the video.
+<p>Try this exercise and then resume the video. 
+</p>
+
+22
+00:02:24 --> 00:02:29
+Find out the <b>frobenius norm</b> of the <b>inverse</b> of the given <b>4 by 4 matrix</b>.
+
+23
+00:02:30 --> 00:02:33
+Switch back to the <b>terminal</b> for the solution.
+
+24
+00:02:34 --> 00:02:45
+Type
+<p><b>m </b><i>is equal to</i><b> asmatrix </b><i>inside brackets</i><b> arange </b><i>inside brackets </i><b>1</b><i> comma </i><b>17 </b><i>dot </i><b>reshape </b><i>inside brackets </i><b>4</b><i> comma </i><b>4</b>
+</p>
+
+25
+00:02:46 --> 00:02:51
+Here, we have used <b>asmatrix, arange</b> and <b>reshape functions</b>.
+
+26
+00:02:52 --> 00:02:58
+We created a <b>matrix</b> of size <b>4 by 4</b> containing <b>elements</b> from 1 to 16.
+
+27
+00:02:59 --> 00:03:05
+Now type,
+<p><b>m </b><i>inside square brackets </i><b>0 </b><i>comma </i><b>1</b><i> is equal to</i><b> 0</b>
+</p>
+
+28
+00:03:06 --> 00:03:11
+<b>m </b><i>inside square brackets </i><b>1</b><i> comma </i><b>3 </b><i>is equal to</i><b> 0</b>
+
+29
+00:03:12 --> 00:03:22
+Then type, <b>m</b>
+<p>We changed the value of <b>element</b> at row 0 column 1 and row 1 column 3 to 0. 
+</p>
+
+30
+00:03:23 --> 00:03:32
+In order to find out the <b>Frobenius norm</b> of the <b>inverse</b> of <b>matrix m</b>, type as shown.
+
+31
+00:03:33 --> 00:03:38
+<b>norm function</b> is available in<b> numpy.linalg module.</b>
+
+32
+00:03:39 --> 00:03:43
+Next, we will see about <b>infinity norm</b> of a <b>matrix.</b>
+
+33
+00:03:44 --> 00:03:50
+It is defined as the maximum value of sum of the <b>absolute value</b> of <b>elements</b> in each row.
+
+34
+00:03:51 --> 00:03:56
+Pause the video.
+<p>Try this exercise and then resume the video. 
+</p>
+
+35
+00:03:57 --> 00:04:00
+Find the <b>infinity norm</b> of the <b>matrix  im.</b>
+
+36
+00:04:01 --> 00:04:04
+Switch back to the <b>terminal</b> for the solution.
+
+37
+00:04:05 --> 00:04:10
+To find out the <b>Infinity norm</b> of the <b>matrix im</b>, type as shown.
+
+38
+00:04:11 --> 00:04:17
+Here value for <b>ord parameter</b> is passed as <b>inf</b> to calculate <b>infinity norm</b>.
+
+39
+00:04:18 --> 00:04:23
+To know more about <b>norms</b> type <b>norm </b><i>question mark</i>
+
+40
+00:04:24 --> 00:04:27
+Press <b>q</b> to exit.
+
+41
+00:04:28 --> 00:04:32
+Next we will see about <b>singular value decomposition.</b>
+
+42
+00:04:33 --> 00:04:41
+In <b>linear algebra</b>, the <b>singular value decomposition</b> is factorization of <b>real</b> or <b>complex matrix.</b>
+
+43
+00:04:42 --> 00:04:51
+The <b>SVD</b> of <b>matrix m1</b> can be found using <b>svd function</b> available in the <b>numpy.linalg module</b>.
+
+44
+00:04:52 --> 00:04:55
+Type as shown.
+
+45
+00:04:56 --> 00:04:59
+<b>svd</b> returns a <b>tuple</b> of 3 <b>elements</b>.
+
+46
+00:05:00 --> 00:05:07
+We have unpacked these values into <b>variable U, sigma</b> and <b>V</b><i> underscore </i><b>conjugate.</b>
+
+47
+00:05:08 --> 00:05:11
+Type, Capital <b>U</b>
+
+48
+00:05:12 --> 00:05:14
+Type,<b> sigma</b>
+
+49
+00:05:15 --> 00:05:19
+Type, Capital <b>V</b><i> underscore </i><b>conjugate</b>
+
+50
+00:05:20 --> 00:05:29
+We can validate the <b>singular value decomposition</b> by comparing the product of:
+<p><b>U, sigma</b> and <b>V </b><i>underscore </i><b>conjugate </b>with<b> m1</b>
+</p>
+
+51
+00:05:30 --> 00:05:36
+<b>sigma</b> is a one <b>dimensional array</b> which contains only the <b>diagonal elements</b> of the <b>matrix</b>.
+
+52
+00:05:37 --> 00:05:42
+Type as shown.
+<p>We first convert this <b>array</b> to a <b>matrix</b>. 
+</p>
+
+53
+00:05:43 --> 00:05:50
+Type <b>smat</b>
+<p><b>smat</b> is a 2 by 3 <b>zero matrix</b>
+</p>
+
+54
+00:05:51 --> 00:06:01
+Now type, <b>smat</b><i> inside square brackets colon </i><b>2 </b><i>comma</i><b> </b><i>colon </i><b>2 </b><i>is equal to</i><b> diag </b><i>inside brackets </i><b>sigma</b>
+
+55
+00:06:02 --> 00:06:05
+Then type <b>smat</b>
+
+56
+00:06:06 --> 00:06:15
+This replaces values at row 0 column 0 and row 1 column 1 in <b>smat </b>with values from <b>sigma. </b>
+
+57
+00:06:16 --> 00:06:26
+<b>smat</b> is a <b>2 by 3 matrix</b> created for multiplications by placing values of sigma as <b>diagonal elements</b> and zero elsewhere.
+
+58
+00:06:27 --> 00:06:32
+Type as shown.
+
+59
+00:06:33 --> 00:06:42
+It returns <b>True</b>.
+<p>It means <b>elements</b> in <b>m1</b> and in product of<b> U, sigma </b>and<b> V</b><i> underscore </i><b>conjugate </b>are equal. 
+</p>
+
+60
+00:06:43 --> 00:06:48
+This brings us to the end of this tutorial. Let us summarize.
+
+61
+00:06:49 --> 00:06:55
+In this tutorial, we have learnt to,  Calculate the <b>norm</b> of a <b>matrix</b> using the <b>function norm()</b>
+
+62
+00:06:56 --> 00:07:00
+Calculate <b>SVD</b> of a <b>matrix</b> using the <b>function svd()</b>
+
+63
+00:07:01 --> 00:07:18
+Here is a self assessment question for you to solve
+<p><b>norm</b><i> inside brackets </i><b>A </b><i>comma </i><b>ord</b><i> is equal to inside single quotes </i><b>fro</b> is  same as <b>norm </b><i>inside brackets </i><b>A</b>
+</p><p>True or False. 
+</p>
+
+64
+00:07:19 --> 00:07:28
+And the answer is True, since the <b>order </b><i>is equal to inside single quotes </i><b>fro</b> stands for <b>Frobenius norm.</b>
+
+65
+00:07:29 --> 00:07:32
+Please post your timed queries in this forum.
+
+66
+00:07:33 --> 00:07:36
+Please post your general queries on Python in this forum.
+
+67
+00:07:37 --> 00:07:40
+FOSSEE team coordinates the TBC project.
+
+68
+00:07:41 --> 00:07:49
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website. 
+</p>
+
+69
+00:07:50 --> 00:07:55
+This is Priya from IIT Bombay signing off.
+<p>Thanks for watching. 
+</p>
+

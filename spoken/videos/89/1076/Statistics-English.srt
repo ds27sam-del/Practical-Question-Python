@@ -1,0 +1,422 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:06
+Hello Friends. Welcome to the tutorial on "<b>Statistics</b>” using <b>Python</b>
+
+2
+00:00:07 --> 00:00:13
+At the end of this tutorial, you will be able to - Do <b>statistical</b> operations in <b>Python</b>
+
+3
+00:00:14 --> 00:00:21
+<b>Sum</b> a set of numbers and Find their <b>mean, median</b> and <b>standard deviation</b>
+
+4
+00:00:22 --> 00:00:28
+To record this tutorial, I am using <b>Ubuntu Linux 16.04</b> operating system
+
+5
+00:00:29 --> 00:00:35
+<b>Python 3.4.3 </b>and <b>IPython 5.1.0</b>
+
+6
+00:00:36 --> 00:00:41
+To practise this tutorial, you should know how to load data from files
+
+7
+00:00:42 --> 00:00:46
+use <b>Lists</b> and access parts of <b>Arrays</b>
+
+8
+00:00:47 --> 00:00:52
+If not, see the pre-requisite <b>Python</b> tutorials on this website.
+
+9
+00:00:53 --> 00:01:02
+For this tutorial, we will use the data file <b>student_record.txt </b>which we used in the earlier tutorial.
+
+10
+00:01:03 --> 00:01:07
+You can also find this file in the <b>Code Files</b> link of this tutorial.
+
+11
+00:01:08 --> 00:01:11
+Please download it in <b>Home directory</b> and use it.
+
+12
+00:01:12 --> 00:01:21
+We will use mathematical and logical operations on this <b>array structured file</b>.
+<p>For this, we need to install <b>Numpy</b>.
+</p>
+
+13
+00:01:22 --> 00:01:25
+<b>NumPy</b>, stands for <b>Numerical Python.</b>
+
+14
+00:01:26 --> 00:01:32
+It is a library consisting of <b>pre-compiled functions</b> for mathematical and numerical routines.
+
+15
+00:01:33 --> 00:01:36
+<b>NumPy</b> has to be installed separately.
+
+16
+00:01:37 --> 00:01:44
+Let us first open the <b>Terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously.
+
+17
+00:01:45 --> 00:01:52
+Let us install latest <b>pip</b>.
+<p><b>pip</b> command is used to install<b> python libraries.</b>
+</p>
+
+18
+00:01:53 --> 00:02:02
+Type, <b>sudo apt-get install python3  hyphen pip</b> and press <b>Enter</b>.
+
+19
+00:02:03 --> 00:02:14
+You need to have <b>root</b> access for installation as it asks for <b>admin password</b>.
+
+20
+00:02:15 --> 00:02:23
+Next, we need to install <b>numpy library</b> as we will be using <b>numpy library</b> throughout the tutorial.
+
+21
+00:02:24 --> 00:02:37
+Type, <b>sudo pip3 install numpy </b>is equal to is equal to<b> 1.13.3 </b>and press<b> Enter.</b>
+
+22
+00:02:38 --> 00:02:46
+The installation is completed successfully. We can see the <b>terminal prompt</b> without any error.
+
+23
+00:02:47 --> 00:02:51
+Next we will learn about <b>loadtxt() function.</b>
+
+24
+00:02:52 --> 00:02:57
+To get the data as an <b>array</b>, we use the <b>loadtxt() function.</b>
+
+25
+00:02:58 --> 00:03:03
+For <b>loadtxt() function</b>, we need to <b>import numpy library</b> first.
+
+26
+00:03:04 --> 00:03:11
+Switch back to the <b>terminal</b>.Now, type <b>ipython3</b> and press <b>Enter</b>.
+
+27
+00:03:12 --> 00:03:23
+Type <b>import numpy as np</b> and press <b>Enter</b>.
+<p>Where <b>np</b> is alias to <b>numpy</b> and it can be any name.
+</p>
+
+28
+00:03:24 --> 00:03:31
+Let us load the data from the file <b>student_record.txt </b>as an <b>array</b>.
+
+29
+00:03:32 --> 00:04:03
+Type, <b>L</b> is equal to <b>np dot loadtxt</b> inside <b>parentheses</b> inside quotes <b>student_record.txt</b> comma <b>usecols</b> is equal to inside <b>parentheses</b> 3 comma 4 comma 5 comma 6 comma 7 comma <b>delimiter</b> is equal to inside quotes <b>semicolon</b> and Press <b>Enter</b>.
+
+30
+00:04:04 --> 00:04:06
+Type<b> L </b>and press<b> Enter</b>.
+
+31
+00:04:07 --> 00:04:10
+We get the <b>output</b> in the form of an <b>array</b>.
+
+32
+00:04:11 --> 00:04:15
+<b>loadtxt</b> loads data from an external file.
+
+33
+00:04:16 --> 00:04:26
+<p><b>Delimiter</b> specifies the kind of character that the <b>fields</b> of data is separated by. 
+</p><p><b>usecols</b> specifies the <b>columns</b> to be used. 
+</p>
+
+34
+00:04:27 --> 00:04:32
+<b>loadtxt, delimiter</b> and <b>usecols</b> are <b>keywords</b>.
+
+35
+00:04:33 --> 00:04:41
+So <b>columns</b> 3,4,5,6,7 from <b>student_record.txt </b>are loaded here.
+
+36
+00:04:42 --> 00:04:48
+The 'comma' between <b>column numbers</b> is added because <b>usecols</b> is a <b>sequence</b>.
+
+37
+00:04:49 --> 00:04:57
+As we can see <b>L</b> is an <b>array</b>. We can get the shape of this <b>array</b> using <b>shape.</b>
+
+38
+00:04:58 --> 00:05:03
+Type, <b>L dot shape </b>and press <b>Enter</b>.
+
+39
+00:05:04 --> 00:05:10
+We get a <b>tuple</b> giving the numbers of <b>rows</b> and <b>columns</b> respectively.
+
+40
+00:05:11 --> 00:05:21
+In this example, the array <b>L </b>has one lakh eighty five thousand six hundred and sixty seven rows and 5 columns.
+
+41
+00:05:22 --> 00:05:27
+Let us switch back to the <b>student_record.txt</b> file.
+
+42
+00:05:28 --> 00:05:38
+Let us start applying statistical operations on these.
+<p>How do you find the sum of marks of all subjects for the first student?
+</p>
+
+43
+00:05:39 --> 00:05:53
+Switch back to the <b>terminal</b>.
+<p>To access the first row in an <b>array</b>, we will type <b>L </b>inside square brackets <b>0 </b>and press <b>Enter</b>.
+</p>
+
+44
+00:05:54 --> 00:06:08
+Now to sum this, type, <b>totalmarks </b>is equal to <b>sum </b>inside parentheses <b>L </b>inside square brackets <b>0 </b> and Press <b>Enter.</b>
+
+45
+00:06:09 --> 00:06:18
+Type <b>totalmarks </b>and press <b>Enter.</b>
+<p>We got sum of marks of all subjects of the first student.
+</p>
+
+46
+00:06:19 --> 00:06:25
+Now to get the <b>mean</b> we can divide the <b>totalmarks</b> by the length of the <b>array.</b>
+
+47
+00:06:26 --> 00:06:39
+Type, <b>totalmarks </b>divided by <b>len</b> inside parentheses <b>L</b> inside square brackets <i><b>0 </b>and press <b>Enter.</b></i>
+
+48
+00:06:40 --> 00:06:54
+Or simply use the <b>function mean</b>. Type <b>np dot mean</b> inside parentheses <b>L </b>inside square brackets <b>0 </b>and press<b> Enter.</b>
+
+49
+00:06:55 --> 00:07:03
+But we have such a large <b>data</b> <b>set</b>.
+<p>And calculating the <b>mean</b> for each student one by one is time consuming. 
+</p>
+
+50
+00:07:04 --> 00:07:11
+Is there a way to reduce the work?
+<p>For this, we will look into the <b>documentation</b> of <b>mean.</b>
+</p>
+
+51
+00:07:12 --> 00:07:22
+Type, <b>np dot mean questionmark </b>and press Enter<i>.</i> Read the text for more information.
+
+52
+00:07:23 --> 00:07:27
+Type <b>q </b>to exit the documentation.
+
+53
+00:07:28 --> 00:07:34
+In the above example, <b>L</b> is a <b>two dimensional array </b>like <b>matrix</b>.
+
+54
+00:07:35 --> 00:07:40
+We can calculate the <b>mean</b> across each of the <b>axis</b> of the <b>array</b>.
+
+55
+00:07:41 --> 00:07:47
+The <b>axis</b> of <b>rows</b> is referred by 0 and <b>columns</b> by 1.
+
+56
+00:07:48 --> 00:07:56
+To calculate <b>mean</b> across all <b>columns</b>, we have to pass extra parameter 1 for the <b>axis</b>.
+
+57
+00:07:57 --> 00:07:59
+Switch back to the <b>terminal</b>.
+
+58
+00:08:00 --> 00:08:06
+Let us calculate, <b>mean</b> of the marks scored by all the students for each subject.
+
+59
+00:08:07 --> 00:08:17
+Type <b>np dot mean </b>inside parentheses <b>L  comma 0</b> <i>and press <b>Enter</b>.</i>
+
+60
+00:08:18 --> 00:08:24
+Next, we will calculate the <b>median</b> of English marks for all the students.
+
+61
+00:08:25 --> 00:08:34
+Type <b>L </b>inside square brackets <b>colon comma 0 </b>and press <b>Enter</b>.
+
+62
+00:08:35 --> 00:08:44
+Note <b>colon comma zero</b> displays first <b>column</b> in the <b>array</b> that is, English Mark.
+
+63
+00:08:45 --> 00:08:50
+To get the <b>median</b> we will simply use the <b>function median</b>.
+
+64
+00:08:51 --> 00:09:03
+Type <b>np dot median </b>inside parentheses <b>L </b>inside square brackets <b>colon</b> comma <b>0 </b>
+<p>Press <b>Enter</b>.
+</p>
+
+65
+00:09:04 --> 00:09:12
+For all the subjects, we can calculate <b>median</b> across all <b>rows</b> using <b>median function</b> as shown here.
+
+66
+00:09:13 --> 00:09:23
+Type <b>np dot median </b>inside parentheses <b>L comma 0</b>
+<p>Press <b>Enter</b>.
+</p>
+
+67
+00:09:24 --> 00:09:30
+Similarly to calculate <b>standard</b> <b>deviation</b> we will use the <b>function std</b>
+
+68
+00:09:31 --> 00:09:49
+Standard deviation for English subject can be found by typing <b>np  dot std </b>inside parentheses <b>L </b>inside square brackets <b>colon comma 0</b>. Press <b>Enter</b>.
+
+69
+00:09:50 --> 00:10:02
+And for all <b>rows</b>, we do, <b>np dot std </b>inside parentheses <b>L comma 0 </b>and press <b>Enter.</b>
+
+70
+00:10:03 --> 00:10:08
+Pause the video here, try out the following exercise and resume the video.
+
+71
+00:10:09 --> 00:10:17
+Refer to the file<b> football.txt</b>, that is available in the <b>Code Files</b> link of this tutorial.
+
+72
+00:10:18 --> 00:10:22
+Download and save the file in the <b>present working directory</b>.
+
+73
+00:10:23 --> 00:10:27
+Currently the <b>present working directory</b> is the <b>Home directory.</b>
+
+74
+00:10:28 --> 00:10:33
+In <b>football.txt</b>, the first column is <b>player name</b>,
+
+75
+00:10:34 --> 00:10:41
+Second is <b>goals</b> <b>at home</b> and third is <b>goals away</b>.
+
+76
+00:10:42 --> 00:10:49
+Find the total goals for each player
+<p><b>Mean</b> of home and goals away
+</p>
+
+77
+00:10:50 --> 00:10:54
+<b>Standard deviation</b> of home and goals away
+
+78
+00:10:55 --> 00:10:57
+Switch to the terminal.
+
+79
+00:10:58 --> 00:11:30
+The solution is, first, type, <b>L</b> is equal to <b>np dot loadtxt</b> inside parentheses inside quotes <b>football.txt comma usecols</b> is equal to inside parentheses <b>1 comma 2 comma delimiter</b> is equal to inside quotes <b>comma</b>. Press <b>Enter</b>.
+
+80
+00:11:31 --> 00:11:38
+<b>np dot sum </b>inside parentheses <b>L comma 1 </b>and press <b>Enter</b>.
+
+81
+00:11:39 --> 00:11:49
+The answer for the second, <b>np dot mean </b>inside parentheses <b>L comma 0 </b>and press <b>Enter</b>.
+
+82
+00:11:50 --> 00:11:58
+Third, <b>np dot std </b>inside parentheses <b>L comma 0 </b>and press <b>Enter</b>.
+
+83
+00:11:59 --> 00:12:17
+This brings us to the end of the tutorial.
+<p>In this tutorial, we have learnt to do the standard <b>statistical operations</b> like:  <b>sum</b>, <b>mean</b>, <b>median</b> and <b>standard deviation</b> in <b>Python</b>.
+</p>
+
+84
+00:12:18 --> 00:12:22
+Here are some self assessment questions for you to solve.
+
+85
+00:12:23 --> 00:12:31
+Given a <b>two dimensional list </b>as shown, how do you calculate the <b>mean</b> of each row?
+
+86
+00:12:32 --> 00:12:36
+Second. Calculate the <b>median</b> of the given <b>list</b>.
+
+87
+00:12:37 --> 00:12:50
+Third. There is a <b>file</b> with 6 <b>columns</b>. But we want to load text only from <b>columns</b> 2,3,4,5.
+<p>How do we specify that?
+</p>
+
+88
+00:12:51 --> 00:13:01
+And the answers,
+<p>To get the <b>mean</b> of each <b>row</b>, we just pass 1 as the second <b>parameter</b> to the <b>function mean</b>
+</p>
+
+89
+00:13:02 --> 00:13:10
+<b>np.mean </b>inside parentheses<b> two_dimensional_list comma 1</b>
+
+90
+00:13:11 --> 00:13:23
+We use the <b>function median</b> to calculate the <b>median</b> of the <b>list</b>
+<p><b>np.median </b>inside parentheses <b>student_marks</b>
+</p>
+
+91
+00:13:24 --> 00:13:38
+Third, To specify the particular <b>columns</b> of a file, we use the parameter <b>usecols </b>is equal to inside parentheses <b>2, 3, 4, 5</b>
+
+92
+00:13:39 --> 00:13:42
+Please post your timed queries in this forum.
+
+93
+00:13:43 --> 00:13:47
+Please post your general queries on <b>Python</b> in this forum.
+
+94
+00:13:48 --> 00:13:52
+FOSSEE team coordinates the TBC project.
+
+95
+00:13:53 --> 00:14:04
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website. 
+</p>
+
+96
+00:14:05 --> 00:14:10
+Thats it for the tutorial.
+<p>This is Trupti Kini from IIT Bombay signing off. Thank you.
+</p>
+

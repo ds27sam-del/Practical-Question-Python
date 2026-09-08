@@ -1,0 +1,374 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:05
+Welcome to the spoken tutorial on <b>Conditional statements</b>.
+
+2
+00:00:06 --> 00:00:12
+In this tutorial, we will learn to use
+<p><b>if/else blocks</b>
+</p>
+
+3
+00:00:13 --> 00:00:21
+<b>if/elif/else blocks</b>
+<p><b>Ternary</b> <b>conditional</b> <b>statement </b>and <b>Pass statement</b>
+</p>
+
+4
+00:00:22 --> 00:00:29
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p>
+
+5
+00:00:30 --> 00:00:36
+<b>Python 3.4.3</b>
+<p>and <b>IPython 5.1.0</b>
+</p>
+
+6
+00:00:37 --> 00:00:45
+To practice this tutorial, you should know how to use
+<p>basic<b> data types </b>and <b>operators </b>
+</p>
+
+7
+00:00:46 --> 00:00:49
+<b>strings </b>and <b>Input/Output statements</b>
+
+8
+00:00:50 --> 00:00:54
+If not, see the relevant Python tutorials on this website.
+
+9
+00:00:55 --> 00:00:58
+First let us learn about<b> if condition. </b>
+
+10
+00:00:59 --> 00:01:09
+<b>if condition </b>is used to decide whether to execute the statements inside the <b>if block </b>or not.
+<p>Here is the syntax.
+</p>
+
+11
+00:01:10 --> 00:01:13
+Next we will see about <b>if else condition</b>.
+
+12
+00:01:14 --> 00:01:19
+When the test condition is true, it will execute the body of <b>if</b>.
+
+13
+00:01:20 --> 00:01:24
+If the condition is <b>False</b>, body of the <b>else</b> is executed.
+
+14
+00:01:25 --> 00:01:29
+Note that, <b>if</b> and <b>else</b> statements end with a colon.
+
+15
+00:01:30 --> 00:01:35
+This denotes the beginning of the code block of <b>True</b> or <b>False</b> condition.
+
+16
+00:01:36 --> 00:01:41
+All the <b>statements</b> inside a <b>code block</b> are <b>indented</b> by 4 spaces.
+
+17
+00:01:42 --> 00:01:47
+Let us start <b>ipython.</b>
+<p>Open the <b>terminal</b>.
+</p>
+
+18
+00:01:48 --> 00:01:52
+Type <b>ipython3 </b>and press <b>Enter.</b>
+
+19
+00:01:53 --> 00:01:59
+From here onwards, remember to press the <b>Enter</b> key after typing every command on the <b>terminal</b>.
+
+20
+00:02:00 --> 00:02:04
+Now let us check if an entered number is even or not.
+
+21
+00:02:05 --> 00:02:13
+Type, <b>num </b><i>is equal to</i><b> int </b><i>inside brackets</i><b> input </b><i>open and close brackets</i>
+
+22
+00:02:14 --> 00:02:17
+Enter 4 and press <b>Enter</b>
+
+23
+00:02:18 --> 00:02:25
+Type, <b>if num </b><i>percentage</i><b> 2 </b><i>equal to equal to </i><b>0 </b><i>colon</i>
+
+24
+00:02:26 --> 00:02:31
+<b>print </b><i>inside brackets inside single quotes </i><b>Even</b>
+
+25
+00:02:32 --> 00:02:38
+Press backspace four times and type, <b>else </b>colon
+
+26
+00:02:39 --> 00:02:43
+<b>print </b><i>inside brackets inside single quotes </i><b>Odd</b>
+
+27
+00:02:44 --> 00:02:52
+Press<b> Enter </b>twice to get the output.
+<p>As expected, it displays <b>Even</b> as output.
+</p>
+
+28
+00:02:53 --> 00:02:59
+Note that, the <b>statements</b> inside a <b>code block</b> are <b>indented</b> by 4 spaces automatically.
+
+29
+00:03:00 --> 00:03:04
+Next we will see another <b>conditional statement</b> called <b>elif</b>.
+
+30
+00:03:05 --> 00:03:10
+All the syntax and rules for <b>elif </b>are same as <b>if/else statements.</b>
+
+31
+00:03:11 --> 00:03:14
+In <b>if/else, </b>only one condition is checked.
+
+32
+00:03:15 --> 00:03:19
+But in <b>elif</b> <b>statement </b>multiple conditions can be checked.
+
+33
+00:03:20 --> 00:03:27
+For example,
+<p>The first block of code is executed as soon as condition one evaluates to <b>True</b>.
+</p>
+
+34
+00:03:28 --> 00:03:32
+All the subsequent conditions in <b>elif </b>ladder are not checked.
+
+35
+00:03:33 --> 00:03:41
+The <b>else</b> <b>block</b> gets executed if all the <b>conditions</b> in if and <b>elif </b>ladder are evaluated to <b>False</b>.
+
+36
+00:03:42 --> 00:03:47
+Let us understand <b>if/elif/else ladder </b>with an example.
+
+37
+00:03:48 --> 00:03:57
+Type, <b>a </b><i>is equal to minus</i><b> 3</b>
+<p>We have a variable<b> a</b> which holds <b>integer</b> value as -3.
+</p>
+
+38
+00:03:58 --> 00:04:05
+Type as shown.
+<p>This program will print  <b>"positive"</b> if <b>a</b> is <b>positive</b>, 
+</p>
+
+39
+00:04:06 --> 00:04:14
+"<b>negative</b>" if it is <b>negative</b> or  <b>"zero"</b> if the above conditions are evaluated to <b>False </b>
+
+40
+00:04:15 --> 00:04:19
+Press <b>Enter</b> twice to see the output.
+
+41
+00:04:20 --> 00:04:26
+We can also have any number of <b>elif</b> conditions within an <b>if/elif/else statements</b>.
+
+42
+00:04:27 --> 00:04:34
+For example, based on the type of user the corresponding operations are performed using <b>elif</b>.
+
+43
+00:04:35 --> 00:04:40
+Pause the video.
+<p>Try this exercise and then resume the video.
+</p>
+
+44
+00:04:41 --> 00:04:52
+Given a number, <b>num</b> as input.
+<p>Write an <b>if else block </b>to<b> </b>print<b> num</b>, if it is divisible by 10, else print<b> 10 </b><i>asterisk</i><b> num</b>.
+</p>
+
+45
+00:04:53 --> 00:04:56
+The solution is on your screen.
+
+46
+00:04:57 --> 00:05:00
+Next let us learn about <b>ternary</b> operator.
+
+47
+00:05:01 --> 00:05:07
+Ternary operator allows to test a condition in a single line replacing the multiline<b> if-else</b>.
+
+48
+00:05:08 --> 00:05:15
+<p>It can reduce the code size and increase the readability of the code.
+</p><p>Here is the syntax.
+</p>
+
+49
+00:05:16 --> 00:05:22
+Let us write a <b>ternary conditional statement </b>to find the largest of two numbers.
+
+50
+00:05:23 --> 00:05:25
+Type,<b> a </b><i>is equal to</i><b> 4</b>
+
+51
+00:05:26 --> 00:05:29
+<b>b </b><i>is equal to</i><b> 2</b>
+
+52
+00:05:30 --> 00:05:38
+<b>large </b><i>underscore </i><b>num </b><i>is equal to</i><b> a if a </b><i>greater than</i><b> b else b</b>
+
+53
+00:05:39 --> 00:05:43
+<b>print</b><i> inside brackets </i><b>large </b><i>underscore</i><b> num</b>
+
+54
+00:05:44 --> 00:05:46
+We got the required output.
+
+55
+00:05:47 --> 00:05:52
+Pause the video.
+<p>Try this exercise and then resume the video.
+</p>
+
+56
+00:05:53 --> 00:06:04
+Given a number, <b>n </b>as input.
+<p>Write a <b>ternary operator</b> to print<b> n</b>, if it is divisible by 10, else print<b> 10 </b><i>asterisk</i><b> n</b>.
+</p>
+
+57
+00:06:05 --> 00:06:08
+The solution is on your screen.
+
+58
+00:06:09 --> 00:06:12
+Next we will learn about <b>pass statement</b>.
+
+59
+00:06:13 --> 00:06:20
+The <b>pass </b>statement acts as a <b><i>null </i>operation</b> (i.e) nothing happens when it executes.
+
+60
+00:06:21 --> 00:06:24
+It works as a <b>placeholder</b> for a <b>block</b> of <b>code</b>.
+
+61
+00:06:25 --> 00:06:31
+It is used in a <b>code block </b>where actual <b>code</b> <b>implementation</b> is not known yet.
+
+62
+00:06:32 --> 00:06:36
+Let us understand the <b>pass</b> statement with an example.
+
+63
+00:06:37 --> 00:06:40
+Type <b>a</b> <i>is equal to</i> <b>11</b>
+
+64
+00:06:41 --> 00:06:43
+Then type as shown.
+
+65
+00:06:44 --> 00:06:53
+If <b>a</b><i> divided by </i><b>2</b> equals to zero, <b>if block</b> is executed.
+<p>Else no operation is performed.
+</p>
+
+66
+00:06:54 --> 00:07:01
+Press <b>Enter</b> key twice to get the output.
+<p>Here <b>a</b><i> divided by </i><b>2</b> is not 0. 
+</p>
+
+67
+00:07:02 --> 00:07:07
+So no operation is performed and nothing is displayed as output.
+
+68
+00:07:08 --> 00:07:13
+This brings us to the end of the tutorial.
+<p>Let us summarize. 
+</p>
+
+69
+00:07:14 --> 00:07:21
+In this tutorial, we have learnt the <b>conditional statements</b> such as,
+<p><b>if/else statement</b>
+</p>
+
+70
+00:07:22 --> 00:07:24
+<b>if/elif/else statement</b>
+
+71
+00:07:25 --> 00:07:29
+<b>Ternary conditional statement </b>and  <b>Pass statement</b>
+
+72
+00:07:30 --> 00:07:34
+Here are some self assessment questions for you to solve.
+
+73
+00:07:35 --> 00:07:37
+First. Given a <b>variable t. </b>
+
+74
+00:07:38 --> 00:07:46
+Print<b> Good Morning </b>if it is less than 12, otherwise print<b> Hello</b>. Use <b>if else</b> statement.
+
+75
+00:07:47 --> 00:07:55
+Second. Convert the below <b>if else</b> <b>code </b>into <b>ternary conditional statement</b>.
+
+76
+00:07:56 --> 00:08:02
+And the answers,
+<p>First. The following code gives the required output.
+</p>
+
+77
+00:08:03 --> 00:08:10
+Second. Use the following statement to convert the <b>if else</b> code into a <b>ternary</b> statement
+
+78
+00:08:11 --> 00:08:14
+Please post your timed queries in this forum.
+
+79
+00:08:15 --> 00:08:19
+Please post your general queries on Python in this forum.
+
+80
+00:08:20 --> 00:08:23
+FOSSEE team coordinates the TBC project.
+
+81
+00:08:24 --> 00:08:33
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website.
+</p>
+
+82
+00:08:34 --> 00:08:39
+This is Priya from IIT Bombay signing off. Thanks for watching.
+

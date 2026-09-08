@@ -1,0 +1,258 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:05
+Hello friends! Welcome to the <b>spoken tutorial</b> on <b>Subplots</b>.
+
+2
+00:00:06 --> 00:00:13
+At the end of this tutorial, you will be able to create and switch between <b>subplots</b>.
+
+3
+00:00:14 --> 00:00:28
+To record this tutorial, I am using:
+<p><b>Ubuntu Linux 14.04</b> operating system,
+</p><p><b>Python 3.4.3</b>,
+</p><p><b>IPython 5.1.0</b>.
+</p>
+
+4
+00:00:29 --> 00:00:47
+To practise this tutorial, you should know how to:
+<p><b>run</b> basic <b>Python command</b>s on the <b>ipython console</b>,
+</p><p>use <b>Plots</b> interactively,
+</p><p>embellish a <b>plot</b>.
+</p><p>If not, see the pre-requisite <b>Python tutorials</b> on this website.
+</p>
+
+5
+00:00:48 --> 00:01:00
+Let us first open the <b>Terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously.
+<p>Now, type <b>ipython3</b> and press <b>Enter</b>. 
+</p>
+
+6
+00:01:01 --> 00:01:09
+Let us initialise the <b>pylab package</b>. Type: <b>percentage pylab </b>and press<b> Enter</b>.
+
+7
+00:01:10 --> 00:01:14
+To compare two plots, we draw the <b>plots</b> in the same plotting area.
+
+8
+00:01:15 --> 00:01:23
+Let us now create two plots- a <b>cosine plot</b> and an <b>exponential curve</b> in the same plotting area.
+
+9
+00:01:24 --> 00:01:44
+Type: <b>x equals to linspace</b> inside brackets <b>0 comma 50 comma 500 </b>and press <b>Enter</b>.
+<p><b>plot</b> inside the brackets <b>x comma cos(x)</b>.
+</p>
+
+10
+00:01:45 --> 00:02:03
+Type: <b>y equals to linspace</b> inside brackets <b>0 comma 5 comma 100.</b>
+<p><b>plot</b> inside brackets <b>y comma y square.</b>
+</p>
+
+11
+00:02:04 --> 00:02:12
+Here, the two plots have different regular <b>axes.</b> So, we cannot draw overlaid plots.
+
+12
+00:02:13 --> 00:02:16
+In such cases, we can draw <b>subplots</b>.
+
+13
+00:02:17 --> 00:02:32
+We use '<b>subplot' command</b> to accomplish this.
+<p>Type: <b>clf()</b>
+</p><p><b>subplot</b> inside the brackets <b>2 comma 1 comma 1</b>.
+</p>
+
+14
+00:02:33 --> 00:02:39
+We can see the first <b>subplot</b>. The <b>subplot command</b> takes three <b>arguments.</b>
+
+15
+00:02:40 --> 00:02:52
+The first <b>argument</b> is the number of <b>row</b>s of <b>subplots</b> that must be created.
+<p>Here the first <b>argument</b> is 2 to split the plot horizontally.
+</p>
+
+16
+00:02:53 --> 00:03:06
+The second <b>argument</b> is the number of <b>columns</b> of <b>subplots</b> that must be created.
+<p>Here, the second <b>argument </b>is 1.  So, <b>plot</b> will not split vertically.
+</p>
+
+17
+00:03:07 --> 00:03:18
+The last <b>argument</b> specifies the serial number for the<b> subplot</b>.
+<p>Here, we passed 1 as the <b>argument</b> which creates the upper subplot. 
+</p>
+
+18
+00:03:19 --> 00:03:33
+If we <b>execute</b> the <b>subplot command</b> as-
+<p><b>subplot</b> inside the brackets <b>2 comma 1 comma 2</b>, the lower subplot is created. 
+</p>
+
+19
+00:03:34 --> 00:03:37
+Here, we can see now two subplots.
+
+20
+00:03:38 --> 00:03:59
+Now, we can draw plots in each of the subplot area using the <b>plot</b> command.
+<p>Type: <b>subplot</b> inside brackets <b>2 comma 1 comma 1</b>.
+</p><p><b>plot</b> inside brackets <b>x comma cos(x)</b>.
+</p>
+
+21
+00:04:00 --> 00:04:15
+Now, type: <b>subplot</b> inside brackets <b>2 comma 1 comma 2 </b>
+<p><b>plot y comma y square</b>
+</p>
+
+22
+00:04:16 --> 00:04:28
+This created two <b>plots</b>, one in each of the<b> subplot</b> area. The top <b>subplot</b> holds a <b>cosine curve</b> and the bottom <b>subplot</b> holds a <b>parabola</b>.
+
+23
+00:04:29 --> 00:04:34
+It is clear from the two <b>subplots</b> that both have different regular axes.
+
+24
+00:04:35 --> 00:04:45
+For the <b>cosine curve, x-axis</b> varies from 0 to 50 and <b>y-axis</b> varies from <b>minus 1</b> to <b>1</b>.
+
+25
+00:04:46 --> 00:04:56
+For the <b>parabolic curve, x-axis</b> varies from 0 to 5 and <b>y-axis</b> varies from 0 to 25.
+
+26
+00:04:57 --> 00:04:59
+Now clear the <b>plot window</b>.
+
+27
+00:05:00 --> 00:05:04
+Pause the video. Try this exercise and then resume the video.
+
+28
+00:05:05 --> 00:05:15
+<b>Pressure, Volume </b>and<b> Temperatures </b>are held by the equation <b>Pv equals to nRT</b> where <b>nR</b> is a <b>constant</b>.
+
+29
+00:05:16 --> 00:05:28
+Assume <b>nR equals to 0.01 Joules per Kelvin</b> and <b>T equals to 200K</b>. <b>V</b> can be in the range from <b>21cc to 100cc</b>.
+
+30
+00:05:29 --> 00:05:38
+Draw two different plots as<b> subplots</b>:
+<p><b>Pressure v/s Volume plot </b>and
+</p><p><b>Pressure v/s Temperature plot</b>. 
+</p>
+
+31
+00:05:39 --> 00:05:42
+Switch to the <b>terminal</b> for the solution.
+
+32
+00:05:43 --> 00:05:50
+To start with, we have been given the range of <b>Volume</b> from which we can define the variable <b>v.</b>
+
+33
+00:05:51 --> 00:06:02
+<b>v equals to linspace</b> inside brackets <b>21 comma 100 comma 500</b>.
+
+34
+00:06:03 --> 00:06:23
+We can create first <b>subplot</b> and draw <b>Pressure</b> v/s <b>Volume</b> graph using this <b>v</b>.
+<p><b>subplot(2 comma 1 comma 1) </b>
+</p><p><b>plot(v comma 2 point 0 by v)</b>
+</p>
+
+35
+00:06:24 --> 00:06:37
+We know that <b>nRT</b> is a <b>constant</b> which is equal to 2.0
+<p>since <b>nR</b> is equal to 0.01 <b>Joules per Kelvin</b>  and <b>T</b> equals to 200 <b>Kelvin. </b>
+</p>
+
+36
+00:06:38 --> 00:07:01
+Now, we can create the second <b>subplot</b> and draw the <b>Pressure</b> v/s <b>Temperature plot</b> as follows.
+<p><b>subplot(2 comma 1 comma 2)</b>
+</p><p><b>plot(200 comma 2 point 0 divided by v)</b>
+</p>
+
+37
+00:07:02 --> 00:07:07
+We have an error now, telling <b>x</b> and <b>y</b> dimensions don't match.
+
+38
+00:07:08 --> 00:07:13
+So, we will create same number of points for <b>temperature.</b>
+
+39
+00:07:14 --> 00:07:26
+Type: <b>t equals to linspace</b> inside brackets <b>200 comma 200 comma 500. </b>
+
+40
+00:07:27 --> 00:07:34
+Now, we have 500 values in <b>t </b>and each with the value 200 <b>Kelvin</b>.
+
+41
+00:07:35 --> 00:07:47
+Plotting this data, we get the required <b>plot. </b>
+<p><b>plot</b> inside brackets <b>t comma 2 point 0 divided by v</b>
+</p>
+
+42
+00:07:48 --> 00:07:55
+We can see two <b>subplots</b> of <b>Pressure v/s Volume</b> and <b>Pressure v/s Temperature</b> respectively.
+
+43
+00:07:56 --> 00:08:07
+This brings us to the end of this tutorial.
+<p>In this tutorial, we have learnt to create <b>subplots </b>and to <b>switch</b> between them. 
+</p>
+
+44
+00:08:08 --> 00:08:11
+Here are some self assessment questions for you to solve.
+
+45
+00:08:12 --> 00:08:35
+1. Which of the following is correct?
+<p><b>subplot</b> inside brackets <b>numRows comma numCols comma plotNum </b>,
+</p><p><b>subplot</b> inside brackets <b>numRows comma numCols </b>,
+</p><p><b>subplot</b> inside brackets <b>numCols comma numRows</b>.
+</p>
+
+46
+00:08:36 --> 00:08:47
+And the answer is first option.
+<p>1.The<b> subplot</b> command takes three <b>arguments</b> namely the number of <b>rows</b>, number of <b>columns</b> and the <b>plot number</b>. 
+</p>
+
+47
+00:08:48 --> 00:08:52
+Please post your timed queries in this forum.
+
+48
+00:08:53 --> 00:08:58
+Please post your general queries on <b>Python</b> in this forum.
+
+49
+00:08:59 --> 00:09:03
+The <b>FOSSEE</b> team coordinates the <b>TBC project</b>.
+
+50
+00:09:04 --> 00:09:14
+<b>Spoken-tutorial</b> is funded by <b>NMEICT, MHRD</b>, Govt. of India. For more details, visit this website.
+
+51
+00:09:15 --> 00:09:20
+This is Usha from <b>IIT Bombay</b>, signing off. Thank You.
+

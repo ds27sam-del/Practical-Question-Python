@@ -1,0 +1,447 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:05
+Welcome to the spoken tutorial on <b>Parsing data</b>.
+
+2
+00:00:06 --> 00:00:21
+In this tutorial, we will learn to-
+<p>Split a<b> string </b>using a<b> delimiter. </b>
+</p><p>Remove the leading, trailing and all <b>whitespaces</b> in a <b>string</b> and  
+</p><p>Convert between different <b>built-in datatypes</b>
+</p>
+
+3
+00:00:22 --> 00:00:37
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p><p><b>Python 3.4.3 </b>and
+</p><p><b>IPython 5.1.0</b>
+</p>
+
+4
+00:00:38 --> 00:00:48
+To practice this tutorial, you should know how to use <b>lists.</b>
+<p>If not, see the relevant <b>Python</b> tutorials on this website.
+</p>
+
+5
+00:00:49 --> 00:00:53
+First, let us understand, what is meant by <b>parsing data</b>.
+
+6
+00:00:54 --> 00:01:03
+<b>Parsing</b> the <b>data</b> is reading data in text form. It is converted into a form which can be used for computations.
+
+7
+00:01:04 --> 00:01:07
+Next we will learn about <b>split() function.</b>
+
+8
+00:01:08 --> 00:01:14
+<b>split() function</b> breaks up a larger <b>string</b> into smaller <b>strings</b> using a defined <b>separator</b>.
+
+9
+00:01:15 --> 00:01:21
+If no <b>argument</b> is specified, then <b>whitespace</b> is used as default <b>separator</b>.
+
+10
+00:01:22 --> 00:01:28
+Syntax is<b>: str dot split</b> inside <b>parentheses argument</b>
+
+11
+00:01:29 --> 00:01:37
+The <b>split function</b> <b>parses</b> a <b>string</b> and returns an <b>array</b> of <b>tokens</b>.
+<p>This is called <b>string tokenizing</b>.
+</p>
+
+12
+00:01:38 --> 00:01:45
+Let us first open the <b>terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously.
+
+13
+00:01:46 --> 00:01:51
+Type <b>ipython3 </b>and press <b>Enter</b>.
+
+14
+00:01:52 --> 00:02:01
+Let us initialize the <b>pylab package</b>. Type <b>percentage sign pylab </b>and press<b> Enter.</b>
+
+15
+00:02:02 --> 00:02:08
+From here onwards, please remember to press the <b>Enter</b> key after typing every command on the <b>terminal</b>.
+
+16
+00:02:09 --> 00:02:13
+Let us define a variable <b>str1</b> as <b>string data type.</b>
+
+17
+00:02:14 --> 00:02:23
+Type, <b>str1 </b><i>is equal to inside double quotes</i><b> Welcome to </b><i>insert some <b>whitespaces</b>, then</i><b> Python tutorials</b>
+
+18
+00:02:24 --> 00:02:33
+We can have any number of <b>whitespaces </b>between <b>to </b>and <b>Python tutorials</b>.
+<p>But all the <b>spaces</b> are treated as one space. 
+</p>
+
+19
+00:02:34 --> 00:02:37
+Now, we are going to <b>split</b> this <b>string</b> on <b>whitespace</b>.
+
+20
+00:02:38 --> 00:02:43
+Type, <b>str1 dot split </b>open and close <b>parentheses.</b>
+
+21
+00:02:44 --> 00:02:47
+As we can see, we get a <b>list</b> of <b>strings.</b>
+
+22
+00:02:48 --> 00:02:56
+Let us take another example for <b>split() function</b> with <b>argument</b>. Type as shown.
+
+23
+00:02:57 --> 00:03:03
+Type, <b>x dot split<i> </i></b><i>inside parentheses inside single quotes <b>semicolon.</b></i>
+
+24
+00:03:04 --> 00:03:07
+We get a <b>list</b> of <b>strings</b> separated by <b>comma</b>.
+
+25
+00:03:08 --> 00:03:13
+Pause the video.  Try this exercise and then resume the video.
+
+26
+00:03:14 --> 00:03:21
+Split <b>x</b> using <b>space</b> as <b>argument</b>. Is it same as splitting without an <b>argument</b>?
+
+27
+00:03:22 --> 00:03:25
+Switch to the <b>terminal</b> for the solution.
+
+28
+00:03:26 --> 00:03:31
+Type <b>b </b>is equal to <b>x dot split </b>open and close <b>parentheses</b>.
+
+29
+00:03:32 --> 00:03:40
+Type <b> c </b>is equal to <b>x dot split </b>inside  parentheses and inside single quotes <b>space</b>.
+
+30
+00:03:41 --> 00:03:43
+Type <b>b </b>
+
+31
+00:03:44 --> 00:03:46
+Type<b> c </b>
+
+32
+00:03:47 --> 00:03:53
+We can see that <b>splitting</b> without <b>argument</b> is same as giving <b>space</b> as <b>argument.</b>
+
+33
+00:03:54 --> 00:04:00
+Splitting the <b>string</b> without <b>argument</b> will split the <b>string</b> separated by any number of <b>spaces</b>.
+
+34
+00:04:01 --> 00:04:07
+And giving <b>space</b> as <b>argument</b> will split the sentence specifically on single <b>whitespace</b>.
+
+35
+00:04:08 --> 00:04:11
+Let us recall the variable <b>str1</b>.
+
+36
+00:04:12 --> 00:04:23
+Now, we will split this <b>string</b> without <b>argument</b>.  Type <b>b</b> is equal to <b>str1 dot split </b>open and close <b>parentheses</b>.
+
+37
+00:04:24 --> 00:04:32
+Type <b> c </b>is equal to <b>str1 dot split </b>inside <b>parentheses</b> and inside single quotes <b>space</b>.
+
+38
+00:04:33 --> 00:04:35
+Type <b>b</b>
+
+39
+00:04:36 --> 00:04:37
+Type <b>c</b>
+
+40
+00:04:38 --> 00:04:48
+As you can see, here <b>b</b> is not equal to <b>c</b> since <b>c</b> has <b>whitespaces </b>as entries, whereas <b>b</b> has only words<b>.</b>
+
+41
+00:04:49 --> 00:04:52
+Next we will learn about <b>strip method.</b>
+
+42
+00:04:53 --> 00:04:58
+<b>strip function</b> removes all leading and trailing <b>whitespaces</b> in a <b>string</b>
+
+43
+00:04:59 --> 00:05:08
+Let us define a <b>string</b> by typing <b>unstripped </b>is equal to inside double quotes <b>space Hello world space</b>
+
+44
+00:05:09 --> 00:05:17
+Now to remove the <b>whitespace</b>, type, <b>unstripped dot strip</b> open and close <b>parentheses.</b>
+
+45
+00:05:18 --> 00:05:24
+We can see that <b>strip</b> removes all the <b>whitespaces</b> in the beginning and at the end of the <b>string</b>.
+
+46
+00:05:25 --> 00:05:31
+After <b>splitting</b> and <b>stripping</b> we get a <b>list</b> of <b>strings</b> with leading and trailing <b>spaces</b> stripped off.
+
+47
+00:05:32 --> 00:05:37
+Now we shall look at converting <b>strings</b> into <b>floats</b> and <b>integers</b>.
+
+48
+00:05:38 --> 00:05:45
+Type, <b>mark <i>underscore</i> str </b>is equal to inside double quotes <b>1.25 </b>
+
+49
+00:05:46 --> 00:05:52
+Note that <b>1.25</b> is a <b>string</b> and not a <b>float</b> as it is within double quotes.
+
+50
+00:05:53 --> 00:06:04
+Type, <b>mark </b>is equal to<b> float </b>inside <b>parentheses mark underscore str</b>. Here we are converting <b>string</b> to <b>float</b>.
+
+51
+00:06:05 --> 00:06:16
+Type <b>type </b>inside parentheses <b>mark underscore str</b>. This tells you the <b>datatype</b> of <b>mark_str</b> i.e. <b>string.</b>
+
+52
+00:06:17 --> 00:06:25
+Type <b>type </b>inside parentheses <b>mark </b>. This shows <b>mark</b> is a <b>float datatype.</b>
+
+53
+00:06:26 --> 00:06:33
+We can see that <b>string</b> is converted to <b>float</b>. Now we can perform <b>mathematical operations</b> on them.
+
+54
+00:06:34 --> 00:06:39
+Pause the video. Try this exercise and then resume the video.
+
+55
+00:06:40 --> 00:06:47
+What happens if you type, <b>int</b> inside parentheses inside double quotes <b>1.25</b> in the <b>terminal</b>?
+
+56
+00:06:48 --> 00:06:51
+Switch to the <b>terminal</b> for the solution.
+
+57
+00:06:52 --> 00:06:58
+Type, <b>int </b>inside parentheses inside double quotes <b>1.25</b>
+
+58
+00:06:59 --> 00:07:05
+We can see a <b>ValueError.</b> We cannot convert a <b>string</b> to <b>integer</b> directly.
+
+59
+00:07:06 --> 00:07:17
+Let us see the correct solution for this. Type <b>dcml underscore str </b><i>is equal to inside double quotes<b> 1.25.</b></i>
+
+60
+00:07:18 --> 00:07:26
+Type <b>flt </b>is equal to<b> float </b>inside parentheses <b>dcml underscore str.</b>
+
+61
+00:07:27 --> 00:07:33
+Here we are converting the <b>string</b> into <b>float </b>as we cannot directly convert it into <b>integer</b>.
+
+62
+00:07:34 --> 00:07:36
+Type <b>flt </b>
+
+63
+00:07:37 --> 00:07:47
+Type, <b>number </b>is equal to<b> int </b>inside parentheses <b>flt</b>. We are now converting <b>float</b> into <b>integer</b>.
+
+64
+00:07:48 --> 00:07:53
+Type <b>number</b> We got the output as <b>integer</b>.
+
+65
+00:07:54 --> 00:07:58
+This is how we should convert <b>strings</b> into <b>floats</b> and <b>integers</b>.
+
+66
+00:07:59 --> 00:08:03
+Next, we will use a data file to<b> parse </b>the<b> data.</b>
+
+67
+00:08:04 --> 00:08:09
+Let me open the file <b>student underscore record.txt</b> in text editor.
+
+68
+00:08:10 --> 00:08:21
+The file <b>student underscore record.txt </b>is available in the <b>Code files</b> link of this tutorial.
+<p>Please download it in your <b>Home directory</b> and use it.
+</p>
+
+69
+00:08:22 --> 00:08:27
+We will first <b>read</b> the <b>file</b> line by line and <b>parse</b> each <b>record</b> in this <b>file</b>.
+
+70
+00:08:28 --> 00:08:34
+It contains <b>records</b> of students and their marks in the <b>State Secondary Board Examination</b>.
+
+71
+00:08:35 --> 00:08:42
+It has 1 lakh 80 thousand lines of record. We are going to read it and process this <b>data</b>.
+
+72
+00:08:43 --> 00:08:48
+Each line in the <b>file</b> is a set of <b>fields</b> separated by <b>semicolons</b>.
+
+73
+00:08:49 --> 00:08:52
+Consider a sample record from this file.
+
+74
+00:08:53 --> 00:09:07
+The following are the <b>fields</b> in any given line.
+<p><b>Region Code</b>
+<b>Roll Number</b>
+<b>Name</b>
+Marks of 5 subjects
+Total marks
+</p>
+
+75
+00:09:08 --> 00:09:13
+Open a new text editor. Type the code as shown.
+
+76
+00:09:14 --> 00:09:16
+Let me explain this program.
+
+77
+00:09:17 --> 00:09:27
+We have already learnt <b>for loop</b> in earlier tutorial. The <b>for loop</b> will process the student <b>record</b> and split the fields of each <b>record</b>.
+
+78
+00:09:28 --> 00:09:31
+The math marks are then converted to <b>float</b>.
+
+79
+00:09:32 --> 00:09:40
+Then it is appended and stored as a <b>list</b> in a variable <b>math underscore  marks underscore A </b>for region code <b>A</b>.
+
+80
+00:09:41 --> 00:09:47
+Save the file as<b> marks.py </b>in the <b>Home directory</b>.
+
+81
+00:09:48 --> 00:09:50
+Switch to the <b>terminal</b>.
+
+82
+00:09:51 --> 00:09:57
+Execute the file with <b>percentage sign run space marks.py.</b>
+
+83
+00:09:58 --> 00:10:08
+Switch back to the editor. Now we have all the math marks for region <b>A</b> in the list <b>math underscore marks underscore A</b>.
+
+84
+00:10:09 --> 00:10:14
+Add the below lines to calculate the <b>mean</b> of math marks for region <b>A</b>.
+
+85
+00:10:15 --> 00:10:20
+For this, we just have to sum the math marks and divide by the length.
+
+86
+00:10:21 --> 00:10:25
+Note that the length will give the number of students in region <b>‘A’</b>.
+
+87
+00:10:26 --> 00:10:28
+Let us save the file.
+
+88
+00:10:29 --> 00:10:31
+Switch to the <b>terminal</b>.
+
+89
+00:10:32 --> 00:10:39
+Execute the file again with <b>percentage sign run space marks.py.</b>
+
+90
+00:10:40 --> 00:10:42
+Hence we got our final <b>output</b>.
+
+91
+00:10:43 --> 00:10:50
+Here the <b>mean</b> value for region <b>A</b> is calculated roughly for 1 lakh 80 thousand <b>records</b>.
+
+92
+00:10:51 --> 00:10:56
+This is how we <b>split</b> and read a huge <b>data</b> and perform <b>computations</b> on it.
+
+93
+00:10:57 --> 00:11:00
+This brings us to the end of this tutorial.
+
+94
+00:11:01 --> 00:11:10
+In this tutorial, we learnt to,<b> </b>
+<p><b>Tokenize</b> a <b>string</b>
+</p><p><b>Split</b> a <b>string</b> separated by <b>delimiters</b> with <b>split()</b> <b>function</b>
+</p>
+
+95
+00:11:11 --> 00:11:24
+Remove <b>whitespaces</b> using the <b>strip() function.</b>
+<p>Convert <b>datatypes</b> of numbers from one type to another
+</p><p><b>Parse</b> input <b>data</b> and perform computations on it. 
+</p>
+
+96
+00:11:25 --> 00:11:35
+Here are some self assessment questions for you to solve
+<p>1. How do you split the string “Guido;Rossum;Python" to get the words?
+</p>
+
+97
+00:11:36 --> 00:11:42
+2. What does int inside paranthesis inside double quotes 20.0 produce?
+
+98
+00:11:43 --> 00:12:02
+And the answers -
+<p>1. <b>line.split</b> inside <b>parantheses</b> inside single quotes <b>comma</b>
+</p><p>2. <b>int</b> inside <b>parantheses</b> inside double quotes <b>20.0</b> will give an error, because converting a <b>string</b> directly into <b>integer</b> is not possible. 
+</p>
+
+99
+00:12:03 --> 00:12:06
+Please post your timed queries in this forum.
+
+100
+00:12:07 --> 00:12:11
+Please post your general queries on <b>Python</b> in this forum.
+
+101
+00:12:12 --> 00:12:15
+FOSSEE team coordinates the TBC project.
+
+102
+00:12:16 --> 00:12:26
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India. For more details, visit this website.
+
+103
+00:12:27 --> 00:12:32
+This is  from IIT Bombay signing off. Thanks for watching.
+

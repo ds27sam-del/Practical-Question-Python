@@ -1,0 +1,556 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:06
+Hello friends. Welcome to the tutorial on <b>Getting started with IPython</b>.
+
+2
+00:00:07 --> 00:00:12
+At the end of this tutorial, you will be able to: invoke the <b>IPython interpreter</b>,
+
+3
+00:00:13 --> 00:00:15
+quit the <b>IPython interpreter</b>,
+
+4
+00:00:16 --> 00:00:19
+navigate the <b>IPython session</b> history,
+
+5
+00:00:20 --> 00:00:22
+use <b>tab-completion</b> within <b>IPython</b>,
+
+6
+00:00:23 --> 00:00:25
+look up documentation in <b>IPython</b>,
+
+7
+00:00:26 --> 00:00:29
+interrupt incomplete or incorrect <b>commands</b>.
+
+8
+00:00:30 --> 00:00:36
+To record this tutorial, I am using:
+<p><b>Ubuntu Linux 14.04</b> operating system, 
+</p>
+
+9
+00:00:37 --> 00:00:43
+<b>Python 3.5.2</b>,
+<p><b>IPython 5.1.0</b>
+</p>
+
+10
+00:00:44 --> 00:00:49
+What is <b>IPython</b>?
+<p><b>IPython</b> is an enhanced interactive <b>Python interpreter</b>. 
+</p>
+
+11
+00:00:50 --> 00:00:55
+It provides features like <b>tab-completion</b> and easier access to help.
+
+12
+00:00:56 --> 00:00:59
+Let us first see how to start the <b>IPython interpreter</b>.
+
+13
+00:01:00 --> 00:01:06
+First open the <b>terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously on the keyboard.
+
+14
+00:01:07 --> 00:01:12
+Type <b>ipython3</b> at the <b>prompt</b> and press <b>Enter</b>.
+
+15
+00:01:13 --> 00:01:17
+If <b>IPython</b> is not installed, please refer to the <b>Instruction sheet</b>.
+
+16
+00:01:18 --> 00:01:24
+If <b>IPython</b> is installed, the <b>IPython interpreter </b>is <b>load</b>ed by running the <b>ipython command </b>in the <b>terminal</b>.
+
+17
+00:01:25 --> 00:01:31
+The versions of <b>Python</b> and <b>IPython</b> that are installed, are shown on the <b>terminal</b>.
+
+18
+00:01:32 --> 00:01:36
+Some additional helpful information is printed by <b>IPython.</b>
+
+19
+00:01:37 --> 00:01:41
+After this, we get a <b>prompt</b> with <b>i n bracket 1</b>:
+
+20
+00:01:42 --> 00:01:47
+Now, let us see how we can quit the <b>IPython interpreter</b>.
+<p>Press <b>Ctrl+D</b> keys. 
+</p>
+
+21
+00:01:48 --> 00:01:52
+A prompt will appear to confirm if we really want to exit.
+
+22
+00:01:53 --> 00:01:56
+Type <b>y</b> for <b>yes</b> and quit <b>IPython</b>.
+
+23
+00:01:57 --> 00:02:01
+Note that <b>y</b> is given in square brackets. So, it is default.
+
+24
+00:02:02 --> 00:02:04
+We could also press <b>Enter</b> and it will exit.
+
+25
+00:02:05 --> 00:02:09
+Else, type <b>n </b>for <b>no </b>if you don't want to quit <b>IPython</b>.
+
+26
+00:02:10 --> 00:02:15
+Let us type <b>y</b>.
+<p>We have quit <b>IPython interpreter</b> and are back at the <b>terminal prompt</b>. 
+</p>
+
+27
+00:02:16 --> 00:02:22
+Let us start it again.
+<p>Type <b>ipython3</b> in the <b>terminal </b>and press <b>Enter</b>. 
+</p>
+
+28
+00:02:23 --> 00:02:29
+Now, let us learn how to use the interpreter.
+<p>Let us start with the simplest operation - addition. 
+</p>
+
+29
+00:02:30 --> 00:02:35
+Type: <b>1 plus 2</b> at the <b>IPython prompt </b>and press <b>Enter</b>.
+
+30
+00:02:36 --> 00:02:42
+We press <b>Enter</b> to execute the <b>python command</b>. Please do so, after typing every <b>command</b>.
+
+31
+00:02:43 --> 00:02:46
+<b>IPython</b> promptly displays the output as <b>3</b>.
+
+32
+00:02:47 --> 00:02:53
+Notice that the output is shown with an <b>Out</b> square brackets <b>1</b> indication.
+
+33
+00:02:54 --> 00:03:02
+Let us now try a few more operations such as-
+<p><b>5 minus 3</b>, 
+</p><p><b>7 multiplied by 4</b>. 
+</p>
+
+34
+00:03:03 --> 00:03:09
+Each time we press <b>Enter</b> and see the output on the <b>IPython console window.</b>
+
+35
+00:03:10 --> 00:03:14
+Let us see how we can navigate to previous <b>command</b>s in <b>IPython</b>.
+
+36
+00:03:15 --> 00:03:22
+For example, say, we want to <b>execute</b> <b>print open parenthesis 1 plus 2 close parenthesis.</b>
+
+37
+00:03:23 --> 00:03:29
+Instead of typing the whole <b>command</b>, we can recall the command <b>1 plus 2 </b>we typed earlier.
+
+38
+00:03:30 --> 00:03:34
+Use the up arrow key to go back to the command<b> 1 plus 2</b>.
+
+39
+00:03:35 --> 00:03:39
+Now use the left-arrow key to navigate to the beginning of the line.
+
+40
+00:03:40 --> 00:03:48
+Type the word <b>print</b>, open parenthesis close parenthesis, on the keyboard.
+
+41
+00:03:49 --> 00:03:52
+We have changed the <b>command</b> to <b>print (1 plus 2). </b>Now press <b>Enter</b>.
+
+42
+00:03:53 --> 00:04:02
+The <b>interpreter </b>prints the result as <b>3</b>.
+<p>Notice that this time, the indication <b>Out</b> square brackets, is not displayed. 
+</p>
+
+43
+00:04:03 --> 00:04:13
+Now let us execute <b>print 10 multiplied by 2. </b>
+<p>We use the up arrow key to navigate to the previous <b>command print (1 plus 2)</b>. 
+</p>
+
+44
+00:04:14 --> 00:04:20
+Now replace <b>1 plus 2 </b>with <b>10 multiplied by 2 </b>and press <b>Enter</b>.
+
+45
+00:04:21 --> 00:04:26
+As with any programming language, <b>asterisk </b>is used for multiplication operator.
+
+46
+00:04:27 --> 00:04:29
+Observe the <b>output</b> on the <b>console</b>.
+
+47
+00:04:30 --> 00:04:34
+Now, let us see, what is <b>tab-completion</b>.
+<p>Let us consider an example. 
+</p>
+
+48
+00:04:35 --> 00:04:38
+Suppose we want to use the <b>function "print"</b>.
+
+49
+00:04:39 --> 00:04:44
+For this, we just type <b>pri</b> at the <b>prompt</b> and press the <b>tab key</b>.
+
+50
+00:04:45 --> 00:04:51
+As you can see on the <b>console</b> that <b>IPython</b> has autocompleted the <b>command</b> <b>pri</b> to <b>print</b>.
+
+51
+00:04:52 --> 00:04:55
+This feature of <b>IPython</b> is called the <b>tab-completion</b>.
+
+52
+00:04:56 --> 00:05:04
+Let us see some more possibilities of <b>tab completion</b>.
+<p>Just type <b>p</b> and then press the tab. 
+</p>
+
+53
+00:05:05 --> 00:05:08
+In this case, we see that <b>IPython</b> does not complete the <b>command</b>.
+
+54
+00:05:09 --> 00:05:13
+This is because, there are more than one <b>command</b> beginning with <b>p</b>.
+
+55
+00:05:14 --> 00:05:19
+Therefore, it just lists out all the possible <b>tab-completions</b> of <b>p</b>.
+
+56
+00:05:20 --> 00:05:22
+Now let us try out an exercise.
+
+57
+00:05:23 --> 00:05:30
+Pause the video, solve the problem and resume the video.
+<p>Find out the <b>command</b>s starting with "<b>ab</b>". 
+</p>
+
+58
+00:05:31 --> 00:05:34
+List out the <b>commands</b> starting with "<b>a</b>".
+
+59
+00:05:35 --> 00:05:39
+<b>ab </b> autocompletes to <b>a b s  abs</b>.
+
+60
+00:05:40 --> 00:05:45
+<b>a tab</b> displays a list of all the <b>command</b>s starting with <b>a</b>.
+
+61
+00:05:46 --> 00:05:50
+Now, let us see what the <b>function abs </b>is used for.
+
+62
+00:05:51 --> 00:05:54
+We will use the help feature of <b>IPython</b> to find out this.
+
+63
+00:05:55 --> 00:06:02
+To see the documentation of a <b>function</b>, type the <b>function </b>name followed by a question mark.
+
+64
+00:06:03 --> 00:06:07
+The <b>IPython interpreter </b>will show the <b>documentation</b> for the <b>function</b>.
+
+65
+00:06:08 --> 00:06:15
+From the displayed information, it says <b>abs</b> accepts a number as input and returns it's absolute value.
+
+66
+00:06:16 --> 00:06:28
+Let us see a few examples. On the <b>console</b>, type: <b>a b s minus 19</b> and then <b>a b s 19</b>.
+
+67
+00:06:29 --> 00:06:32
+We get 19, as expected, in both the cases.
+
+68
+00:06:33 --> 00:06:41
+Now let us try it for decimal numbers.
+<p>Let us try <b>a b s minus 10.5</b>. 
+</p>
+
+69
+00:06:42 --> 00:06:45
+We get <b>10.5</b> as the result.
+
+70
+00:06:46 --> 00:06:51
+Pause the video here.
+<p>Try out the following exercise and resume the video. 
+</p>
+
+71
+00:06:52 --> 00:06:56
+Look-up the documentation of <b>round</b> and see how to use it.
+
+72
+00:06:57 --> 00:07:05
+Switch to the <b>console</b> for the solution.
+<p>You can look up the documentation of the <b>function round</b> by typing <b>round</b> question mark. 
+</p>
+
+73
+00:07:06 --> 00:07:11
+It says here that the <b>function 'round'</b>, rounds a number to a given precision.
+
+74
+00:07:12 --> 00:07:20
+<b>ndigits </b>is the precision value for <b>round</b> function.
+<p>Notice, there are extra square brackets around <b>ndigits</b>. 
+</p>
+
+75
+00:07:21 --> 00:07:26
+This means that <b>ndigits</b> is optional and 0 is the default value.
+
+76
+00:07:27 --> 00:07:32
+Optional <b>parameter</b>s are shown in square brackets in <b>Python</b> documentation.
+
+77
+00:07:33 --> 00:07:37
+Pause the video here.
+<p>Try out the following exercise and resume the video. 
+</p>
+
+78
+00:07:38 --> 00:07:51
+Check the output of:
+<p><b>round 2.48</b>,  
+<b>round 2.48 comma 1</b>,  
+<b>round 2.484</b>,  
+<b>round 2.484 comma 2</b>
+</p>
+
+79
+00:07:52 --> 00:07:56
+We get <b>round 2.48 is equal to 2.0</b>,
+
+80
+00:07:57 --> 00:08:01
+<b>round 2.48 comma 1 is 2.5</b>,
+
+81
+00:08:02 --> 00:08:05
+<b>round 2.484 is 2.0</b>,
+
+82
+00:08:06 --> 00:08:12
+<b>round 2.484 comma 2 is 2.48 </b>
+<p>which are what we expect. 
+</p>
+
+83
+00:08:13 --> 00:08:19
+Let us now see how to correct typing errors which we could make while typing on the <b>console</b>.
+
+84
+00:08:20 --> 00:08:31
+Let us make a typing error deliberately.
+<p>Type: <b>round open parenthesis 2.484</b> and press <b>Enter</b>, without closing the parenthesis. 
+</p>
+
+85
+00:08:32 --> 00:08:39
+We get a prompt with dots.
+<p>This prompt is the continuation prompt of <b>IPython</b>. 
+</p>
+
+86
+00:08:40 --> 00:08:43
+It appears when the previous line is incomplete.
+
+87
+00:08:44 --> 00:08:53
+Now complete the <b>command</b> with close parenthesis and press <b>Enter</b>.
+<p>We get the expected output, that is <b>2</b>. 
+</p>
+
+88
+00:08:54 --> 00:08:59
+What if we type an incorrect <b>command </b>and end up with the continuation prompt?
+
+89
+00:09:00 --> 00:09:08
+In such case, we can press <b>Ctrl+C</b> keys to interrupt the <b>command</b> and get back to the <b>IPython prompt</b>.
+
+90
+00:09:09 --> 00:09:14
+<b>round</b> takes only numbers as input. Type: <b>round(1a</b>
+
+91
+00:09:15 --> 00:09:18
+Do not close the parenthesis and press<b> Enter. </b>
+
+92
+00:09:19 --> 00:09:27
+We gave alpha-numeric value '<b>1 a'</b> as input.
+<p>Press<b> Ctrl+C</b> to interrupt the execution. 
+</p>
+
+93
+00:09:28 --> 00:09:33
+Pause the video here.
+<p>Try out the following exercise and resume the video. 
+</p>
+
+94
+00:09:34 --> 00:09:40
+Type: <b>round 2.484,</b> without closing the parenthesis and press <b>Enter</b>.
+
+95
+00:09:41 --> 00:09:50
+Then cancel the <b>command</b> using <b>Ctrl+C</b>. Type the command <b>round 2.484 comma 2 </b>
+
+96
+00:09:51 --> 00:10:00
+The output on your <b>console </b>should look like this.
+
+97
+00:10:01 --> 00:10:03
+This brings us to the end of this tutorial.
+
+98
+00:10:04 --> 00:10:12
+In this tutorial, we have learnt to:
+<p>invoke the <b>IPython interpreter </b>by typing <b>ipython</b> in the <b>terminal</b>, 
+</p>
+
+99
+00:10:13 --> 00:10:16
+quit the <b>IPython interpreter </b>by using <b>Ctrl+D</b>,
+
+100
+00:10:17 --> 00:10:22
+navigate the <b>IPython session</b> history by using the arrow keys,
+
+101
+00:10:23 --> 00:10:26
+Use  <b>tab-completion</b> to work faster,
+
+102
+00:10:27 --> 00:10:31
+see the documentation of <b>functions </b>using <b>question mark</b>,
+
+103
+00:10:32 --> 00:10:36
+interrupt commands using <b>Ctrl+C</b> when we make an error.
+
+104
+00:10:37 --> 00:10:40
+Here are some self assessment questions for you to solve.
+
+105
+00:10:41 --> 00:10:45
+<b>IPython is a programming language similar to Python.</b> <b>True</b> or <b>False</b>
+
+106
+00:10:46 --> 00:10:54
+Which key combination quits <b>IPython</b>?
+<p><b>Ctrl + C</b>
+</p><p><b>Ctrl + D</b>
+</p><p><b>Alt + C</b>
+</p><p><b>Alt + D</b>
+</p>
+
+107
+00:10:55 --> 00:11:06
+Which character is used at the end of a <b>command</b> in <b>IPython</b> to display the documentation?
+<p><b>under score</b>
+</p><p><b>question mark</b>
+</p><p><b>exclamation mark</b>
+</p><p><b>ampersand </b>
+</p>
+
+108
+00:11:07 --> 00:11:16
+And, the answers are- <b>False. IPython</b> is not a new programming language. It is just an enhanced interactive <b>Python interpreter</b>.
+
+109
+00:11:17 --> 00:11:20
+We use <b>Ctrl + D</b> to quit <b>IPython interpreter</b>.
+
+110
+00:11:21 --> 00:11:27
+We use <b> question mark (?) </b>at the end of the <b>command</b> to display its documentation.
+
+111
+00:11:28 --> 00:11:36
+This video summarises the <b>Spoken Tutorial</b> project.
+<p>If you do not have good bandwidth, you may download and watch it. 
+</p>
+
+112
+00:11:37 --> 00:11:41
+We conduct workshops, give certificates. Please contact us.
+
+113
+00:11:42 --> 00:11:47
+Do you have questions in THIS <b>Spoken Tutorial?</b>
+<p>Choose the minute and second where you have the question. 
+</p>
+
+114
+00:11:48 --> 00:11:55
+Explain your question briefly. Someone from the <b>FOSSEE</b> team will answer them.
+<p>Please visit this site. 
+</p>
+
+115
+00:11:56 --> 00:11:58
+Do you have any general / technical questions in <b>Python</b>?
+
+116
+00:11:59 --> 00:12:03
+Please visit the <b>FOSSEE forum</b> and post your question.
+
+117
+00:12:04 --> 00:12:09
+The <b>FOSSEE </b>team coordinates coding of several solved examples of popular books.
+
+118
+00:12:10 --> 00:12:16
+We give honorarium and certificates for those who do this.
+<p>For more details, please visit this site. 
+</p>
+
+119
+00:12:17 --> 00:12:22
+The <b>Spoken Tutorial</b> project is funded by <b>NMEICT, MHRD,</b> Govt. of India.
+
+120
+00:12:23 --> 00:12:28
+This is Prabhu from <b>IIT Bombay</b>, signing off. Thanks for watching.
+

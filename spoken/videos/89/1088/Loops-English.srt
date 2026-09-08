@@ -1,0 +1,238 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:04
+Welcome to the spoken tutorial on <b>Loops</b>.
+
+2
+00:00:05 --> 00:00:17
+In this tutorial, we will learn to use,
+<p><b>for loop</b>
+</p><p><b>while loop</b>
+</p><p><b>break, continue </b>and<b> pass statements</b> in the <b>loops</b>
+</p>
+
+3
+00:00:18 --> 00:00:33
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p><p><b>Python 3.4.3 </b>and
+</p><p><b>IPython 5.1.0</b>
+</p>
+
+4
+00:00:34 --> 00:00:44
+To practice this tutorial, you should know how to
+<p>use<b> conditional statements</b>
+</p><p>If not, see the relevant <b>Python</b> tutorials on this website.
+</p>
+
+5
+00:00:45 --> 00:00:48
+Let us begin the tutorial with <b>while loop</b>.
+
+6
+00:00:49 --> 00:00:55
+The <b>while loop</b> is used to execute a set of <b>statements</b> as long as a condition is <b>true.</b>
+
+7
+00:00:56 --> 00:01:02
+When the condition becomes <b>false</b>, program control passes to the line immediately after the <b>loop</b>.
+
+8
+00:01:03 --> 00:01:08
+The code inside the <b>while loop </b>should be indented four spaces to the right.
+
+9
+00:01:09 --> 00:01:13
+Let us start <b>ipython.</b>  Open the <b>terminal.</b>
+
+10
+00:01:14 --> 00:01:25
+Type <b>ipython3 </b>and press <b>Enter.</b>
+<p>From here onwards, remember to press the <b>Enter</b> key after typing every command on the <b>terminal</b>.
+</p>
+
+11
+00:01:26 --> 00:01:31
+Let us <b>print</b> the squares of all the odd numbers less than 10, using the <b>while loop</b>.
+
+12
+00:01:32 --> 00:01:49
+Type, <b>i </b><i>is equal to</i><b> 1</b> <b>while i </b><i>less than </i><b>10 </b><i>colon</i> <b>print </b><i>inside brackets </i><b>i </b><i>asterisk </i><b>i</b> <b>i </b><i>plus equal to </i><b>2</b>
+
+13
+00:01:50 --> 00:01:53
+Here the <b>while loop</b> repeatedly checks the condition.
+
+14
+00:01:54 --> 00:01:58
+If it is <b>True</b>, it <b>executes</b> the <b>block</b> of <b>code </b>within the <b>loop</b>.
+
+15
+00:01:59 --> 00:02:03
+Then press the <b>Enter</b> key twice to get the output.
+
+16
+00:02:04 --> 00:02:08
+Next let us now solve the same problem using <b>for loop</b>.
+
+17
+00:02:09 --> 00:02:23
+Type, <b>for n in range </b><i>inside brackets </i><b>1, 10, 2 </b><i>colon</i> <b>print </b><i>inside brackets </i><b>n </b><i>asterisk </i><b>n</b>
+
+18
+00:02:24 --> 00:02:29
+As we know, the <b>for loop</b> iterates over a <b>list</b> or any other <b>sequential data type</b>.
+
+19
+00:02:30 --> 00:02:39
+So, we use the <b>range </b>function to<b> </b>get a list of odd numbers below 10 and iterate over it. Then we print the square of <b>n</b>.
+
+20
+00:02:40 --> 00:02:51
+Press <b>Enter</b> twice. We can see that we got the same output as before.  Note that now the lines of code are less.
+
+21
+00:02:52 --> 00:02:57
+Pause the video here. Try this exercise and then resume the video.
+
+22
+00:02:58 --> 00:03:03
+Write a <b>while loop</b> to print the squares of all the even numbers below 10.
+
+23
+00:03:04 --> 00:03:07
+Switch back to the <b>terminal</b> for the solution.
+
+24
+00:03:08 --> 00:03:11
+Type, <b>i </b><i>is equal to</i><b> 2</b>
+
+25
+00:03:12 --> 00:03:25
+<b>while i </b><i>less than</i><b> 10 </b><i>colon</i> <b>print </b><i>inside brackets </i><b>i </b><i>asterisk </i><b>i</b> <b>i </b><i>plus equal to </i><b>2</b>
+
+26
+00:03:26 --> 00:03:31
+Press the <b>Enter </b>key twice. We got the required output.
+
+27
+00:03:32 --> 00:03:38
+Pause the video here. Try this exercise and then resume the video.
+
+28
+00:03:39 --> 00:03:44
+Write a <b>for loop</b> to print the squares of all the even numbers below 10.
+
+29
+00:03:45 --> 00:03:48
+Switch back to the <b>terminal</b> for the solution.
+
+30
+00:03:49 --> 00:04:08
+Type, <b>for n in range </b><i>inside brackets</i><b> 2, 10, 2 </b><i>colon</i> <b>print </b><i>inside brackets</i><b> n</b><i> asterisk </i><b>n</b>
+<p>Press <b>Enter</b> twice. We got the required output.
+</p>
+
+31
+00:04:09 --> 00:04:14
+Next let us see at how to use the<b> break, pass </b>and <b>continue</b> keywords.
+
+32
+00:04:15 --> 00:04:19
+Now type this code to understand the <b>pass statement.</b>
+
+33
+00:04:20 --> 00:04:23
+As we already know, <b>pass</b> is just a <b>placeholder</b>.
+
+34
+00:04:24 --> 00:04:30
+It is used for the sake of completion of <b>blocks</b>, that do not have any <b>code</b> within them.
+
+35
+00:04:31 --> 00:04:41
+Nothing gets printed when we execute this code. Press <b>Enter</b> twice. As we expected nothing gets printed.
+
+36
+00:04:42 --> 00:04:45
+Next let us understand about the <b>break statement.</b>
+
+37
+00:04:46 --> 00:04:52
+<b>break</b> is used to break the innermost <b>loop</b>.  Type the code as shown.
+
+38
+00:04:53 --> 00:04:57
+Here, it will <b>iterate </b>each letter in the word <b>python.</b>
+
+39
+00:04:58 --> 00:05:06
+And it <b>breaks </b>the loop when <b>h </b>is the <b>iteration</b> value. Press <b>Enter</b> twice to see the output.
+
+40
+00:05:07 --> 00:05:11
+Next let us understand about the <b>continue statement.</b>
+
+41
+00:05:12 --> 00:05:26
+Type the code as shown. The<b> continue statement</b> rejects all the remaining <b>statements</b> in the current iteration of the <b>loop</b>.
+<p>And it moves the control back to the top of the <b>loop</b>. 
+</p>
+
+42
+00:05:27 --> 00:05:34
+It will print the squares of all the odd numbers below 10 which are not multiples of 3.
+
+43
+00:05:35 --> 00:05:40
+Press <b>Enter</b> twice. We got the required output.
+
+44
+00:05:41 --> 00:05:46
+This brings us to the end of this tutorial. Let us summarise.
+
+45
+00:05:47 --> 00:06:04
+In this tutorial, we have learnt to,
+<p><b>Iterate</b> over a <b>sequence</b> using <b>for </b><i>and </i><b>while loops</b>
+</p><p><b>Break</b> out of <b>loops</b> using <b>break statement</b>
+</p><p>Skip <b>iterations</b> using <b>continue statement</b>
+</p><p>Use the <b>pass statement</b> in a <b>loop</b>
+</p>
+
+46
+00:06:05 --> 00:06:23
+Here are some self assessment questions for you to solve
+<p>Given <b>range(1,4)</b>, write a <b>code</b> to <b>print</b> only the number 1.
+</p><p>Which <b>statement</b> do you use to skip <b>iterations</b>? 
+</p>
+
+47
+00:06:24 --> 00:06:36
+And the answers,
+<p>We can use the <b>break statement</b> in the <b>for loop</b> as shown here
+</p><p>In order to skip <b>iterations</b>, we can use the <b>continue statement</b>.
+</p>
+
+48
+00:06:37 --> 00:06:40
+Please post your timed queries in this forum.
+
+49
+00:06:41 --> 00:06:45
+Please post your general queries on Python in this forum.
+
+50
+00:06:46 --> 00:06:49
+FOSSEE team coordinates the TBC project.
+
+51
+00:06:50 --> 00:06:59
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India. For more details, visit this website.
+
+52
+00:07:00 --> 00:07:05
+This is Priya from IIT Bombay signing off. Thanks for watching.
+

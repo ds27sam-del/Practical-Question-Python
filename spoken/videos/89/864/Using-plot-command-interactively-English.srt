@@ -1,0 +1,338 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:07
+Hello friends! Welcome to the tutorial on using <b>plot </b>command interactively in <b>IPython</b>.
+
+2
+00:00:08 --> 00:00:19
+At the end of this tutorial, you will be able to:
+<p>create simple <b>plots</b> of mathematical <b>functions</b>, 
+</p><p>use the <b>Plot window</b> to study <b>plots </b>better.
+</p>
+
+3
+00:00:20 --> 00:00:33
+To record this tutorial, I am using:
+<p><b>Ubuntu Linux 14.04</b> operating system,
+</p><p><b>Python 3.4.3</b> and
+</p><p><b>IPython 5.1.0</b>
+</p>
+
+4
+00:00:34 --> 00:00:43
+Pre-requisites to practise this tutorial are -
+<p>you should know how to <b>run</b> basic <b>Python </b>commands on the <b>ipython console.</b>
+</p>
+
+5
+00:00:44 --> 00:00:49
+If not, for relevant <b>Python </b>tutorials, please visit this website.
+
+6
+00:00:50 --> 00:00:57
+Let us first open the <b>Terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously.
+
+7
+00:00:58 --> 00:01:04
+Now, type <b>ipython3</b> and press <b>Enter</b>.
+
+8
+00:01:05 --> 00:01:15
+Let us initialise the <b>pylab package</b>. Type: percentage <b>pylab </b>and press<b> Enter</b>.
+
+9
+00:01:16 --> 00:01:19
+Let's first understand what is <b>Pylab</b>.
+
+10
+00:01:20 --> 00:01:31
+<b>Pylab</b> is a convenient <b>Python</b> <b>module</b>
+<p>which provides- 
+<b>plotting</b> functionality and 
+has mathematical and scientific <b>functions</b>. 
+</p>
+
+11
+00:01:32 --> 00:01:40
+After running <b>percentage pylab </b>in the <b>iPython console</b>, you will see a message-
+<p>“<b>Using matplotlib backend: TkAgg ”.</b>
+</p>
+
+12
+00:01:41 --> 00:01:44
+This means <b>matplotlib</b> is running.
+
+13
+00:01:45 --> 00:01:54
+But sometimes you may get an error that says-
+<p><b>“ImportError: No module named matplotlib”.</b>
+</p>
+
+14
+00:01:55 --> 00:02:01
+In such cases, you have to install <b>matplotlib</b> and <b>run</b> this <b>command</b> again.
+
+15
+00:02:02 --> 00:02:13
+Let's come back to the <b>ipython console</b>. Type '<b>linspace'</b> followed by a question mark in <b>ipython console. </b> Press <b>Enter</b>.
+
+16
+00:02:14 --> 00:02:19
+Please note that the <b>command </b>is<b> linspace </b>and not<b> linespace.</b>
+
+17
+00:02:20 --> 00:02:33
+The displayed information says that
+<p><b>linspace</b> returns evenly spaced numbers 
+which are calculated over the interval <b>start</b> and <b>stop</b>. 
+</p>
+
+18
+00:02:34 --> 00:02:40
+Press <b>q </b>to exit the documentation and return to the <b>console.</b>
+
+19
+00:02:41 --> 00:02:57
+Let's try to generate 100 points from 1 to 100. Type: <b>linspace brackets 1 comma 100 comma 100</b>
+
+20
+00:02:58 --> 00:03:08
+Here, 1 is the <b>start</b> , 100 is the <b>stop</b> and the next 100 is the number of points. Now, press <b>Enter</b>.
+
+21
+00:03:09 --> 00:03:14
+As you can see, a sequence of numbers from 1 to 100 is displayed.
+
+22
+00:03:15 --> 00:03:20
+Now let's try to generate 200 points between 0 and 1.
+
+23
+00:03:21 --> 00:03:35
+We do that by typing <b>linspace brackets 0 comma 1 comma 200 </b>and press <b>Enter</b>.
+
+24
+00:03:36 --> 00:03:39
+Here is the expected sequence of numbers.
+
+25
+00:03:40 --> 00:03:47
+In <b>linspace,</b> the <b>start</b> and <b>stop</b> points can be integers, decimals or <b>constants</b>.
+
+26
+00:03:48 --> 00:03:51
+Let us now learn about the <b>len </b>function.
+
+27
+00:03:52 --> 00:03:57
+First we will generate 100 points between <b>minus pi</b> and <b>pi</b>.
+
+28
+00:03:58 --> 00:04:09
+So, type: <b>linspace brackets minus pi comma pi comma 100 </b>and press <b>Enter</b>.
+
+29
+00:04:10 --> 00:04:14
+Here '<b>pi'</b> is a constant defined by <b>pylab</b>.
+
+30
+00:04:15 --> 00:04:21
+Now, let us <b>save</b> this to a variable, say <b>t</b>.  Press <b>Enter</b>.
+
+31
+00:04:22 --> 00:04:31
+If we now type: <b>len bracket t </b>and press <b>Enter</b>, we will get the number of points between <b>minus pi</b> and <b>pi</b>.
+
+32
+00:04:32 --> 00:04:36
+<b>len</b> function gives the no. of elements present in a given sequence.
+
+33
+00:04:37 --> 00:04:42
+Next, let's try and plot a <b>cosine</b> curve between <b>minus pi</b> and<b> pi.</b>
+
+34
+00:04:43 --> 00:04:58
+For this, we use the <b>plot</b> command. Type: <b>plot brackets t comma cos(t) </b>and press <b>Enter.</b>
+
+35
+00:04:59 --> 00:05:08
+As you can see from the <b>cosine plot</b>, <b>cos(t)</b> gets the <b>cosine</b> value at every point corresponding to point <b>t.</b>
+
+36
+00:05:09 --> 00:05:20
+We can also assign the value of <b>cos(t) </b>to a variable <b>cosine</b> by typing<b> cosine equals to cos(t). </b>Press <b>Enter</b>.
+
+37
+00:05:21 --> 00:05:30
+And then plot by typing <b>plot(t comma cosine) </b>and press <b>Enter</b>.
+
+38
+00:05:31 --> 00:05:41
+To clear the <b>plot</b>, we have to use the <b>clf()</b> function. This avoids overlapping of new plots over older plots.
+
+39
+00:05:42 --> 00:05:55
+In the <b>console</b>, type: <b>clf() </b>and press <b>Enter. </b>The previous <b>plot</b> is cleared and a blank <b>plot window</b> is displayed.
+
+40
+00:05:56 --> 00:05:59
+Now, let's try to plot a <b>sine</b> plot.
+
+41
+00:06:00 --> 00:06:13
+Type: <b>plot brackets t comma sin(t) </b>and press <b>Enter.</b> A <b>sine plot </b>is displayed.
+
+42
+00:06:14 --> 00:06:24
+To study the plot better on the<b> plot window,</b> we can use various options that are available on it.
+<p>Let us have a look at these options. 
+</p>
+
+43
+00:06:25 --> 00:06:32
+Moving the <b>mouse</b> pointer along the <b>plot</b> gives us the location of each point on the plot.
+
+44
+00:06:33 --> 00:06:38
+Notice here, at the bottom left of the window, there are a few buttons.
+
+45
+00:06:39 --> 00:06:46
+The right-most among them is for saving the file. Just click on it and type the file name.
+
+46
+00:06:47 --> 00:06:53
+Let us <b>save</b> the <b>plot</b> by the name <b>sin underscore curve</b> in <b>pdf format</b>.
+
+47
+00:06:54 --> 00:07:07
+Click on the dropdown here. As you can see, there are many formats in which to save the file.
+<p>Formats like <b>png, eps, pdf</b>, and <b>ps</b> are available. 
+</p>
+
+48
+00:07:08 --> 00:07:13
+We have to specify the format that we prefer at the time of saving.
+
+49
+00:07:14 --> 00:07:23
+To the left of the <b>save </b>button, is the <b>slider</b> button. Using this button, we can specify the margins of the<b> plot window</b>.
+
+50
+00:07:24 --> 00:07:36
+To the left of the <b>slider</b> button is the <b>zoom</b> button . It is used to <b>zoom</b> into the <b>plot</b>. Just specify the region to <b>zoom</b> into.
+
+51
+00:07:37 --> 00:07:40
+The button to the left of <b>zoom, </b>can be used to move the <b>axes </b>of the <b>plot</b>.
+
+52
+00:07:41 --> 00:07:47
+The next two buttons with left and right arrow icons, change the state of the <b>plot</b>.
+
+53
+00:07:48 --> 00:07:56
+It takes us to the previous or next state of the <b>plot</b>.  It acts like the back and forward button in a browser.
+
+54
+00:07:57 --> 00:08:02
+The last one is '<b>home'</b>, referring to the initial <b>plot. </b>
+
+55
+00:08:03 --> 00:08:08
+Pause the video here, try out the following exercise and then resume the video.
+
+56
+00:08:09 --> 00:08:25
+Plot <b>(sin(x) multiplied by sin(x)) divided by x</b>.
+<p>1. <b>Save</b> the <b>plot</b> as <b>sinsquarebyx dot pdf</b>.
+</p><p>2. <b>Zoom</b> and find the <b>maxima</b>.
+</p><p>3. Bring it back to initial position.
+</p>
+
+57
+00:08:26 --> 00:08:41
+This brings us to the end of this tutorial. In this tutorial, we have learnt to:
+<p>start <b>IPython</b> with <b>pylab</b>, 
+</p><p>use the <b>linspace</b> function to create equally spaced points in a region,
+</p>
+
+58
+00:08:42 --> 00:08:52
+find the length of sequences using <b>len</b> <b>function</b>,
+<p>plot mathematical functions using <b>plot</b>,
+</p><p>clear drawing area using <b>clf</b>. 
+</p>
+
+59
+00:08:53 --> 00:09:03
+usage of buttons in the <b>UI</b> of the plot window such as -<br/> <b>save</b>, <b>zoom,</b> <b>move axis</b>, <b>back and forward, </b> <b>Home. </b>
+
+60
+00:09:04 --> 00:09:14
+Here are some self assessment questions for you to solve -
+<p>1. Create 100 equally spaced points between <b>minus pi by 2</b> and <b>pi by 2</b>.
+</p>
+
+61
+00:09:15 --> 00:09:18
+2. How can we find the length of a sequence ?
+
+62
+00:09:19 --> 00:09:25
+3. What will the command <b>linspace(minus pi comma pi comma 100)</b> do?
+
+63
+00:09:26 --> 00:09:42
+And the answers are-
+<p>We use the command <b>linspace(minus pi by 2 comma pi by 2 comma 100)</b> to create 100 equally spaced lines between the points <b>minus pi by 2</b> and <b>pi by 2</b>.
+</p>
+
+64
+00:09:43 --> 00:09:49
+<b>len(sequence underscore name) </b>is the function used to find out the length of a sequence.
+
+65
+00:09:50 --> 00:10:05
+The command <b>linspace(minus pi comma pi comma 100)</b> will return 100 evenly spaced samples from <b>-pi</b> to <b>pi</b> including both <b>minus pi </b>and <b>pi</b>.
+
+66
+00:10:06 --> 00:10:15
+The video at the following link summarises the <b>Spoken Tutorial</b> project.  If you do not have good bandwidth, you can download and watch it.
+
+67
+00:10:16 --> 00:10:23
+We conduct workshops using Spoken Tutorials and give certificates. Please contact us.
+
+68
+00:10:24 --> 00:10:26
+Do you have questions in THIS <b>Spoken Tutorial?</b>
+
+69
+00:10:27 --> 00:10:38
+Choose the minute and second where you have the question. Explain your question briefly.
+<p>Someone from the <b>FOSSEE</b> team will answer them. Please visit this site. 
+</p>
+
+70
+00:10:39 --> 00:10:45
+Do you have any general / technical questions? Please visit the forum given in this link.
+
+71
+00:10:46 --> 00:10:50
+The <b>FOSSEE </b>team coordinates coding of solved examples of popular books.
+
+72
+00:10:51 --> 00:10:59
+We give honorarium and certificates for those who do this. For more details, please visit this site.
+
+73
+00:11:00 --> 00:11:06
+The Spoken Tutorial project is funded by <b>NMEICT, MHRD,</b> Govt. of India.
+
+74
+00:11:07 --> 00:11:12
+This is Usha from <b>IIT Bombay</b>, signing off. Thanks for watching.
+

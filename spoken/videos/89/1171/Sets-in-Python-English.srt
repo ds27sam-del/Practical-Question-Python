@@ -1,0 +1,463 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:05
+Welcome to the spoken tutorial on <b>Sets in Python</b>.
+
+2
+00:00:06 --> 00:00:11
+In this tutorial, you will learn to, Create <b>sets</b> from <b>lists</b>
+
+3
+00:00:12 --> 00:00:17
+Perform <b>union, intersection</b> and <b>symmetric difference operations</b>
+
+4
+00:00:18 --> 00:00:26
+Check if a <b>set</b> is a <b>subset</b> of other and
+<p>Understand various similarities with <b>lists</b>
+</p>
+
+5
+00:00:27 --> 00:00:34
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p>
+
+6
+00:00:35 --> 00:00:41
+<b>Python 3.4.3 </b>and <b>IPython 5.1.0</b>
+
+7
+00:00:42 --> 00:00:52
+To practise this tutorial, you should know how to run basic <b>Python </b>commands on the <b>ipython console </b>and use <b>lists</b>
+
+8
+00:00:53 --> 00:00:57
+If not, see the relevant <b>Python </b>tutorials on this website.
+
+9
+00:00:58 --> 00:01:01
+First let us see the overview of <b>sets</b>.
+
+10
+00:01:02 --> 00:01:06
+<b>Sets</b> are unordered collections of unique <b>elements</b>.
+
+11
+00:01:07 --> 00:01:13
+The <b>set</b> itself is <b>mutable</b>.
+<p>We can add or remove <b>items</b> from it.
+</p>
+
+12
+00:01:14 --> 00:01:18
+Let us start <b>ipython</b>.
+<p>Open the <b>terminal.</b>
+</p>
+
+13
+00:01:19 --> 00:01:23
+Type <b>ipython3 </b>and press <b>Enter.</b>
+
+14
+00:01:24 --> 00:01:30
+From here onwards, remember to press the <b>Enter</b> key after typing every command on the <b>terminal</b>.
+
+15
+00:01:31 --> 00:01:34
+Let us look at how to input <b>sets</b>.
+
+16
+00:01:35 --> 00:01:46
+Type,
+<p><b>a</b><i> underscore </i><b>list </b><i>is equal to inside square brackets </i><b>1 </b><i>comma</i><b> 2 </b><i>comma</i><b> 1 </b><i>comma</i><b> 4 </b><i>comma</i><b> 5 </b><i>comma</i><b> 6 </b><i>comma</i><b> 2</b>
+</p>
+
+17
+00:01:47 --> 00:01:53
+Type, <b>a </b><i>is equal to </i><b>set </b><i>inside brackets </i><b>a </b><i>underscore </i><b>list</b>
+
+18
+00:01:54 --> 00:01:56
+Then type,<b> a</b>
+
+19
+00:01:57 --> 00:02:02
+We can see that duplicates are removed and the <b>set</b> contains only unique <b>elements</b>.
+
+20
+00:02:03 --> 00:02:07
+<b>Sets</b> can also be created directly as follows
+
+21
+00:02:08 --> 00:02:18
+Type, <b>b </b><i>is equal to inside curly braces </i><b>1 </b><i>comma</i><b> 2 </b><i>comma</i><b> 1 </b><i>comma</i><b> 4 </b><i>comma</i><b> 5 </b><i>comma</i><b> 6 </b><i>comma</i><b> 2</b>
+
+22
+00:02:19 --> 00:02:26
+Type, <b>b</b>. As before, we see that the <b>set</b> contains only unique <b>elements</b>.
+
+23
+00:02:27 --> 00:02:35
+To create an<b> empty set, </b>type, <b>c </b><i>is equal to </i><b>set </b><i>open and close brackets</i>
+
+24
+00:02:36 --> 00:02:44
+Note that <b>d </b><i>is equal to open and close curly braces</i> creates an empty dictionary, not an empty <b>set</b>.
+
+25
+00:02:45 --> 00:02:55
+<b>Sets</b> can contain <b>numbers, strings</b> and <b>tuples.</b>
+<p>But cannot contain <b>mutable elements</b> such as <b>lists</b> or <b>dictionaries</b>.
+</p>
+
+26
+00:02:56 --> 00:03:08
+Type, <b>b </b><i>underscore </i><b>list </b><i>is equal to inside square brackets again inside square brackets </i><b>1 </b><i>comma</i><b> 2 </b><i>comma</i><b> 1</b> <i>comma</i><b> 6 </b><i>comma</i><b> 2 </b>
+
+27
+00:03:09 --> 00:03:16
+Now type, <b>b </b><i>is equal to</i><b> set </b><i>inside brackets </i><b>b </b><i>underscore </i><b>list</b>
+
+28
+00:03:17 --> 00:03:20
+As you can see, it gives a <b>TypeError.</b>
+
+29
+00:03:21 --> 00:03:28
+Now let us perform some <b>operations</b> on <b>sets</b>.
+<p>For this, we will first create a pair of <b>sets.</b>
+</p>
+
+30
+00:03:29 --> 00:03:32
+Type the <b>sets</b> as shown.
+
+31
+00:03:33 --> 00:03:38
+Here, <b>f </b>is the <b>set</b> of <b>fibonacci</b> numbers from 1 to 10.
+
+32
+00:03:39 --> 00:03:43
+And <b>p</b> is the <b>set</b> of <b>prime</b> numbers from 1 to 15.<b> </b>
+
+33
+00:03:44 --> 00:03:46
+Various <b>operations</b> can be performed on <b>sets</b>.
+
+34
+00:03:47 --> 00:03:52
+First we will add an <b>element</b> to a <b>set</b> by using <b>add method</b>.
+
+35
+00:03:53 --> 00:03:57
+Type, <b>f </b><i>dot </i><b>add</b><i> inside brackets </i><b>13</b>
+
+36
+00:03:58 --> 00:04:05
+Now type, <b>f</b>
+<p>As you can see, <b>13 </b>is added to the set <b>f.</b>
+</p>
+
+37
+00:04:06 --> 00:04:10
+<b>add method</b> has no effect if the <b>element</b> is already present.
+
+38
+00:04:11 --> 00:04:15
+Type, <b>f </b><i>dot</i><b> add </b><i>inside brackets</i><b> 13</b>
+
+39
+00:04:16 --> 00:04:22
+Type, <b>f</b>
+<p>As you can see, <b>13 </b>is not added this time.
+</p>
+
+40
+00:04:23 --> 00:04:27
+Next we will learn to remove an <b>element</b> using <b>remove method</b>.
+
+41
+00:04:28 --> 00:04:33
+Type, <b>p </b><i>dot </i><b>remove </b><i>inside brackets </i><b>13</b>
+
+42
+00:04:34 --> 00:04:40
+Now type, <b>p</b>. As you can see, <b>13 </b>is removed from the set <b>p</b>.
+
+43
+00:04:41 --> 00:04:45
+If the <b>element</b> is not a <b>member</b>, it raises a <b>KeyError.</b>
+
+44
+00:04:46 --> 00:04:51
+Type, <b>p </b><i>dot </i><b>remove </b><i>inside brackets </i><b>18</b>
+
+45
+00:04:52 --> 00:04:56
+<b>KeyError </b>is raised since <b>element 18 </b>is not present in <b>p.</b>
+
+46
+00:04:57 --> 00:05:00
+The<b> pipe</b> character stands for <b>union.</b>
+
+47
+00:05:01 --> 00:05:05
+Type, <b>f </b><i>pipe</i><b> p </b>
+
+48
+00:05:06 --> 00:05:15
+Or type, <b>f </b><i>dot </i><b>union </b><i>inside brackets </i><b>p</b>
+<p>It gave the <b>union</b> of <b>f </b>and<b> p </b>
+</p>
+
+49
+00:05:16 --> 00:05:19
+The <b>ampersand</b> character stands for <b>intersection</b>.
+
+50
+00:05:20 --> 00:05:29
+Type, <b>f </b><i>ampersand</i><b> p</b>
+<p>Or type, <b>f </b><i>dot </i><b>intersection </b><i>inside brackets </i><b>p </b>
+</p>
+
+51
+00:05:30 --> 00:05:33
+It gave the <b>intersection</b> of <b>f</b> and <b>p.</b>
+
+52
+00:05:34 --> 00:05:43
+Type, <b>f </b><i>minus</i><b> p</b>
+<p>Or type, <b>f </b><i>dot </i><b>difference </b><i>inside brackets </i><b>p</b>
+</p>
+
+53
+00:05:44 --> 00:05:49
+It gave all the <b>elements</b> that are in <b>f</b> but not in <b>p</b>.
+
+54
+00:05:50 --> 00:05:53
+Type, <b>f </b><i>caret</i><b> p</b>
+
+55
+00:05:54 --> 00:06:00
+Or type, <b>f </b><i>dot </i><b>symmetric </b><i>underscore </i><b>difference </b><i>inside brackets </i><b>p</b>
+
+56
+00:06:01 --> 00:06:07
+It gives all the <b>elements</b> in <b>f</b> <b>union</b> <b>p</b> but not in <b>f</b> <b>intersection</b> <b>p</b>.
+
+57
+00:06:08 --> 00:06:12
+In mathematical terms, it gives the <b>symmetric difference</b>.
+
+58
+00:06:13 --> 00:06:16
+<b>Sets</b> also support checking of <b>subsets</b>.
+
+59
+00:06:17 --> 00:06:26
+Type, <b>a </b><i>is equal to </i><b>set</b><i> inside brackets inside square brackets </i><b>1 </b><i>comma </i><b>2 </b><i>comma </i><b>3 </b><i>comma </i><b>4</b>
+
+60
+00:06:27 --> 00:06:34
+Type, <b>b </b><i>is equal to </i><b>set </b><i>inside brackets inside square brackets </i><b>1 </b><i>comma</i><b> 2 </b>
+
+61
+00:06:35 --> 00:06:46
+Now type, <b>b</b><i> less than or equal to </i><b>a</b>
+<p>Or type, <b>b </b><i>dot </i><b>issubset </b><i>inside brackets </i><b>a</b>
+</p>
+
+62
+00:06:47 --> 00:06:51
+It gives <b> True </b>since <b>b</b> is a <b>subset</b> of <b>a. </b>
+
+63
+00:06:52 --> 00:07:00
+<b>Sets</b> also support checking of <b>supersets</b>.
+<p>Type, <b>b </b><i>greater than or equal to </i><b>a</b>
+</p>
+
+64
+00:07:01 --> 00:07:07
+Or type, <b>b </b><i>dot </i><b>issuperset </b><i>inside brackets </i><b>a</b>
+
+65
+00:07:08 --> 00:07:13
+We get <b>False</b> since <b>b </b>is not a superset of <b>a</b>.
+
+66
+00:07:14 --> 00:07:19
+Every <b>set</b> is a <b>subset</b> as well as a <b>superset</b> of itself.
+
+67
+00:07:20 --> 00:07:27
+Type,  <b>a </b><i>less than or equal to </i><b>a</b>
+<p><b>a</b><i> greater than or equal to </i><b>a</b>
+</p>
+
+68
+00:07:28 --> 00:07:34
+It gives <b>True</b> in both cases since<b> a </b>is a<b> superset </b>and<b> subset</b> of itself<b>. </b>
+
+69
+00:07:35 --> 00:07:38
+Elements of a <b>set</b> can be accessed using <b>for loop</b>.
+
+70
+00:07:39 --> 00:07:46
+Type, <b>for x in a </b><i>colon</i> <b>print </b><i>inside brackets </i><b>x</b>
+
+71
+00:07:47 --> 00:07:51
+The <b>items</b> from the <b>set</b> will not appear in any specific order.
+
+72
+00:07:52 --> 00:07:58
+The <b>length</b> and <b>containership</b> check on <b>sets</b> are similar as in <b>lists</b> and <b>tuples</b>.
+
+73
+00:07:59 --> 00:08:06
+Type, <b>len </b><i>inside brackets </i><b>a </b>
+<p>It shows 4<b>. </b>
+</p>
+
+74
+00:08:07 --> 00:08:12
+Type,
+<p><b>1 in a</b>
+</p><p><b>7 in a</b>
+</p>
+
+75
+00:08:13 --> 00:08:17
+It prints<b> True </b>and<b> False </b>respectively<b> </b>
+
+76
+00:08:18 --> 00:08:24
+<b>Sets</b> do not support <b>indexing</b>.
+<p>Hence, <b>slicing</b> and <b>striding</b> are not valid on <b>sets</b>. 
+</p>
+
+77
+00:08:25 --> 00:08:30
+Pause the video.
+<p>Try this exercise and then resume the video.
+</p>
+
+78
+00:08:31 --> 00:08:36
+Given a list of marks, as shown, list all the duplicate marks.
+
+79
+00:08:37 --> 00:08:40
+Switch to the <b>terminal</b> for the solution.
+
+80
+00:08:41 --> 00:08:52
+Type, <b>marks </b><i>is equal to inside square brackets </i><b>20</b><i> comma</i><b> 23</b><i> comma</i><b> 22</b><i> comma</i><b> 23</b><i> comma</i><b> 20</b><i> comma</i><b> 21</b><i> comma</i><b> 23 </b>
+
+81
+00:08:53 --> 00:08:59
+<b>marks </b><i>underscore </i><b>set </b><i>is equal to </i><b>set </b><i>inside brackets </i><b>marks</b>
+
+82
+00:09:00 --> 00:09:09
+<b>for num in marks </b><i>underscore </i><b>set</b><i> colon</i>
+<p><b>marks</b><i> dot </i><b>remove </b><i>inside brackets </i><b>num</b>
+</p>
+
+83
+00:09:10 --> 00:09:16
+<b>remove method</b> only removes the first occurrence of an <b>element</b> from the <b>list</b>.
+
+84
+00:09:17 --> 00:09:23
+Type, <b>duplicates </b><i>is equal to </i><b>set</b><i> inside bracket </i><b>marks </b>
+
+85
+00:09:24 --> 00:09:27
+Now type, <b>duplicates</b>
+
+86
+00:09:28 --> 00:09:36
+We now have duplicate marks in the <b>set duplicates.</b>
+<p>Hence, we have obtained our required solution.
+</p>
+
+87
+00:09:37 --> 00:09:42
+This brings us to the end of this tutorial. Let us summarize.
+
+88
+00:09:43 --> 00:09:49
+In this tutorial, we have learnt to, Make <b>sets</b> from <b>lists </b>or by using curly braces
+
+89
+00:09:50 --> 00:09:54
+Perform <b>union, intersection</b> and <b>symmetric difference operations</b>
+
+90
+00:09:55 --> 00:10:01
+Check if a <b>set</b> is a <b>subset</b> of other using the <i>less than or equal to</i> operator
+
+91
+00:10:02 --> 00:10:07
+Understand the various similarities with <b>lists</b> like length and containership
+
+92
+00:10:08 --> 00:10:11
+Here are some self assessment questions for you to solve.
+
+93
+00:10:12 --> 00:10:17
+First. If <b>a </b>is assigned as follows, what is <b>set </b><i>of</i> <b>a</b>
+
+94
+00:10:18 --> 00:10:26
+Second. Given <b>odd</b> and <b>squares</b> as shown.  How do you find the <b>symmetric difference</b> of these two <b>sets</b>?
+
+95
+00:10:27 --> 00:10:33
+Third. If <b>a</b> is a <b>set</b>, how do you check if a variable <b>b</b> exists in <b>a</b>?
+
+96
+00:10:34 --> 00:10:45
+And the answers,
+<p>First. <b>set </b><i>of </i><b>a</b> will have all the common <b>elements</b> in the <b>list</b> <b>a</b>, that is 1 <i>comma</i> 2 <i>comma</i> 3 <i>comma</i> 5 <i>comma</i> 8. 
+</p>
+
+97
+00:10:46 --> 00:10:55
+Second. To find the <b>symmetric difference</b> between two <b>sets</b>, we use the operator <i>caret</i>. So we can type <b>odd </b><i>caret </i><b>squares</b>
+
+98
+00:10:56 --> 00:11:00
+Third. To check the containership, we type, <b>b in a</b>
+
+99
+00:11:01 --> 00:11:04
+Please post your timed queries in this forum.
+
+100
+00:11:05 --> 00:11:09
+Please post your general queries on Python in this forum.
+
+101
+00:11:10 --> 00:11:14
+FOSSEE team coordinates the TBC project.
+
+102
+00:11:15 --> 00:11:24
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website.
+</p>
+
+103
+00:11:25 --> 00:11:30
+This is Priya from IIT Bombay signing off.
+<p>Thanks for watching.
+</p>
+

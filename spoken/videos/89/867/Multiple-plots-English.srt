@@ -1,0 +1,382 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:06
+Hello friends! Welcome to the spoken tutorial on "<b>Multiple plots</b>".
+
+2
+00:00:07 --> 00:00:14
+At the end of this tutorial, you will be able to:
+<p>draw multiple <b>plots</b> which are overlaid, 
+</p>
+
+3
+00:00:15 --> 00:00:16
+use the <b>figure</b> command,
+
+4
+00:00:17 --> 00:00:19
+use the <b>legend</b> command,
+
+5
+00:00:20 --> 00:00:27
+switch between the <b>plots</b> and perform some operations on each of them like saving the <b>plot</b>s.
+
+6
+00:00:28 --> 00:00:35
+To record this tutorial, I am using:
+<p><b>Ubuntu Linux 14.04</b> operating system, 
+</p>
+
+7
+00:00:36 --> 00:00:41
+<b>Python 3.4.3</b>,
+<p><b>IPython 5.1.0</b>
+</p>
+
+8
+00:00:42 --> 00:00:48
+To practise this tutorial, you should know how to:
+<p>use plots interactively, 
+</p>
+
+9
+00:00:49 --> 00:00:52
+embellish a <b>plot</b>,
+<p>save<b> plots</b>. 
+</p>
+
+10
+00:00:53 --> 00:00:58
+If not, see the pre-requisite <b>Python tutorials</b> on this website.
+
+11
+00:00:59 --> 00:01:06
+Let us first open the <b>Terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously.
+
+12
+00:01:07 --> 00:01:12
+Now, type <b>ipython3</b> and press <b>Enter</b>.
+
+13
+00:01:13 --> 00:01:20
+Let us initialise the <b>pylab package</b>.
+<p>Type <b>percentage pylab </b>and press<b> Enter.</b>
+</p>
+
+14
+00:01:21 --> 00:01:28
+Let us create a set of points for our <b>plot </b>by using the <b>command 'linspace'</b>.
+
+15
+00:01:29 --> 00:01:38
+Type <b>x equals to linspace</b> inside the brackets <b>0 comma 50 comma 10</b>.
+
+16
+00:01:39 --> 00:01:50
+Now, let us draw a simple <b>sine curve</b> using these points.
+<p>Type <b>plot</b> inside the brackets <b>x comma sin(x)</b>. 
+</p>
+
+17
+00:01:51 --> 00:01:58
+As we can see, this <b>sine curve</b> is not a smooth curve. What really caused this?
+
+18
+00:01:59 --> 00:02:07
+This happened because we selected few points that is 10, for this large interval of 0 to 50.
+
+19
+00:02:08 --> 00:02:11
+'<b>Plot' function</b> does not plot the analytical function.
+
+20
+00:02:12 --> 00:02:16
+It plots the points given by the analytical function.
+
+21
+00:02:17 --> 00:02:28
+Now, let us use <b>linspace</b> command to get 500 points between 0 and 50 and draw the <b>sine curve</b> again.
+
+22
+00:02:29 --> 00:02:38
+Type <b>y equals to linspace</b> inside the brackets <b>0 comma 50 comma 500.</b>
+
+23
+00:02:39 --> 00:02:44
+<b>plot</b> inside the brackets <b>y comma sin(y)</b>.
+
+24
+00:02:45 --> 00:02:49
+Now we see a <b>sine curve</b> with a smooth curve.
+
+25
+00:02:50 --> 00:02:55
+Notice, we will also have two plots one overlaid upon another.
+
+26
+00:02:56 --> 00:03:00
+In <b>pylab</b>, by default, all the plots are overlaid.
+
+27
+00:03:01 --> 00:03:06
+To distinguish between two overlaid plots we use the '<b>legend' command.</b>
+
+28
+00:03:07 --> 00:03:15
+Type <b>legend</b> inside the brackets <b>square brackets sin(x) comma sin(y).</b>
+
+29
+00:03:16 --> 00:03:20
+The <b>legend</b> command takes <b>parameter </b>as a <b>list</b> of <b>strings.</b>
+
+30
+00:03:21 --> 00:03:26
+Then it assigns <b>strings</b> to<b> plots</b> in the order they were created.
+
+31
+00:03:27 --> 00:03:33
+Now, we can see the <b>legends</b> being displayed for the two <b>sine curves </b>on the plot area.
+
+32
+00:03:34 --> 00:03:40
+In the <b>IPython terminal</b>, now type <b>clf()</b> to clear the <b>plot window</b>.
+
+33
+00:03:41 --> 00:03:45
+Pause the video. Try this exercise and then resume the video.
+
+34
+00:03:46 --> 00:03:55
+Draw two plots, first plot being a <b>parabola</b> of the form <b>y equals to 4x square</b>,
+
+35
+00:03:56 --> 00:04:04
+and the second being a straight line of the form <b>y equals to 2x plus 3</b> in the interval <b>minus 5</b> to <b>5</b>.
+
+36
+00:04:05 --> 00:04:10
+Use <b>legends</b> to indicate what each <b>plot</b> is doing.
+
+37
+00:04:11 --> 00:04:24
+Switch to the <b>terminal</b> for solution.
+<p>Type: <b>x is equal to linspace</b> inside the brackets <b>minus 5 comma 5 comma 100</b>. 
+</p>
+
+38
+00:04:25 --> 00:04:30
+We can obtain the two plots in different colours using the following commands.
+
+39
+00:04:31 --> 00:04:41
+<b>plot</b> inside the brackets <b>x comma 4 multiplied by</b> inside the brackets <b>x multiplied by x. </b>
+
+40
+00:04:42 --> 00:04:49
+<b>plot</b> inside the brackets <b>x comma 2 multiplied by x plus 3</b>.
+
+41
+00:04:50 --> 00:04:54
+Now, we will add a <b>legend</b> to identify the <b>plots</b>.
+
+42
+00:04:55 --> 00:05:18
+Type: <b>legend</b> inside the brackets inside square brackets <b>r</b> inside <b>inverted commas dollar y is equal to 4 x square dollar comma r</b> inside <b>inverted commas dollar y equals to 2x plus 3 dollar. </b>
+
+43
+00:05:19 --> 00:05:23
+We can see the <b>legend</b> added to the <b>plot</b>.
+
+44
+00:05:24 --> 00:05:32
+Next we will learn to switch between the plots and perform operations such as saving the plots etc.
+
+45
+00:05:33 --> 00:05:42
+Let us see how to accomplish this. But, before we move on, let us clear our <b>screen</b>.
+<p>Type: <b>clf()</b>
+</p>
+
+46
+00:05:43 --> 00:05:52
+Type: <b>x equals to linspace</b> inside the brackets <b>0 comma 50 comma 500</b>.
+
+47
+00:05:53 --> 00:06:02
+To accomplish more control over individual plots, we use the '<b>figure' command. </b>
+<p>Type: <b>figure(1)</b>
+</p>
+
+48
+00:06:03 --> 00:06:11
+<b>plot</b> inside the brackets <b>x comma sin(x) comma inside inverted commas b</b>.
+
+49
+00:06:12 --> 00:06:13
+<b>figure(2)</b>
+
+50
+00:06:14 --> 00:06:23
+<b>plot</b> inside the brackets <b>x comma cos(x) comma</b> inside inverted commas <b>g</b>.
+
+51
+00:06:24 --> 00:06:32
+Now, we have two plots, a <b>sine curve </b>and a <b>cosine curve</b>, in two different figures.
+
+52
+00:06:33 --> 00:06:42
+The <b>figure</b> command takes an <b>integer</b> as an <b>argument. </b>
+<p>This is the  serial number  of the  plot to select corresponding plot. 
+</p>
+
+53
+00:06:43 --> 00:06:55
+All the<b> plot </b>commands we <b>run</b> hereafter are applied to the selected <b>plot</b>.
+<p>In this example, <b>figure 1</b> is the <b>sine plot</b> and <b>figure 2</b> is the <b>cosine  plot</b>. 
+</p>
+
+54
+00:06:56 --> 00:07:00
+For example, we can <b>save</b> each plot separately.
+
+55
+00:07:01 --> 00:07:08
+Type: <b>title</b> inside brackets inside inverted commas <b>cos(x)</b>.
+
+56
+00:07:09 --> 00:07:17
+<b>savefig</b> inside the brackets inside inverted commas <b>cosine.png</b>
+
+57
+00:07:18 --> 00:07:20
+<b>figure(1)</b>
+
+58
+00:07:21 --> 00:07:27
+<b>title</b> inside the brackets inside inverted commas <b>sin(x)</b>.
+
+59
+00:07:28 --> 00:07:35
+<b>savefig</b> inside the brackets inside inverted commas <b>sine.png</b>
+
+60
+00:07:36 --> 00:07:43
+The figures will be saved in current <b>working directory</b>.
+<p>Now, close both the <b>plot windows</b>. 
+</p>
+
+61
+00:07:44 --> 00:07:48
+Pause the video. Try this exercise and then resume the video.
+
+62
+00:07:49 --> 00:08:04
+Draw a line of the form <b>y equals to x</b> as one <b>figure</b> and another line of the form <b>y is equal to 2x plus 3</b>.
+<p><b>Save</b> each of them. 
+</p>
+
+63
+00:08:05 --> 00:08:14
+Switch to the <b>terminal</b> for solution.
+<p>To solve this problem, we will use the <b>figure</b> command to create first plotting area. 
+</p>
+
+64
+00:08:15 --> 00:08:28
+Type: <b>figure(1) </b>
+<p><b>x equals to linspace</b> inside the brackets <b>minus 5 comma 5 comma 100</b>. 
+</p>
+
+65
+00:08:29 --> 00:08:34
+<b>plot</b> inside the brackets <b>x comma x</b>.
+
+66
+00:08:35 --> 00:08:42
+Now, use the <b>figure</b> command to create second plotting area and plot the figure.
+
+67
+00:08:43 --> 00:08:55
+Type: <b>figure(2) </b>
+<p><b>plot</b> inside the brackets <b>x comma 2x plus 3</b>. 
+</p>
+
+68
+00:08:56 --> 00:08:58
+We will <b>save</b> the figure as follows.
+
+69
+00:08:59 --> 00:09:10
+Type: <b>figure(1)</b>
+<p><b>savefig</b> inside brackets inside inverted commas <b>plot1.png</b>
+</p>
+
+70
+00:09:11 --> 00:09:22
+<b>figure(2)</b>
+<p><b>savefig</b> inside the brackets inside inverted commas <b>plot2.png</b>
+</p>
+
+71
+00:09:23 --> 00:09:32
+This brings us to the end of this tutorial. In this tutorial, we have learnt to:
+<p>draw multiple plots which are overlaid, 
+</p>
+
+72
+00:09:33 --> 00:09:34
+use the <b>figure</b> command,
+
+73
+00:09:35 --> 00:09:37
+use the <b>legend</b> command,
+
+74
+00:09:38 --> 00:09:45
+switch between the plots and perform some operations on each of them like saving the plots.
+
+75
+00:09:46 --> 00:09:54
+Here are some self assessment questions for you to solve-
+<p>What <b>command</b> is used to get individual plots separately? 
+</p>
+
+76
+00:09:55 --> 00:09:59
+What will be the <b>command</b> to identify <b>sine</b> and <b>cosine curve</b>?
+
+77
+00:10:00 --> 00:10:06
+And the answers are-
+<p>The <b>command "figure()"</b> can get us the individual plots separately. 
+</p>
+
+78
+00:10:07 --> 00:10:20
+The <b>legend</b> command-  <b>legend</b> inside the brackets inside square brackets inside inverted commas <b>sin(x) comma inside inverted commas </b>cos(x)<b>.</b>
+
+79
+00:10:21 --> 00:10:25
+Please post your timed queries in this forum.
+
+80
+00:10:26 --> 00:10:30
+Please post your general queries on <b>Python</b> in this forum.
+
+81
+00:10:31 --> 00:10:34
+<b>FOSSEE</b> team coordinates the <b>TBC project</b>.
+
+82
+00:10:35 --> 00:10:44
+<b>Spoken-tutorial</b> is funded by <b>NMEICT, MHRD</b>, Govt. of India.
+<p>For more details, visit this website. 
+</p>
+
+83
+00:10:45 --> 00:10:50
+This is Usha from <b>IIT Bombay</b>, signing off.
+<p>Thank You. 
+</p>
+

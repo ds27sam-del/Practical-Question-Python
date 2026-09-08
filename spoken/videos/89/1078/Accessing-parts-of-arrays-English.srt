@@ -1,0 +1,461 @@
+<center><b>Narration</b></center>
+
+1
+00:00:01 --> 00:00:06
+Welcome to the spoken tutorial on "<b>Accessing parts of arrays</b>".
+
+2
+00:00:07 --> 00:00:16
+In this tutorial, we will learn to access and change: Individual <b>elements</b> of <b>single dimensional</b> and <b>multi-dimensional </b>arrays<b>.</b>
+
+3
+00:00:17 --> 00:00:19
+<b>Rows</b> and <b>columns</b> of <b>arrays</b>.
+
+4
+00:00:20 --> 00:00:24
+<b>Elements</b> of an <b>array</b>, using <b>slicing</b> and <b>striding</b>.
+
+5
+00:00:25 --> 00:00:32
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p>
+
+6
+00:00:33 --> 00:00:39
+<b>Python 3.4.3 </b>and <b>IPython 5.1.0</b>
+
+7
+00:00:40 --> 00:00:48
+To practise this tutorial, you should know how to run basic <b>Python </b>commands on the <b>IPython console.</b>
+
+8
+00:00:49 --> 00:00:50
+use<b> arrays.</b>
+
+9
+00:00:51 --> 00:00:56
+If not, see the relevant <b>Python </b>tutorials on this website.
+
+10
+00:00:57 --> 00:01:00
+Let us begin with the help of an example.
+
+11
+00:01:01 --> 00:01:08
+Consider two <b>arrays</b>, A and C.
+<p>We will use these <b>arrays</b> throughout this tutorial. 
+</p>
+
+12
+00:01:09 --> 00:01:14
+Let us start <b>ipython</b>.
+<p>Open the <b>terminal</b>. 
+</p>
+
+13
+00:01:15 --> 00:01:20
+Type <b>ipython3 </b>and press <b>Enter</b>.
+
+14
+00:01:21 --> 00:01:28
+Let us create the two <b>arrays</b> in <b>terminal</b>.
+<p>For this, we have to import <b>numpy library</b>.
+</p>
+
+15
+00:01:29 --> 00:01:35
+Type <b>import numpy as np</b> and press <b>Enter</b>.
+
+16
+00:01:36 --> 00:01:42
+From here onwards, please remember to press the <b>Enter</b> key after typing every command on the <b>terminal</b>.
+
+17
+00:01:43 --> 00:01:50
+Type <b>A </b><i>is equal to</i><b> np </b><i>dot </i><b>arange </b><i>inside parentheses </i><b>1 </b><i>comma </i><b>6 </b>
+
+18
+00:01:51 --> 00:02:02
+Type, <b>C </b><i>is equal to</i><b> np </b><i>dot </i><b>arange </b><i>inside parentheses </i><b>1 </b><i>comma </i><b>26 </b><i>dot </i><b>reshape </b><i>inside parentheses</i><b> 5 </b><i>comma </i><b>5 </b>
+
+19
+00:02:03 --> 00:02:08
+We have already learnt about <b>arange</b> and<b> reshape methods</b> in an earlier tutorial.
+
+20
+00:02:09 --> 00:02:15
+Now, let us see the contents of A and C.
+<p>Type <b>A </b>
+</p>
+
+21
+00:02:16 --> 00:02:18
+Type <b>C </b>
+
+22
+00:02:19 --> 00:02:27
+In <b>A</b>, we have only one row with <b>elements</b> from 1 to 6.
+<p><b>A</b> is a <b>one dimensional array.</b>
+</p>
+
+23
+00:02:28 --> 00:02:39
+In <b>C</b>, we have 1 to 26 <b>elements</b> in the form of <b>matrix</b> of 5 rows and 5 columns.
+<p>So <b>C</b> is a <b>two dimensional array.</b>
+</p>
+
+24
+00:02:40 --> 00:02:44
+Next, let us see about <b>accessing</b> individual <b>elements</b> in an array.
+
+25
+00:02:45 --> 00:02:50
+To access, the <b>element</b> 3 in <b>array A</b>, we say, A of 2.
+
+26
+00:02:51 --> 00:02:55
+Type <b>A </b><i>inside square brackets </i><b>2</b>
+
+27
+00:02:56 --> 00:03:05
+In <b>Python, arrays</b> are <b>zero-indexed</b>.
+<p>This means, the position of the <b>element</b> starts with 0 instead of 1.
+</p>
+
+28
+00:03:06 --> 00:03:10
+Now, let us access the <b>element</b> 14 from <b>array C</b>.
+
+29
+00:03:11 --> 00:03:18
+14 is in the third <b>row</b> and the fourth <b>column</b>.
+<p>To do this, we say, C of 2,3.
+</p>
+
+30
+00:03:19 --> 00:03:23
+Type <b>C </b><i>inside square brackets </i><b>2 </b><i>comma</i><b> 3</b>.
+
+31
+00:03:24 --> 00:03:28
+Next we will learn how to change the value of an <b>array</b>.
+
+32
+00:03:29 --> 00:03:36
+We shall now change 3 to -3 in A and 14 to -14 in C.
+
+33
+00:03:37 --> 00:03:42
+For this we simply assign the new value after accessing the <b>element</b>.
+
+34
+00:03:43 --> 00:03:49
+Type, <b>A </b><i>inside square brackets </i><b>2 </b><i>is equal to minus <b>3 </b></i>
+
+35
+00:03:50 --> 00:03:56
+Type, <b>C </b><i>inside square brackets </i><b>2 </b><i>comma</i><b> 3 </b><i>is equal to minus </i><b>14</b>
+
+36
+00:03:57 --> 00:04:02
+Let us check our operations.
+<p>Type <b>A</b>
+</p>
+
+37
+00:04:03 --> 00:04:09
+Type <b>C</b>
+<p>You can see that the <b>elements</b> are changed now.
+</p>
+
+38
+00:04:10 --> 00:04:14
+Likewise you can change any single <b>element</b> in an <b>array</b>.
+
+39
+00:04:15 --> 00:04:23
+Next let us learn to change more than one <b>elements</b> at a time.
+<p>First with <b>rows </b>and then with <b>columns</b>. 
+</p>
+
+40
+00:04:24 --> 00:04:28
+Let us access one <b>row</b> of C, say the third <b>row</b>.
+
+41
+00:04:29 --> 00:04:33
+Type <b>C </b><i>inside square brackets </i><b>2</b>
+
+42
+00:04:34 --> 00:04:39
+We can see that the third row of the <b>array</b> is displayed now.
+
+43
+00:04:40 --> 00:04:44
+<b>Python programming</b> supports <b>negative indexing</b> of <b>arrays</b>.
+
+44
+00:04:45 --> 00:04:55
+This means the index value of -1 gives the last element and -2 gives the second to last element of an array.
+
+45
+00:04:56 --> 00:05:00
+We can access the last <b>row</b> of C in 2 ways.
+
+46
+00:05:01 --> 00:05:05
+Type <b>C </b><i>inside square brackets </i><b>4</b>
+
+47
+00:05:06 --> 00:05:16
+Or with <b>negative indexing</b> as<b> C </b><i>inside square brackets minus </i><b>1</b>
+<p>Notice that both the outputs are same.
+</p>
+
+48
+00:05:17 --> 00:05:21
+Now, we will learn to change the last <b>row</b> into all <b>zeros.</b>
+
+49
+00:05:22 --> 00:05:33
+Type <b>C </b><i>inside square brackets minus </i>1 is <i>equal to</i><b> </b><i>inside square brackets 0 comma 0 comma 0 comma 0 comma 0</i>
+
+50
+00:05:34 --> 00:05:41
+Type<b> C</b>
+<p>Notice that zeros are displayed in the last row of the <b>array</b> C.
+</p>
+
+51
+00:05:42 --> 00:05:49
+We can also type,<b> C </b><i>inside square brackets minus </i><b>1 </b><i>is equal to</i><b> 2.</b>
+
+52
+00:05:50 --> 00:05:56
+Type C
+<p>And check with the changes made.
+</p>
+
+53
+00:05:57 --> 00:05:59
+Now let us learn to <b>slice</b> an <b>array</b>.
+
+54
+00:06:00 --> 00:06:04
+<b>Slicing</b> of an <b>array</b> is done to access parts of an <b>array</b>.
+
+55
+00:06:05 --> 00:06:10
+<b>Slicing</b> syntax is inside square brackets <b>start colon stop.</b>
+
+56
+00:06:11 --> 00:06:16
+<b>Striding</b> uses the ‘step’ value to jump between the <b>elements</b> in an <b>array</b>.
+
+57
+00:06:17 --> 00:06:24
+<b>Striding</b> syntax is inside square brackets <b>start </b>colon <b>stop colon step.</b>
+
+58
+00:06:25 --> 00:06:27
+Switch back to the <b>terminal</b>.
+
+59
+00:06:28 --> 00:06:33
+Type, <b>C </b><i>inside square brackets </i><b>0 </b>colon <b>3 </b>comma<b> 2</b>
+
+60
+00:06:34 --> 00:06:43
+<p>0 and 3 corresponds to start and stop values for row <b>slicing</b> and 2 corresponds to column index.
+</p>
+
+61
+00:06:44 --> 00:06:53
+We get the <b>elements</b> of <b>rows indexed from 0 to 2 and column</b> <b>indexed</b> by 2.
+<p>Hence we have <b>sliced</b> the <b>array</b>.
+</p>
+
+62
+00:06:54 --> 00:07:00
+Now we will access the <b>elements</b> of <b>row</b> with <b>index</b> 2, and first 2 columns.
+
+63
+00:07:01 --> 00:07:16
+Type <b>C </b><i>inside square brackets </i><b>2</b> comma<b> 0 </b>colon <b>3</b>
+<p>2 corresponds to row index and 0 and 3 corresponds to start and stop values for column <b>slicing</b>.
+</p>
+
+64
+00:07:17 --> 00:07:22
+Pause the video. Try this exercise and then resume the video.
+
+65
+00:07:23 --> 00:07:27
+Obtain the following <b>elements</b> one by one from <b>array</b> C.
+
+66
+00:07:28 --> 00:07:31
+Switch to the <b>terminal</b> for the solution.
+
+67
+00:07:32 --> 00:07:38
+Type <b>C </b><i>inside square brackets </i><b>1 </b>comma<b> 1 </b>colon <b>3</b>
+
+68
+00:07:39 --> 00:07:42
+We get the <b>elements</b> 7 and 8.
+
+69
+00:07:43 --> 00:07:49
+Type <b>C </b><i>inside square brackets </i><b>0 </b>colon <b>4 </b>comma<b> 0 </b>
+
+70
+00:07:50 --> 00:07:54
+We get the <b>elements</b> 1, 6, 11 and 16
+
+71
+00:07:55 --> 00:08:01
+Type <b>C </b><i>inside square brackets </i><b>1 </b>colon <b>5 </b>comma<b> 0</b>
+
+72
+00:08:02 --> 00:08:06
+We get the <b>elements</b> 6, 11, 16 and 2
+
+73
+00:08:07 --> 00:08:15
+We can also get the same elements by typing <b>C </b><i>inside square brackets </i><b>1 </b>colon comma<b> 0</b>
+
+74
+00:08:16 --> 00:08:21
+Pause the video. Try this exercise and then resume the video.
+
+75
+00:08:22 --> 00:08:27
+Obtain the <b>elements</b> [[8, 9], [13, -14]] from <b>array</b> C.
+
+76
+00:08:28 --> 00:08:30
+Switch to the <b>terminal</b> for the solution.
+
+77
+00:08:31 --> 00:08:38
+Type, <b>C </b><i>inside square brackets </i><b>1 </b>colon <b>3 </b>comma<b> 2 </b>colon <b>4</b>
+
+78
+00:08:39 --> 00:08:41
+We got the required <b>elements</b>.
+
+79
+00:08:42 --> 00:08:46
+Next we will learn the idea of <b>striding</b> using the smaller <b>array</b> C.
+
+80
+00:08:47 --> 00:08:53
+We will try to access only the odd rows and columns i.e first, third and fifth.
+
+81
+00:08:54 --> 00:09:03
+Type, <b>C </b><i>inside square brackets </i><b>0 </b>colon <b>5 </b>colon <b>2 </b>comma<b> 0 </b>colon <b>5 </b>colon <b>2</b>
+
+82
+00:09:04 --> 00:09:12
+We can also type <b>C </b><i>inside square brackets colon colon </i><b>2 </b>comma colon colon<b> 2 </b>
+
+83
+00:09:13 --> 00:09:17
+We can see that only the odd rows and columns are displayed.
+
+84
+00:09:18 --> 00:09:25
+The <b>step</b> 2 specifies the <b>jump</b> between the <b>elements</b>.
+<p>This is called <b>striding</b>.
+</p>
+
+85
+00:09:26 --> 00:09:31
+If no <b>step</b> is specified, a default value of 1 is assumed.
+
+86
+00:09:32 --> 00:09:40
+Type <b>C </b><i>inside square brackets</i><b> 1 </b>colon colon <b>2 </b>comma colon colon <b>2 </b>
+
+87
+00:09:41 --> 00:09:43
+We get the <b>elements</b> as shown.
+
+88
+00:09:44 --> 00:09:49
+Pause the video. Try this exercise and then resume the video.
+
+89
+00:09:50 --> 00:09:53
+Obtain the following <b>elements</b> from <b>array</b> C.
+
+90
+00:09:54 --> 00:09:56
+The solution is on your screen.
+
+91
+00:09:57 --> 00:10:07
+This brings us to the end of this tutorial.
+<p>In this tutorial, we have learnt to, Manipulate <b>single</b> and <b>multi</b> <b>dimensional</b> <b>arrays</b>. 
+</p>
+
+92
+00:10:08 --> 00:10:13
+Access and change individual <b>elements</b> by using their <b>index numbers.</b>
+
+93
+00:10:14 --> 00:10:20
+Access and change <b>rows</b> and <b>columns</b> of arrays by specifying the <b>row</b> and <b>column</b> numbers.
+
+94
+00:10:21 --> 00:10:23
+<b>Slice</b> and <b>stride</b> on <b>arrays</b>.
+
+95
+00:10:24 --> 00:10:27
+Here are some self assessment questions for you to solve.
+
+96
+00:10:28 --> 00:10:32
+How do we access the <b>element</b> 18 from the given array A?
+
+97
+00:10:33 --> 00:10:39
+How do we obtain the <b>elements</b> [[21, 22], [31, 32]] from the given <b>array</b> B?
+
+98
+00:10:40 --> 00:10:49
+And the answers,
+<p>First. The <b>element</b> 18 in <b>array</b> A has index number 2. Hence, we can access it as A of 2
+</p>
+
+99
+00:10:50 --> 00:11:00
+Second. To obtain the central four numbers in the <b>array</b> B, we say, B <i>inside square brackets </i>1 colon 3 comma 1 colon 3
+
+100
+00:11:01 --> 00:11:04
+Please post your timed queries in this forum.
+
+101
+00:11:05 --> 00:11:09
+Please post your general queries on Python in this forum.
+
+102
+00:11:10 --> 00:11:13
+FOSSEE team coordinates the TBC project.
+
+103
+00:11:14 --> 00:11:23
+Spoken-tutorial is funded by NMEICT, MHRD, Govt. of India.
+<p>For more details, visit this website.
+</p>
+
+104
+00:11:24 --> 00:11:29
+This is Priya from IIT Bombay signing off. Thanks for watching.
+

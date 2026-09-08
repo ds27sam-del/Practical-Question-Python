@@ -1,0 +1,390 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:05
+Welcome to the spoken tutorial on <b>Getting started with arrays</b>.
+
+2
+00:00:06 --> 00:00:23
+In this tutorial, you will learn to,
+<p>Create <b>arrays</b> using data
+</p><p>Create <b>arrays</b> from <b>lists</b>
+</p><p>Perform basic <b>array</b> operations 
+</p><p>Create an <b>identity matrix </b>
+</p><p>and Use the <b>method zeros</b>
+</p>
+
+3
+00:00:24 --> 00:00:38
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 16.04</b> operating system
+</p><p><b>Python 3.4.3 </b>and
+</p><p><b>IPython 5.1.0</b>
+</p>
+
+4
+00:00:39 --> 00:00:49
+To practice this tutorial, you should know how to use <b>Lists.</b>If not, see the relevant <b>Python</b> tutorials on this website.
+
+5
+00:00:50 --> 00:00:57
+<b>Arrays</b> are <b>homogeneous data structures</b>. All <b>elements</b> in it must be of same <b>data type.</b>
+
+6
+00:00:58 --> 00:01:04
+In this tutorial, we will be using<b> numpy library</b> which we used in earlier tutorial.
+
+7
+00:01:05 --> 00:01:11
+Let us first open the <b>terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously.
+
+8
+00:01:12 --> 00:01:21
+Let us start <b>ipython</b> by typing <b>ipython3 </b>and press <b>Enter.</b> We can see the <b>ipython prompt</b>.
+
+9
+00:01:22 --> 00:01:31
+Now we will <b>import numpy</b>. Type, <b>import numpy as np</b> and press <b>Enter.</b>
+
+10
+00:01:32 --> 00:01:35
+Now let us see how to create <b>arrays. </b>
+
+11
+00:01:36 --> 00:01:43
+From here onwards, please remember to press the <b>Enter</b> key after typing every command on the <b>terminal</b>.
+
+12
+00:01:44 --> 00:01:53
+Type, <b>a1 </b><i>is equal to</i><b> np </b><i>dot </i><b>array </b><i>inside parentheses inside square brackets </i><b>1 </b><i>comma </i><b>2 </b><i>comma </i><b>3 </b><i>comma </i><b>4 </b>
+
+13
+00:01:54 --> 00:02:01
+Type <b>a1 </b> Notice that we have created a <b>one dimensional array</b> here.
+
+14
+00:02:02 --> 00:02:08
+Also notice that the object we passed to create an <b>array </b>is a <b>list,</b> i.e <b>a1.</b>
+
+15
+00:02:09 --> 00:02:13
+Next we will see how to create <b>two dimensional array</b>.
+
+16
+00:02:14 --> 00:02:19
+Two dimensional <b>array</b> is created by converting a <b>list</b> of <b>lists</b> to an <b>array.</b>
+
+17
+00:02:20 --> 00:02:37
+Type, <b>a2 </b><i>is equal to</i><b> np </b><i>dot </i><b>array </b><i>inside parentheses inside square brackets </i>again<i> inside square brackets 1 comma 2 comma 3 comma 4 comma inside square brackets 5 comma 6 comma 7 comma 8</i>
+
+18
+00:02:38 --> 00:02:43
+Type <b>a2</b> This is our <b>2-dimensional array</b>.
+
+19
+00:02:44 --> 00:02:47
+Next we will see about <b>arange method</b>.
+
+20
+00:02:48 --> 00:02:56
+To arrange the <b>elements</b> in an <b>array</b> we use <b>arange method.</b> The syntax is shown here.
+
+21
+00:02:57 --> 00:03:03
+Type <b>ar</b><i> is equal to</i> <b>np</b> <i>dot </i><b>arange</b> <i>inside parentheses</i> 1 <i>comma</i> 9.
+
+22
+00:03:04 --> 00:03:07
+Type <b>print</b> <i>inside parentheses</i> <b>ar</b>
+
+23
+00:03:08 --> 00:03:12
+Here, 1 is the <b>start</b> value and 9 is the <b>stop</b> value.
+
+24
+00:03:13 --> 00:03:21
+As you can see, we obtained a <b>one dimensional array</b> between 1 and 9 with 1 included and 9 excluded.
+
+25
+00:03:22 --> 00:03:25
+It will give the <b>elements</b> one less than the stop value.
+
+26
+00:03:26 --> 00:03:32
+Can we make a <b>two dimensional array</b> of order 2 by 4?  Yes, we can do it.
+
+27
+00:03:33 --> 00:03:37
+We will use <b>reshape method</b> to change the shape of an array.
+
+28
+00:03:38 --> 00:03:44
+The syntax is: <b>object.reshape </b><i>inside parentheses </i><b>rows </b><i>comma</i><b> columns</b>
+
+29
+00:03:45 --> 00:03:47
+Switch back to the <b>terminal</b>.
+
+30
+00:03:48 --> 00:03:53
+Type, <b>ar</b> <i>dot</i> <b>reshape</b><i> inside parentheses</i> <b>2</b><i> comma</i> <b>4</b>.
+
+31
+00:03:54 --> 00:03:59
+Type<b> ar</b> Shape of the original <b>array ar </b>is not changed.
+
+32
+00:04:00 --> 00:04:10
+If you want to change the shape of the original <b>array</b>, type <b>ar </b><i>dot </i><b>shape </b><i>is equal to</i><b> </b><i>inside parentheses</i> <b>2</b><i> comma</i> <b>4</b>.
+
+33
+00:04:11 --> 00:04:19
+Type<b> ar</b>  We can see that the shape of the original <b>array ar</b> is changed now.
+
+34
+00:04:20 --> 00:04:24
+To find the shape of an <b>array</b> we can use the <b>method shape.</b>
+
+35
+00:04:25 --> 00:04:33
+It returns a <b>tuple</b> of the <b>shape</b> of an <b>array.</b>
+<p>A <b>tuple</b> is nothing but an <b>ordered list</b> of <b>elements</b>. 
+</p>
+
+36
+00:04:34 --> 00:04:37
+Let us check the shape of the <b>arrays</b> we have created so far.
+
+37
+00:04:38 --> 00:04:46
+Type <b>a2 </b><i>dot </i><b>shape </b> <b>a2.shape</b> object is a <b>tuple</b>, and it returned a <b>tuple</b> <b>(2, 4)</b>.
+
+38
+00:04:47 --> 00:04:51
+Pause the video here, try out the following exercise and resume the video.
+
+39
+00:04:52 --> 00:04:57
+Find out the shape of the <b>arrays a1 </b>and<b> ar </b>which we have created earlier in this tutorial.
+
+40
+00:04:58 --> 00:05:03
+Let us see the solution. Type, <b>a1 </b><i>dot </i><b>shape </b>
+
+41
+00:05:04 --> 00:05:08
+Since <b>a1</b> is a <b>single dimensional array</b>, the <b>column</b> is empty.
+
+42
+00:05:09 --> 00:05:14
+Type, <b>ar </b><i>dot </i><b>shape </b> <b>ar</b> is a <b>two dimensional array</b>.
+
+43
+00:05:15 --> 00:05:20
+Now let us try to create a new <b>array</b> with elements of different <b>datatypes</b>.
+
+44
+00:05:21 --> 00:05:32
+Type <b>a3 </b><i>is equal to</i><b> np </b><i>dot </i><b>array </b><i>inside parentheses inside square brackets </i><b>1 </b><i>comma </i><b>2 </b><i>comma </i><b>3 </b><i>comma inside single quotes </i><b>a string </b>
+
+45
+00:05:33 --> 00:05:36
+<b>Arrays</b> handle <b>elements</b> with the same <b>datatype</b>.
+
+46
+00:05:37 --> 00:05:43
+Here we are handling with different <b>datatypes</b>. So it should give us error.
+
+47
+00:05:44 --> 00:05:53
+Type <b>a3</b> But we did not get any error.  Because all the <b>elements</b> get implicitly converted as <b>strings</b>.
+
+48
+00:05:54 --> 00:05:56
+This is how <b>array</b> works.
+
+49
+00:05:57 --> 00:06:03
+Note that the output mentions <b>dtype=’<U21'</b>
+
+50
+00:06:04 --> 00:06:09
+A<b> dtype</b> is the <b>datatype </b>required to hold the objects in sequence.
+
+51
+00:06:10 --> 00:06:16
+The characters of <b>dtype</b> i.e. <b>’<U21' </b>might differ with <b>python</b> version.
+
+52
+00:06:17 --> 00:06:20
+Next we will see about <b>identity matrix</b>.
+
+53
+00:06:21 --> 00:06:28
+It is a <b>square matrix</b> of order (n,n) with ones on the <b>main diagonal</b> and all other <b>elements</b> as zeros.
+
+54
+00:06:29 --> 00:06:33
+The syntax is <b>identity </b><i>inside parentheses<b> </b></i><b>n.</b>
+
+55
+00:06:34 --> 00:06:38
+Let us see how to create a 2 by 2 <b>identity matrix</b>.
+
+56
+00:06:39 --> 00:06:44
+Type, <b>np</b> <i>dot<b> </b></i><b>identity </b><i>inside parentheses </i><b>2.</b>
+
+57
+00:06:45 --> 00:06:49
+We can see all ones in the <b>main diagonal</b> as expected.
+
+58
+00:06:50 --> 00:06:52
+Next is <b>Zeros method</b>.
+
+59
+00:06:53 --> 00:06:57
+It creates an <b>m by n </b>matrix with all <b>elements</b> as 0.
+
+60
+00:06:58 --> 00:07:04
+The Syntax is: <b>zeros </b><i>inside parentheses inside parentheses<b> </b></i><b>m, n</b>
+
+61
+00:07:05 --> 00:07:10
+Let us create an <b>array</b> of the shape (4, 5) with all the <b>elements zero</b>.
+
+62
+00:07:11 --> 00:07:17
+Type, <b>np </b><i>dot </i><b>zeros </b><i>inside parentheses inside parentheses </i><b>4 </b><i>comma </i><b>5</b><i>.</i>
+
+63
+00:07:18 --> 00:07:23
+The default output of <b>identity</b> and <b>zeros method </b>are in <b>float datatype</b>.
+
+64
+00:07:24 --> 00:07:33
+Explore the below <b>functions</b> on your own:
+<p><b>zeros_like</b>
+</p><p><b>ones</b>
+</p><p><b>ones_like</b>
+</p>
+
+65
+00:07:34 --> 00:07:35
+Try the following.
+
+66
+00:07:36 --> 00:07:40
+First check the value of <b>a1</b> which we assigned earlier.
+
+67
+00:07:41 --> 00:07:47
+Type <b>a1 </b> We see that <b>a1</b> is a <b>single dimensional array.</b>
+
+68
+00:07:48 --> 00:07:57
+Let us now try <b>a1 </b><i>multiplied by </i><b>2</b> It returned a new <b>array</b> with all the <b>elements</b> multiplied by 2.
+
+69
+00:07:58 --> 00:08:05
+Now let us again check the contents of <b>a1.</b>  Note that the value of <b>a1</b> still remains the same.
+
+70
+00:08:06 --> 00:08:09
+Similarly we will try with addition.
+
+71
+00:08:10 --> 00:08:17
+Type, <b>a1 </b><i>plus </i><b>2 </b> It returns a new <b>array</b>, with all the <b>elements</b> summed with two.
+
+72
+00:08:18 --> 00:08:25
+Type <b>a1</b> . But again notice that the value of <b>a1</b> has not been changed.
+
+73
+00:08:26 --> 00:08:30
+Let us try with <b>a1 </b><i>plus equal to </i><b>2 </b>
+
+74
+00:08:31 --> 00:08:40
+Type, <b>a1 </b> This will change the<b> array a1 </b>itself as we are assigning the new output to <b>a1</b>.
+
+75
+00:08:41 --> 00:08:49
+We can use all the mathematical operations with <b>arrays</b>. Next, we will see how to add two <b>arrays</b>.
+
+76
+00:08:50 --> 00:08:59
+Type, <b>a1 </b><i>is equal to</i><b> np </b><i>dot </i><b>array </b><i>inside parentheses inside square brackets </i><b>1, 2, 3, 4</b>
+
+77
+00:09:00 --> 00:09:09
+Type <b>a2 </b><i>is equal to</i><b> np </b><i>dot </i><b>array </b><i>inside parentheses inside square brackets </i><b>5, 6, 7, 8</b>
+
+78
+00:09:10 --> 00:09:17
+Type <b>a1 </b><i>plus</i><b> a2</b>This returns an <b>array</b> by adding <b>element</b> by <b>element</b>.
+
+79
+00:09:18 --> 00:09:26
+Type <b>a1 </b><i>multiplied by</i><b> a2</b>  It returns an <b>array</b> with <b>element</b> by <b>element</b> multiplication.
+
+80
+00:09:27 --> 00:09:30
+This brings us to the end of the end of this tutorial.
+
+81
+00:09:31 --> 00:09:49
+In this tutorial, we have learnt to,
+<p>1. Create an <b>array</b> using the <b>array() function</b>. 
+</p><p>2. Perform some basic operations on <b>arrays</b> like addition and multiplication. 
+</p><p>3. Use methods like - 
+</p><p><b>shape , arange, reshape, identity </b>and<b>zeros</b>
+</p>
+
+82
+00:09:50 --> 00:09:53
+Here is a self assessment question for you to solve
+
+83
+00:09:54 --> 00:10:09
+<b>x </b><i>is equal to</i><b> np.array </b><i>inside parentheses inside square brackets<b> </b></i><b>1, 2, 3, </b><i>inside square brackets<b> </b></i><b>5, 6, 7</b> is a valid statement?
+<p>True 
+False 
+</p>
+
+84
+00:10:10 --> 00:10:12
+And the answer is False.
+
+85
+00:10:13 --> 00:10:18
+The correct way is to assign the <b>elements</b> as a <b>list</b> of <b>lists</b> and then convert it to an <b>array.</b>
+
+86
+00:10:19 --> 00:10:34
+That is <b>x </b><i>is equal to</i><b> np.array </b><i>inside parentheses inside square brackets again inside square brackets </i><b>1, 2, 3, </b><i>inside square brackets </i><b>5, 6, 7</b>
+
+87
+00:10:35 --> 00:10:38
+Please post your timed queries in this forum.
+
+88
+00:10:39 --> 00:10:43
+Please post your general queries on <b>Python</b> in this forum.
+
+89
+00:10:44 --> 00:10:47
+FOSSEE team coordinates the TBC project.
+
+90
+00:10:48 --> 00:10:56
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.For more details, visit this website.
+
+91
+00:10:57 --> 00:11:02
+This is Priya from IIT Bombay signing off. Thanks for watching.
+

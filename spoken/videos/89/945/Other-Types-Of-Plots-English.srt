@@ -1,0 +1,238 @@
+<b>Narration</b>
+
+1
+00:00:01 --> 00:00:05
+Hello friends. Welcome to the tutorial on <b>Other types of plots</b>
+
+2
+00:00:06 --> 00:00:14
+At the end of this tutorial, you will be able to -
+<p>Create <b>scatter plot</b>
+</p><p>Create<b> log-log plots</b>
+</p>
+
+3
+00:00:15 --> 00:00:28
+To record this tutorial, I am using
+<p><b>Ubuntu Linux 14.04</b> operating system
+</p><p><b>Python 3.4.3</b>
+</p><p><b>IPython 5.1.0</b>
+</p>
+
+4
+00:00:29 --> 00:00:40
+To practice this tutorial, you should know how to
+<p>Run basic <b>Python</b> <b>commands</b> on the <b>ipython</b> <b>console</b>
+</p><p>Load<b> data </b>from<b> files </b>and  <b>Plot data</b>.
+</p>
+
+5
+00:00:41 --> 00:00:45
+If not, see the relevant <b>Python</b> tutorials on this website.
+
+6
+00:00:46 --> 00:00:57
+Let us first open the <b>Terminal </b>by pressing <b>Ctrl+Alt+T </b>keys simultaneously.
+<p>Now, type <b>ipython3</b> and press <b>Enter</b>. 
+</p>
+
+7
+00:00:58 --> 00:01:07
+Let us initialise the <b>pylab</b> package. Type <i>percent </i><b>pylab </b>and press<b> Enter.</b>
+
+8
+00:01:08 --> 00:01:12
+In a <b>scatter</b> <b>plot</b>, the data is displayed as a collection of points.
+
+9
+00:01:13 --> 00:01:17
+Each point determines its position on the x and y axes
+
+10
+00:01:18 --> 00:01:26
+Plot a <b>scatter</b> <b>plot</b> showing the percentage profit of a company A from the year 2000 to 2010.
+
+11
+00:01:27 --> 00:01:34
+The data for the same is available in the <b>file</b> <b>company </b><i>hyphen </i><b>a </b><i>hyphen </i><b>data </b><i>dot </i><b>txt</b>.
+
+12
+00:01:35 --> 00:01:44
+<b>company </b><i>hyphen </i><b>a </b><i>hyphen </i><b>data </b><i>dot </i><b>txt</b> file is available in the code file link of this tutorial.  Please download and use it.
+
+13
+00:01:45 --> 00:01:51
+Let us see the content of the file <b>company </b><i>hyphen </i><b>a </b><i>hyphen </i><b>data </b><i>dot </i><b>txt</b>.
+
+14
+00:01:52 --> 00:01:59
+So type,<b>cat company </b><i>hyphen </i><b>a </b><i>hyphen </i><b>data </b><i>dot </i><b>txt</b>.<b> </b>and<b> press Enter</b>
+
+15
+00:02:00 --> 00:02:05
+The data file has two columns with a set of values in each column.
+
+16
+00:02:06 --> 00:02:14
+The first column represents the years. And the second column represents the profit percentage.
+
+17
+00:02:15 --> 00:02:21
+To produce the scatter plot, we first need to load the data from the file using <b>loadtxt</b> command.
+
+18
+00:02:22 --> 00:02:44
+So Type
+<p><b>year </b><i>comma</i><b> profit </b><i>equal to</i><b> loadtxt </b><i>within parentheses within single quotes </i><b>company </b><i>hyphen </i><b>a </b><i>hyphen </i><b>data </b><i>dot </i><b>txt </b><i>after single quotes comma</i><b> unpack </b><i>equal to</i><b> True </b>and<b> Press Enter</b>
+</p>
+
+19
+00:02:45 --> 00:02:50
+<b>unpack </b><i>equal to</i><b> True returns</b> the <b>transposed array </b>of <b>data</b>
+
+20
+00:02:51 --> 00:02:55
+<b>scatter() function</b> is used to generate the <b>scatter</b> <b>graph</b>
+
+21
+00:02:56 --> 00:03:10
+Syntax: <b>scatter </b><i>within parentheses </i><b>x </b><i>comma </i><b>y</b>
+<p><b>x </b>is<b> </b>a sequence of data
+</p><p><b>y </b>is<b> </b>a sequence of data having the same length of <b>x</b>
+</p>
+
+22
+00:03:11 --> 00:03:19
+Let us use <b>scatter function </b>to <b>plot scatter graph </b>for data stored in <b>year </b>and<b> profit. </b>
+
+23
+00:03:20 --> 00:03:30
+So Type <b>scatter </b><i>within parentheses</i><b> year </b><i>comma</i><b> profit</b> and press <b>Enter.</b>
+
+24
+00:03:31 --> 00:03:35
+Notice that we passed two arguments to <b>scatter() </b>function.
+
+25
+00:03:36 --> 00:03:47
+The First one being the values in x-coordinate that is <b>year.</b> Second, the values in y-coordinate, the <b>profit</b> <b>percentages</b>.
+
+26
+00:03:48 --> 00:03:57
+Pause the video here, try out the following exercise and resume the video. Read the documentation of scatter.
+
+27
+00:03:58 --> 00:04:07
+<b>Plot</b> a scatter plot of same data in <b>company </b><i>hyphen </i><b>a </b><i>hyphen </i><b>data </b><i>dot </i><b>txt</b> with red diamond markers.
+
+28
+00:04:08 --> 00:04:19
+Solution to Exercise Clear the <b>plot window </b>by typing <b>clf parentheses </b>and press <b>Enter</b>
+
+29
+00:04:20 --> 00:04:42
+Now type
+<p><b>scatter </b><i>within parentheses </i><b>year </b><i>comma </i><b>profit </b><i>comma </i><b>color </b><i>equal to within single quotes </i><b>r </b><i>comma </i><b>marker </b><i>equal to within single quotes </i><b>d </b>and <b>press Enter</b>
+</p>
+
+30
+00:04:43 --> 00:04:50
+Thus, we got our scatter plot. Now let us see another kind of plot.
+
+31
+00:04:51 --> 00:04:56
+A <b>log-log plot</b> is a two-dimensional graph of numerical data.
+
+32
+00:04:57 --> 00:05:01
+It uses <b>logarithmic</b> <b>scales</b> on both <b>axes</b>.
+
+33
+00:05:02 --> 00:05:07
+Graph appears as straight line due to non-linear scaling
+
+34
+00:05:08 --> 00:05:23
+<b>Syntax</b>
+<p><b>loglog </b><i>within parentheses </i><b>x </b><i>comma</i><b> y</b>
+</p><p><b>x </b>is<b> </b>a sequence of data
+</p><p><b>y </b>is<b> </b>a sequence of data, having the same length of <b>x</b>
+</p>
+
+35
+00:05:24 --> 00:05:32
+Plot a <b>log-log</b><i> </i><b>chart</b> of <b>y </b><i>equal to</i><b> 5 times x cube</b> for <b>x</b> from 1 to 20.
+
+36
+00:05:33 --> 00:05:38
+Before we actually plot, let us calculate the points needed for that.
+
+37
+00:05:39 --> 00:05:53
+Type<b> </b> <b>x </b><i>equalto </i><b>linspace </b><i>within parentheses</i><b> 1 </b><i>comma </i><b>20 </b><i>comma </i><b>100 </b>and<b> press Enter</b>
+
+38
+00:05:54 --> 00:06:05
+Then<b>, y </b><i>equal to </i><b>5 </b><i>into</i><b> x </b><i>raised to</i><b> 3</b> and<b> press Enter</b>
+
+39
+00:06:06 --> 00:06:13
+Clear the <b>plot window </b>by typing <b>clf </b>parentheses and <b>press Enter</b>
+
+40
+00:06:14 --> 00:06:23
+Type <b>loglog </b><i>within parentheses </i><b>x </b><i>comma </i><b>y </b>and <b>press Enter</b>
+
+41
+00:06:24 --> 00:06:26
+We see the required plot
+
+42
+00:06:27 --> 00:06:41
+This brings us to the end of this tutorial. In this tutorial we learnt to,
+<p>Plot a <b>scatter</b> <b>plot</b> using <b>scatter()</b> function
+</p><p>Plot a <b>log-log graph</b> using <b>loglog()</b> function
+</p>
+
+43
+00:06:42 --> 00:06:45
+Here are some self assessment questions for you to solve.
+
+44
+00:06:46 --> 00:06:58
+<b>scatter </b><i>within parentheses </i><b>x </b><i>comma</i><b> y </b><i>comma</i><b> color </b><i>equal to within single quotes </i><b>blue </b><i>comma</i><b> marker </b><i>equal to within single quotes </i><b>d</b>
+
+45
+00:06:59 --> 00:07:10
+and <b>plot </b><i>within parentheses </i><b>x </b><i>comma</i><b> y </b><i>comma</i><b> color </b><i>equal to within single quotes </i><b>b </b><i>comma</i><b> marker </b><i>equal to within single quotes </i><b>d</b>
+
+46
+00:07:11 --> 00:07:16
+does exactly the same?
+<p>True or False
+</p>
+
+47
+00:07:17 --> 00:07:24
+And the answer, <b>False</b>. Both functions do not produce the same kind of plot.
+
+48
+00:07:25 --> 00:07:24
+Please post your timed queries in this forum.
+
+49
+00:07:25 --> 00:07:28
+Please post your general queries on Python in this forum.
+
+50
+00:07:29 --> 00:07:32
+FOSSEE team coordinates the TBC project.
+
+51
+00:07:33 --> 00:07:41
+Spoken Tutorial Project is funded by NMEICT, MHRD, Govt. of India.For more details, visit this website.
+
+52
+00:07:42 --> 00:07:47
+This is Prathamesh Salunkhe from IIT Bombay (or FOSSEE, if you wish) signing off. Thank you.
+
